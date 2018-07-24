@@ -11,8 +11,6 @@
 @import AFNetworking;
 #import <SpotifyAuthentication/SpotifyAuthentication.h>
 
-
-#import "ViewController.h"
 #import <HealthKit/HealthKit.h>
 @import SDWebImage;
 
