@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */; };
-		471EA84C2106BB7C00FEB317 /* SDWebImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */; };
+		471EA84C2106BB7C00FEB317 /* SpotifyAuthPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EA84B2106BB7C00FEB317 /* SpotifyAuthPage.m */; };
+		47BD2BD12107B26000BA089B /* SpotifyAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD02107B26000BA089B /* SpotifyAPIController.m */; };
+		47BD2BD42107B3D100BA089B /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD32107B3D100BA089B /* TestViewController.m */; };
+		47BD2BD72107C15200BA089B /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD62107C15200BA089B /* SplashScreenViewController.m */; };
 		561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC52721068CEC00F68C23 /* AppDelegate.m */; };
 		561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52C21068CEC00F68C23 /* Main.storyboard */; };
 		561DC53021068CF100F68C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52F21068CF100F68C23 /* Assets.xcassets */; };
@@ -75,11 +78,17 @@
 /* Begin PBXFileReference section */
 		1A7CE944539608FBF0469AFA /* Pods-Musixuffle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musixuffle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Musixuffle/Pods-Musixuffle.debug.xcconfig"; sourceTree = "<group>"; };
 		387B6D15C4A79BBA9248E1CD /* Pods_Musixuffle_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		471EA84A2106BB7C00FEB317 /* SDWebImageTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebImageTestViewController.h; sourceTree = "<group>"; };
-		471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTestViewController.m; sourceTree = "<group>"; };
+		471EA84A2106BB7C00FEB317 /* SpotifyAuthPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyAuthPage.h; sourceTree = "<group>"; };
+		471EA84B2106BB7C00FEB317 /* SpotifyAuthPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifyAuthPage.m; sourceTree = "<group>"; };
 		473889B92106AF720004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BB2106B36A0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BD2106B43E0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BD2BCF2107B25F00BA089B /* SpotifyAPIController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyAPIController.h; sourceTree = "<group>"; };
+		47BD2BD02107B26000BA089B /* SpotifyAPIController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifyAPIController.m; sourceTree = "<group>"; };
+		47BD2BD22107B3D100BA089B /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		47BD2BD32107B3D100BA089B /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		47BD2BD52107C15200BA089B /* SplashScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
+		47BD2BD62107C15200BA089B /* SplashScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		47BED4312107024E009FF862 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		561DC52321068CEB00F68C23 /* Musixuffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musixuffle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561DC52621068CEC00F68C23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -184,8 +193,14 @@
 				561DC53121068CF100F68C23 /* LaunchScreen.storyboard */,
 				561DC53421068CF100F68C23 /* Info.plist */,
 				561DC53521068CF100F68C23 /* main.m */,
-				471EA84A2106BB7C00FEB317 /* SDWebImageTestViewController.h */,
-				471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */,
+				471EA84A2106BB7C00FEB317 /* SpotifyAuthPage.h */,
+				471EA84B2106BB7C00FEB317 /* SpotifyAuthPage.m */,
+				47BD2BCF2107B25F00BA089B /* SpotifyAPIController.h */,
+				47BD2BD02107B26000BA089B /* SpotifyAPIController.m */,
+				47BD2BD22107B3D100BA089B /* TestViewController.h */,
+				47BD2BD32107B3D100BA089B /* TestViewController.m */,
+				47BD2BD52107C15200BA089B /* SplashScreenViewController.h */,
+				47BD2BD62107C15200BA089B /* SplashScreenViewController.m */,
 			);
 			path = Musixuffle;
 			sourceTree = "<group>";
@@ -448,8 +463,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BD2BD42107B3D100BA089B /* TestViewController.m in Sources */,
+				47BD2BD72107C15200BA089B /* SplashScreenViewController.m in Sources */,
+				47BD2BD12107B26000BA089B /* SpotifyAPIController.m in Sources */,
 				561DC53621068CF100F68C23 /* main.m in Sources */,
-				471EA84C2106BB7C00FEB317 /* SDWebImageTestViewController.m in Sources */,
+				471EA84C2106BB7C00FEB317 /* SpotifyAuthPage.m in Sources */,
 				561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */,
 				5654E5AB2106ECB500DF32B0 /* WebViewController.m in Sources */,
 			);

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Microsoft. All rights reserved.
 //
 
-#import "SDWebImageTestViewController.h"
+#import "SpotifyAuthPage.h"
 @import SDWebImage;
 @import AFNetworking;
 #import <SpotifyAuthentication/SpotifyAuthentication.h>
@@ -23,14 +23,16 @@
 #import <WebKit/WebKit.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 
+#import "TestViewController.h"
 
-@interface SDWebImageTestViewController ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
+
+@interface SpotifyAuthPage ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
 @property (atomic, readwrite) UIViewController *authViewController;
 @property (atomic, readwrite) BOOL firstLoad;
 @property (nonatomic, strong) UILabel *statusLabel;
 @end
 
-@implementation SDWebImageTestViewController
+@implementation SpotifyAuthPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -125,7 +127,11 @@
 {
     self.firstLoad = NO;
     self.statusLabel.text = @"Logged in.";
-//    [self performSegueWithIdentifier:@"ShowPlayer" sender:nil];
+    TestViewController *vc = [[TestViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:NO];
+    [self presentViewController:vc animated:NO completion:^{
+        
+    }];
 }
 
 #pragma mark - SPTStoreControllerDelegate
