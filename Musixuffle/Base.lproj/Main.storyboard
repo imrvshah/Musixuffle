@@ -47,26 +47,126 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gWn-8H-Qoj">
-                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjw-D4-dI3">
+                                <rect key="frame" x="100" y="120" width="175" height="30"/>
+                                <state key="normal" title="Login to Spotify"/>
+                                <connections>
+                                    <action selector="loginClicked:" destination="60D-Ee-gKn" eventType="touchUpInside" id="H5h-fQ-9pz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gWn-8H-Qoj" firstAttribute="width" secondItem="c9v-3V-yqe" secondAttribute="width" id="4LH-eR-Lyf"/>
-                            <constraint firstItem="gWn-8H-Qoj" firstAttribute="centerX" secondItem="G5X-bt-dZG" secondAttribute="centerX" id="52t-Ms-pXc"/>
-                            <constraint firstItem="gWn-8H-Qoj" firstAttribute="centerY" secondItem="G5X-bt-dZG" secondAttribute="centerY" id="Pqz-Lj-Wos"/>
-                            <constraint firstItem="gWn-8H-Qoj" firstAttribute="height" secondItem="c9v-3V-yqe" secondAttribute="height" id="vKp-gs-mZz"/>
+                            <constraint firstItem="G5X-bt-dZG" firstAttribute="trailing" secondItem="mjw-D4-dI3" secondAttribute="trailing" constant="100" id="QH6-c0-Dmn"/>
+                            <constraint firstItem="mjw-D4-dI3" firstAttribute="top" secondItem="G5X-bt-dZG" secondAttribute="top" constant="100" id="ThT-jd-3dy"/>
+                            <constraint firstItem="mjw-D4-dI3" firstAttribute="leading" secondItem="G5X-bt-dZG" secondAttribute="leading" constant="100" id="caj-44-Hug"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G5X-bt-dZG"/>
                     </view>
-                    <connections>
-                        <outlet property="imageView" destination="gWn-8H-Qoj" id="GR5-Nh-Qyy"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXh-ws-V6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1486" y="32"/>
         </scene>
+        <!--Title-->
+        <scene sceneID="sgQ-0Q-HVM">
+            <objects>
+                <viewController id="LR2-U6-Vew" customClass="LoginController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FfO-ju-4cD"/>
+                        <viewControllerLayoutGuide type="bottom" id="BFF-aM-5ca"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dXs-K9-4cH">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backdrop.png" translatesAutoresizingMaskIntoConstraints="NO" id="RdP-qk-26N">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="700"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="iOS SDK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbx-jn-Wyf">
+                                <rect key="frame" x="88" y="84" width="175" height="53"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGk-Ml-wKv">
+                                <rect key="frame" x="79" y="620" width="192" height="30"/>
+                                <state key="normal" title="Clear cookies in UIWebView">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCookiesClicked:" destination="LR2-U6-Vew" eventType="touchUpInside" id="D5y-dd-afB"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgX-qa-IlA" customClass="SPTConnectButton">
+                                <rect key="frame" x="42" y="566" width="266" height="46"/>
+                                <color key="backgroundColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="IPY-ug-NJQ"/>
+                                    <constraint firstAttribute="width" constant="266" id="rga-Oq-TzO"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="loginClicked:" destination="LR2-U6-Vew" eventType="touchUpInside" id="mAS-pS-AvG"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Status text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4F-09-WVo">
+                                <rect key="frame" x="138" y="540" width="75" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Simple Track Playback Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7R-eX-cDU">
+                                <rect key="frame" x="66" y="139" width="219" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GV-w0-0IY">
+                                <rect key="frame" x="93.5" y="653" width="163" height="30"/>
+                                <state key="normal" title="Show Spotify App Store">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSpotifyAppStoreClicked:" destination="LR2-U6-Vew" eventType="touchUpInside" id="sfb-hl-6mS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.066681338029999995" green="0.066681338029999995" blue="0.066681338029999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z4F-09-WVo" firstAttribute="centerX" secondItem="RdP-qk-26N" secondAttribute="centerX" id="DJV-a3-cZE"/>
+                            <constraint firstItem="RdP-qk-26N" firstAttribute="height" secondItem="dXs-K9-4cH" secondAttribute="height" id="G0V-4u-0Wg"/>
+                            <constraint firstItem="RdP-qk-26N" firstAttribute="centerX" secondItem="Cbx-jn-Wyf" secondAttribute="centerX" id="GJ9-o3-nIA"/>
+                            <constraint firstItem="cGk-Ml-wKv" firstAttribute="top" secondItem="hgX-qa-IlA" secondAttribute="bottom" constant="8" id="H1D-xF-hQg"/>
+                            <constraint firstItem="RdP-qk-26N" firstAttribute="top" secondItem="Cbx-jn-Wyf" secondAttribute="top" constant="-84" id="JET-HL-Bsk"/>
+                            <constraint firstItem="3GV-w0-0IY" firstAttribute="centerX" secondItem="RdP-qk-26N" secondAttribute="centerX" id="Jb5-jV-3Pn"/>
+                            <constraint firstItem="RdP-qk-26N" firstAttribute="bottom" secondItem="cGk-Ml-wKv" secondAttribute="bottom" constant="50" id="K46-ub-hoT"/>
+                            <constraint firstItem="hgX-qa-IlA" firstAttribute="centerX" secondItem="RdP-qk-26N" secondAttribute="centerX" id="Nlx-Ri-q2r"/>
+                            <constraint firstItem="cGk-Ml-wKv" firstAttribute="centerX" secondItem="RdP-qk-26N" secondAttribute="centerX" id="O9t-En-zE2"/>
+                            <constraint firstItem="3GV-w0-0IY" firstAttribute="top" secondItem="cGk-Ml-wKv" secondAttribute="bottom" constant="3" id="Sjw-xA-ZKp"/>
+                            <constraint firstAttribute="centerX" secondItem="RdP-qk-26N" secondAttribute="centerX" id="Uz6-KV-fSe"/>
+                            <constraint firstItem="D7R-eX-cDU" firstAttribute="top" secondItem="Cbx-jn-Wyf" secondAttribute="bottom" constant="2" id="nts-DL-okX"/>
+                            <constraint firstAttribute="centerY" secondItem="RdP-qk-26N" secondAttribute="centerY" id="qb4-OJ-Yq3"/>
+                            <constraint firstItem="D7R-eX-cDU" firstAttribute="centerX" secondItem="RdP-qk-26N" secondAttribute="centerX" id="urD-e8-Jvp"/>
+                            <constraint firstItem="hgX-qa-IlA" firstAttribute="top" secondItem="Z4F-09-WVo" secondAttribute="bottom" constant="8" id="w2D-TH-ARs"/>
+                            <constraint firstItem="RdP-qk-26N" firstAttribute="width" secondItem="dXs-K9-4cH" secondAttribute="width" id="zjv-wb-sGA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ras-qY-iFm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="Sf8-rY-8r9"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="350" height="700"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="Z4F-09-WVo" id="uI2-jh-w5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQ7-Cg-8JW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="43"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="backdrop.png" width="16" height="16"/>
+    </resources>
 </document>
