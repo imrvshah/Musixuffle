@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */; };
 		471EA84C2106BB7C00FEB317 /* SDWebImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */; };
-		473889BA2106AF720004E3C1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473889B92106AF720004E3C1 /* SDWebImage.framework */; };
 		561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC52721068CEC00F68C23 /* AppDelegate.m */; };
 		561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52C21068CEC00F68C23 /* Main.storyboard */; };
 		561DC53021068CF100F68C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52F21068CF100F68C23 /* Assets.xcassets */; };
@@ -25,6 +24,10 @@
 		561DC57421069AD800F68C23 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC57321069AD800F68C23 /* ExtensionDelegate.m */; };
 		561DC57521069B2F00F68C23 /* MXInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC5712106996400F68C23 /* MXInterfaceController.m */; };
 		561DC57721069CFC00F68C23 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561DC57621069CFC00F68C23 /* HealthKit.framework */; };
+		563C7B902106EB49009C00C8 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8D2106EB49009C00C8 /* SpotifyMetadata.framework */; };
+		563C7B912106EB49009C00C8 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */; };
+		563C7B922106EB49009C00C8 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */; };
+		5654E5AB2106ECB500DF32B0 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5654E5A92106ECB500DF32B0 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +83,6 @@
 		561DC52321068CEB00F68C23 /* Musixuffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musixuffle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561DC52621068CEC00F68C23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		561DC52721068CEC00F68C23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		561DC52921068CEC00F68C23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		561DC52A21068CEC00F68C23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		561DC52D21068CEC00F68C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		561DC52F21068CF100F68C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561DC53221068CF100F68C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,6 +106,11 @@
 		561DC57321069AD800F68C23 /* ExtensionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
 		561DC57621069CFC00F68C23 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		561DC57821069CFC00F68C23 /* Musixuffle WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Musixuffle WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		563C7B8D2106EB49009C00C8 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = Libs/SpotifyMetadata.framework; sourceTree = "<group>"; };
+		563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = Libs/SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = Libs/SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		5654E5A92106ECB500DF32B0 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5654E5AA2106ECB500DF32B0 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990DD4D993E0D278420E5251 /* Pods_Musixuffle_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D933CD5E24DF45E3149961 /* Pods-Musixuffle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musixuffle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Musixuffle/Pods-Musixuffle.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,9 +121,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				473889BA2106AF720004E3C1 /* SDWebImage.framework in Frameworks */,
+				563C7B902106EB49009C00C8 /* SpotifyMetadata.framework in Frameworks */,
+				563C7B922106EB49009C00C8 /* SpotifyAuthentication.framework in Frameworks */,
 				561DC56A210690CB00F68C23 /* HealthKit.framework in Frameworks */,
 				027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */,
+				563C7B912106EB49009C00C8 /* SpotifyAudioPlayback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,11 +172,11 @@
 		561DC52521068CEB00F68C23 /* Musixuffle */ = {
 			isa = PBXGroup;
 			children = (
+				5654E5AA2106ECB500DF32B0 /* WebViewController.h */,
+				5654E5A92106ECB500DF32B0 /* WebViewController.m */,
 				561DC567210690CB00F68C23 /* Musixuffle.entitlements */,
 				561DC52621068CEC00F68C23 /* AppDelegate.h */,
 				561DC52721068CEC00F68C23 /* AppDelegate.m */,
-				561DC52921068CEC00F68C23 /* ViewController.h */,
-				561DC52A21068CEC00F68C23 /* ViewController.m */,
 				561DC52C21068CEC00F68C23 /* Main.storyboard */,
 				561DC52F21068CF100F68C23 /* Assets.xcassets */,
 				561DC53121068CF100F68C23 /* LaunchScreen.storyboard */,
@@ -210,6 +218,9 @@
 		561DC568210690CB00F68C23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */,
+				563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */,
+				563C7B8D2106EB49009C00C8 /* SpotifyMetadata.framework */,
 				473889BD2106B43E0004E3C1 /* SDWebImage.framework */,
 				473889BB2106B36A0004E3C1 /* SDWebImage.framework */,
 				473889B92106AF720004E3C1 /* SDWebImage.framework */,
@@ -244,6 +255,7 @@
 				561DC52121068CEB00F68C23 /* Resources */,
 				561DC56321068CF300F68C23 /* Embed Watch Content */,
 				9D7EB0E60A03AC9BDC1D6B15 /* [CP] Embed Pods Frameworks */,
+				43DE32E780A8FF5882C78001 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,6 +315,9 @@
 						CreatedOnToolsVersion = 9.3.1;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
 								enabled = 1;
 							};
 						};
@@ -389,6 +404,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		43DE32E780A8FF5882C78001 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Musixuffle/Pods-Musixuffle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9D7EB0E60A03AC9BDC1D6B15 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,6 +449,7 @@
 				561DC53621068CF100F68C23 /* main.m in Sources */,
 				471EA84C2106BB7C00FEB317 /* SDWebImageTestViewController.m in Sources */,
 				561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */,
+				5654E5AB2106ECB500DF32B0 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +711,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				INFOPLIST_FILE = Musixuffle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -701,6 +736,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				INFOPLIST_FILE = Musixuffle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -8,8 +8,10 @@
 
 #import "MXInterfaceController.h"
 #import <HealthKit/HealthKit.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 
-@interface MXInterfaceController () <HKWorkoutSessionDelegate>
+
+@interface MXInterfaceController () <HKWorkoutSessionDelegate, WCSessionDelegate>
 @property(nonatomic, strong)HKHealthStore *healthStore;
 @end
 
@@ -18,6 +20,12 @@
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
      self.healthStore = [[HKHealthStore alloc] init];
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        NSLog(@"WCSession is supported");
+    }
     // Configure interface objects here.
 }
 
@@ -251,6 +259,14 @@
 //    }];
 }
 
+- (void) session:(nonnull WCSession *)session didReceiveApplicationContext:(nonnull NSDictionary<NSString *,id> *)applicationContext {
+    
+    NSLog(@"%@", applicationContext);
+    
+    
+    NSString *item1 = [applicationContext objectForKey:@"firstItem"];
+    int item2 = [[applicationContext objectForKey:@"secondItem"] intValue];
+}
 @end
 
 

@@ -21,9 +21,10 @@
 
 #import <SafariServices/SafariServices.h>
 #import <WebKit/WebKit.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 
 
-@interface SDWebImageTestViewController ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate>
+@interface SDWebImageTestViewController ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
 @property (atomic, readwrite) UIViewController *authViewController;
 @property (atomic, readwrite) BOOL firstLoad;
 @property (nonatomic, strong) UILabel *statusLabel;
@@ -33,6 +34,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        NSLog(@"WCSession is supported");
+    }
 }
 
 
@@ -63,6 +70,11 @@
         [self renewTokenAndShowPlayer];
         return;
     }
+    
+    WCSession *session = [WCSession defaultSession];
+    NSError *error;
+    
+    [session updateApplicationContext:@{@"firstItem": @"item1", @"secondItem":[NSNumber numberWithInt:2]} error:&error];
     
     // Else, just show login dialog
 }
