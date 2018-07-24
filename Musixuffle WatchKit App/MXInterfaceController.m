@@ -26,17 +26,6 @@
         [session activateSession];
         NSLog(@"WCSession is supported");
     }
-    
-    HKHealthStore *cwHealthStore = [[HKHealthStore alloc] init];
-    HKWorkoutConfiguration *cwConfiguration = [[HKWorkoutConfiguration alloc] init];
-    cwConfiguration.activityType = HKWorkoutActivityTypeOther;
-    NSError *error;
-    HKWorkoutSession *cwSession = [[HKWorkoutSession alloc] initWithConfiguration:cwConfiguration error:&error];
-    [cwSession setDelegate:self];
-    if (!error) {
-        [cwHealthStore startWorkoutSession:cwSession];
-    }
-    // Configure interface objects here.
 }
 
 - (void)willActivate {
@@ -51,7 +40,7 @@
 
 - (IBAction)buttonHeartBeatClicked
 {
-//    [self takePermission];
+    [self takePermission];
 //    [self fakeWorkout];
     // TODO: Prevent this if already authorized
 }
