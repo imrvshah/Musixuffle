@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QN5-l1-VqB">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QN5-l1-VqB">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -35,13 +35,15 @@
                                 <label width="136" height="36" alignment="left" text="Label" textAlignment="center" id="fuT-d0-dlD"/>
                             </items>
                         </group>
+                        <imageView alignment="left" id="x5X-AN-7j6"/>
                     </items>
                     <connections>
+                        <outlet property="imageViewTest" destination="x5X-AN-7j6" id="YZy-ca-IjC"/>
                         <outlet property="lableHeartRate" destination="fuT-d0-dlD" id="y1d-pA-JYh"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="449" y="371"/>
+            <point key="canvasLocation" x="491" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
