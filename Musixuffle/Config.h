@@ -22,10 +22,10 @@
 // Don't forget to add your callback URL's prefix to the URL Types section in the target's Info pane!
 
 // Your client ID
-#define kClientId "e6695c6d22214e0f832006889566df9c"
+#define kClientId "f2d7f91cb07e47bf81f42c1a80c53558"
 
 // Your applications callback URL
-#define kCallbackURL "spotifyiossdkexample://"
+#define kCallbackURL "musixuffle://"
 
 // The URL to your token swap endpoint
 // If you don't provide a token swap service url the login will use implicit grant tokens, which means that your user will need to sign in again every time the token expires.

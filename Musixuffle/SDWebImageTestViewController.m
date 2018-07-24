@@ -47,6 +47,8 @@
 {
     [super viewWillAppear:animated];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionUpdatedNotification:) name:@"sessionUpdated" object:nil];
+    
     SPTAuth *auth = [SPTAuth defaultInstance];
     // Uncomment to turn off native/SSO/flip-flop login flow
     //auth.allowNativeLogin = NO;
@@ -123,7 +125,7 @@
 {
     self.firstLoad = NO;
     self.statusLabel.text = @"Logged in.";
-    [self performSegueWithIdentifier:@"ShowPlayer" sender:nil];
+//    [self performSegueWithIdentifier:@"ShowPlayer" sender:nil];
 }
 
 #pragma mark - SPTStoreControllerDelegate
@@ -138,14 +140,26 @@
 {
     self.statusLabel.text = @"Logging in...";
     SPTAuth *auth = [SPTAuth defaultInstance];
+    auth.clientID = @kClientId;
+    auth.requestedScopes = @[SPTAuthStreamingScope];
+    auth.redirectURL = [NSURL URLWithString:@kCallbackURL];
+#ifdef kTokenSwapServiceURL
+    auth.tokenSwapURL = [NSURL URLWithString:@kTokenSwapServiceURL];
+#endif
+#ifdef kTokenRefreshServiceURL
+    auth.tokenRefreshURL = [NSURL URLWithString:@kTokenRefreshServiceURL];
+#endif
+    auth.sessionUserDefaultsKey = @kSessionUserDefaultsKey;
     
-    if ([SPTAuth supportsApplicationAuthentication]) {
-        [[UIApplication sharedApplication] openURL:[auth spotifyAppAuthenticationURL]];
-    } else {
-        self.authViewController = [self authViewControllerWithURL:[[SPTAuth defaultInstance] spotifyWebAuthenticationURL]];
+//    [[UIApplication sharedApplication] openURL:[auth spotifyAppAuthenticationURL] options:nil completionHandler:^(BOOL success) {
+//
+//    }];
+//    else
+//    {
+        self.authViewController = [self authViewControllerWithURL:[auth spotifyWebAuthenticationURL]];
         self.definesPresentationContext = YES;
         [self presentViewController:self.authViewController animated:YES completion:nil];
-    }
+//    }
 }
 
 - (void)renewTokenAndShowPlayer
