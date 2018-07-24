@@ -9,11 +9,7 @@
 /* Begin PBXBuildFile section */
 		027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */; };
 		471EA84C2106BB7C00FEB317 /* SDWebImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */; };
-		471EA8662106C40100FEB317 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471EA8632106C40100FEB317 /* SpotifyMetadata.framework */; };
-		471EA8672106C40100FEB317 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471EA8642106C40100FEB317 /* SpotifyAudioPlayback.framework */; };
-		471EA8682106C40100FEB317 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471EA8652106C40100FEB317 /* SpotifyAuthentication.framework */; };
 		473889BA2106AF720004E3C1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473889B92106AF720004E3C1 /* SDWebImage.framework */; };
-		47BED42E2106E593009FF862 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BED42D2106E593009FF862 /* WebViewController.m */; };
 		561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC52721068CEC00F68C23 /* AppDelegate.m */; };
 		561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52C21068CEC00F68C23 /* Main.storyboard */; };
 		561DC53021068CF100F68C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52F21068CF100F68C23 /* Assets.xcassets */; };
@@ -78,18 +74,14 @@
 		387B6D15C4A79BBA9248E1CD /* Pods_Musixuffle_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		471EA84A2106BB7C00FEB317 /* SDWebImageTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebImageTestViewController.h; sourceTree = "<group>"; };
 		471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTestViewController.m; sourceTree = "<group>"; };
-		471EA8632106C40100FEB317 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = Libs/SpotifyMetadata.framework; sourceTree = "<group>"; };
-		471EA8642106C40100FEB317 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = Libs/SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
-		471EA8652106C40100FEB317 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = Libs/SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		473889B92106AF720004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BB2106B36A0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BD2106B43E0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		47BED42B2106E44D009FF862 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
-		47BED42C2106E593009FF862 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		47BED42D2106E593009FF862 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		561DC52321068CEB00F68C23 /* Musixuffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musixuffle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561DC52621068CEC00F68C23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		561DC52721068CEC00F68C23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		561DC52921068CEC00F68C23 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		561DC52A21068CEC00F68C23 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		561DC52D21068CEC00F68C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		561DC52F21068CF100F68C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		561DC53221068CF100F68C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,12 +115,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				471EA8662106C40100FEB317 /* SpotifyMetadata.framework in Frameworks */,
-				471EA8682106C40100FEB317 /* SpotifyAuthentication.framework in Frameworks */,
 				473889BA2106AF720004E3C1 /* SDWebImage.framework in Frameworks */,
 				561DC56A210690CB00F68C23 /* HealthKit.framework in Frameworks */,
 				027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */,
-				471EA8672106C40100FEB317 /* SpotifyAudioPlayback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,11 +164,11 @@
 		561DC52521068CEB00F68C23 /* Musixuffle */ = {
 			isa = PBXGroup;
 			children = (
-				47BED42C2106E593009FF862 /* WebViewController.h */,
-				47BED42D2106E593009FF862 /* WebViewController.m */,
 				561DC567210690CB00F68C23 /* Musixuffle.entitlements */,
 				561DC52621068CEC00F68C23 /* AppDelegate.h */,
 				561DC52721068CEC00F68C23 /* AppDelegate.m */,
+				561DC52921068CEC00F68C23 /* ViewController.h */,
+				561DC52A21068CEC00F68C23 /* ViewController.m */,
 				561DC52C21068CEC00F68C23 /* Main.storyboard */,
 				561DC52F21068CF100F68C23 /* Assets.xcassets */,
 				561DC53121068CF100F68C23 /* LaunchScreen.storyboard */,
@@ -187,7 +176,6 @@
 				561DC53521068CF100F68C23 /* main.m */,
 				471EA84A2106BB7C00FEB317 /* SDWebImageTestViewController.h */,
 				471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */,
-				47BED42B2106E44D009FF862 /* Config.h */,
 			);
 			path = Musixuffle;
 			sourceTree = "<group>";
@@ -222,9 +210,6 @@
 		561DC568210690CB00F68C23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				471EA8642106C40100FEB317 /* SpotifyAudioPlayback.framework */,
-				471EA8652106C40100FEB317 /* SpotifyAuthentication.framework */,
-				471EA8632106C40100FEB317 /* SpotifyMetadata.framework */,
 				473889BD2106B43E0004E3C1 /* SDWebImage.framework */,
 				473889BB2106B36A0004E3C1 /* SDWebImage.framework */,
 				473889B92106AF720004E3C1 /* SDWebImage.framework */,
@@ -434,7 +419,6 @@
 				561DC53621068CF100F68C23 /* main.m in Sources */,
 				471EA84C2106BB7C00FEB317 /* SDWebImageTestViewController.m in Sources */,
 				561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */,
-				47BED42E2106E593009FF862 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,8 +591,8 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Musixuffle WatchKit Extension/Musixuffle WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Q429UPLE8;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Musixuffle WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -631,8 +615,8 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "Musixuffle WatchKit Extension/Musixuffle WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Q429UPLE8;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Musixuffle WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -654,8 +638,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Q429UPLE8;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Musixuffle_WatchKit_Extension;
 				INFOPLIST_FILE = "Musixuffle WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MSFTHack.Musixuffle.watchkitapp;
@@ -673,8 +657,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Q429UPLE8;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				IBSC_MODULE = Musixuffle_WatchKit_Extension;
 				INFOPLIST_FILE = "Musixuffle WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MSFTHack.Musixuffle.watchkitapp;
@@ -694,24 +678,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Musixuffle/Musixuffle.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Q429UPLE8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Libs/**",
-				);
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Musixuffle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"AFNetworking\"",
-					"-framework",
-					"\"SDWebImage\"",
-					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MSFTHack.Musixuffle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -727,24 +699,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Musixuffle/Musixuffle.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Q429UPLE8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Libs/**",
-				);
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Musixuffle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-framework",
-					"\"AFNetworking\"",
-					"-framework",
-					"\"SDWebImage\"",
-					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MSFTHack.Musixuffle;
 				PRODUCT_NAME = "$(TARGET_NAME)";

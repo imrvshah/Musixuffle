@@ -146,7 +146,7 @@
     workoutSession.delegate = self;
     
     [self.healthStore startWorkoutSession:workoutSession];
-    [self.healthStore endWorkoutSession:workoutSession];
+//    [self.healthStore endWorkoutSession:workoutSession];
 
     
     
