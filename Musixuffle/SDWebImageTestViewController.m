@@ -25,8 +25,11 @@
 
 
 @interface SDWebImageTestViewController ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
+@property (nonatomic) WCSession* watchSession;
+
 @property (atomic, readwrite) UIViewController *authViewController;
 @property (atomic, readwrite) BOOL firstLoad;
+@property (weak, nonatomic) IBOutlet UILabel *labelHeartRate;
 @property (nonatomic, strong) UILabel *statusLabel;
 @end
 
@@ -35,11 +38,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     if ([WCSession isSupported]) {
-        WCSession *session = [WCSession defaultSession];
-        session.delegate = self;
-        [session activateSession];
+        self.watchSession = [WCSession defaultSession];
+        self.watchSession.delegate = self;
+        [self.watchSession activateSession];
         NSLog(@"WCSession is supported");
     }
+    
 }
 
 
@@ -146,6 +150,16 @@
         self.definesPresentationContext = YES;
         [self presentViewController:self.authViewController animated:YES completion:nil];
     }
+    if(self.watchSession){
+        NSError *error = nil;
+        if(![self.watchSession
+             updateApplicationContext:
+             @{@"message" : @"test" }
+             error:&error]){
+            NSLog(@"Updating the context failed: %@", error.localizedDescription);
+        }
+        
+    }
 }
 
 - (void)renewTokenAndShowPlayer
@@ -208,14 +222,45 @@
     self.statusLabel.text = @"Cookies cleared.";
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) session:(nonnull WCSession *)session didReceiveApplicationContext:(nonnull NSDictionary<NSString *,id> *)applicationContext
+{
+    self.labelHeartRate.text = [[applicationContext objectForKey:@"heartRate"] stringValue];
 }
-*/
+
+-(void)session:(WCSession *)session didReceiveMessageData:(NSData *)messageData replyHandler:(void(^)(NSData *replyMessageData))replyHandler
+{
+    NSLog(@"didReceiveMessageData");
+}
+
+/** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+- (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error
+{
+    
+}
+
+/** ------------------------- iOS App State For Watch ------------------------ */
+
+/** Called when the session can no longer be used to modify or add any new transfers and, all interactive messages will be cancelled, but delegate callbacks for background transfers can still occur. This will happen when the selected watch is being changed. */
+- (void)sessionDidBecomeInactive:(WCSession *)session
+{
+    
+}
+
+/** Called when all delegate callbacks for the previously selected watch has occurred. The session can be re-activated for the now selected watch using activateSession. */
+- (void)sessionDidDeactivate:(WCSession *)session
+{
+    
+}
+
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

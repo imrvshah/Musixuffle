@@ -19,12 +19,22 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-     self.healthStore = [[HKHealthStore alloc] init];
+    self.healthStore = [[HKHealthStore alloc] init];
     if ([WCSession isSupported]) {
         WCSession *session = [WCSession defaultSession];
         session.delegate = self;
         [session activateSession];
         NSLog(@"WCSession is supported");
+    }
+    
+    HKHealthStore *cwHealthStore = [[HKHealthStore alloc] init];
+    HKWorkoutConfiguration *cwConfiguration = [[HKWorkoutConfiguration alloc] init];
+    cwConfiguration.activityType = HKWorkoutActivityTypeOther;
+    NSError *error;
+    HKWorkoutSession *cwSession = [[HKWorkoutSession alloc] initWithConfiguration:cwConfiguration error:&error];
+    [cwSession setDelegate:self];
+    if (!error) {
+        [cwHealthStore startWorkoutSession:cwSession];
     }
     // Configure interface objects here.
 }
@@ -41,7 +51,8 @@
 
 - (IBAction)buttonHeartBeatClicked
 {
-    [self takePermission];
+//    [self takePermission];
+//    [self fakeWorkout];
     // TODO: Prevent this if already authorized
 }
 
@@ -49,8 +60,6 @@
 {
     if (HKHealthStore.isHealthDataAvailable)
     {
-       
-        
         HKQuantityType *type = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
         HKQuantityType *type2 = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
         HKQuantityType *type3 = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
@@ -106,7 +115,7 @@
 
 -(void)updateHeartbeat:(NSDate *)startDate
 {
-     self.lableHeartRate.text = @"updateHeartbeat";
+    self.lableHeartRate.text = @"updateHeartbeat";
     //first, create a predicate and set the endDate and option to nil/none
     NSPredicate *Predicate = [HKQuery predicateForSamplesWithStartDate:startDate endDate:nil options:HKQueryOptionNone];
     
@@ -133,6 +142,15 @@
             HKQuantitySample *sample = (HKQuantitySample *)[SampleArray objectAtIndex:0];
             HKQuantity *quantity = sample.quantity;
             NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
+            WCSession *session = [WCSession defaultSession];
+            
+            // Send heart rate to iPhone
+            if(![session updateApplicationContext:
+                 @{@"heartRate" : [NSNumber numberWithFloat:[quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]] }
+                 error:&error])
+            {
+                NSLog(@"Updating the context failed: %@", error.localizedDescription);
+            }
         }else{
             NSLog(@"query %@", error);
         }
@@ -155,118 +173,24 @@
     
     [self.healthStore startWorkoutSession:workoutSession];
 //    [self.healthStore endWorkoutSession:workoutSession];
-
-    
-    
-    // This sample uses hard-coded values and performs all the operations inline
-    // for simplicity's sake. A real-world app would calculate these values
-    // from sensor data and break the operation up using helper methods.
-
-//    HKQuantity *energyBurned =
-//    [HKQuantity quantityWithUnit:[HKUnit kilocalorieUnit]
-//                     doubleValue:425.0];
-//
-//    HKQuantity *distance =
-//    [HKQuantity quantityWithUnit:[HKUnit mileUnit]
-//                     doubleValue:7.2];
-//
-//    // Provide summary information when creating the workout.
-//    HKWorkout *run = [HKWorkout workoutWithActivityType:HKWorkoutActivityTypeRunning
-//                                              startDate:[NSDate date]
-//                                                endDate:[[NSDate date]dateByAddingTimeInterval:5*60*60]
-//                                               duration:0
-//                                      totalEnergyBurned:energyBurned
-//                                          totalDistance:distance
-//                                               metadata:nil];
-//
-//    // Save the workout before adding detailed samples.
-//    [self.healthStore saveObject:run withCompletion:^(BOOL success, NSError *error) {
-//        if (!success) {
-//            // Perform proper error handling here...
-//            NSLog(@"*** An error occurred while saving the "
-//                  @"workout: %@ ***", error.localizedDescription);
-//
-//            abort();
-//        }
-//
-//        // Add optional, detailed information for each time interval
-//        NSMutableArray *samples = [NSMutableArray array];
-
-//        HKQuantityType *distanceType =
-//        [HKObjectType quantityTypeForIdentifier:
-//         HKQuantityTypeIdentifierDistanceWalkingRunning];
-//
-//        HKQuantity *distancePerInterval =
-//        [HKQuantity quantityWithUnit:[HKUnit mileUnit]
-//                         doubleValue:3.2];
-//
-//        HKQuantitySample *distancePerIntervalSample =
-//        [HKQuantitySample quantitySampleWithType:distanceType
-//                                        quantity:distancePerInterval
-//                                       startDate:intervals[0]
-//                                         endDate:intervals[1]];
-//
-//        [samples addObject:distancePerIntervalSample];
-//
-//        HKQuantityType *energyBurnedType =
-//        [HKObjectType quantityTypeForIdentifier:
-//         HKQuantityTypeIdentifierActiveEnergyBurned];
-//
-//        HKQuantity *energyBurnedPerInterval =
-//        [HKQuantity quantityWithUnit:[HKUnit kilocalorieUnit]
-//                         doubleValue:15.5];
-//
-//        HKQuantitySample *energyBurnedPerIntervalSample =
-//        [HKQuantitySample quantitySampleWithType:energyBurnedType
-//                                        quantity:energyBurnedPerInterval
-//                                       startDate:intervals[0]
-//                                         endDate:intervals[1]];
-//
-//        [samples addObject:energyBurnedPerIntervalSample];
-//
-//        HKQuantityType *heartRateType =
-//        [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
-//
-//        HKQuantity *heartRateForInterval =
-//        [HKQuantity quantityWithUnit:[HKUnit unitFromString:@"count/min"]
-//                         doubleValue:95.0];
-//
-//        HKQuantitySample *heartRateForIntervalSample =
-//        [HKQuantitySample quantitySampleWithType:heartRateType
-//                                        quantity:heartRateForInterval
-//                                       startDate:intervals[0]
-//                                         endDate:intervals[1]];
-//
-//        [samples addObject:heartRateForIntervalSample];
-
-        // Continue adding additional samples here...
-
-        // Add all the samples to the workout.
-//        [self.healthStore
-//         addSamples:samples
-//         toWorkout:run
-//         completion:^(BOOL success, NSError *error) {
-//             if (!success) {
-//                 // Perform proper error handling here...
-//                 NSLog(@"*** An error occurred while adding a "
-//                       @"sample to the workout: %@ ***",
-//                       error.localizedDescription);
-//
-//                 abort();
-//             }
-//         }];
-
-//    }];
 }
 
-- (void) session:(nonnull WCSession *)session didReceiveApplicationContext:(nonnull NSDictionary<NSString *,id> *)applicationContext {
-    
+- (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *, id> *)applicationContext
+{
     NSLog(@"%@", applicationContext);
-    
-    
+    self.lableHeartRate.text = @"didReceiveApplicationContext";
     NSString *item1 = [applicationContext objectForKey:@"firstItem"];
     int item2 = [[applicationContext objectForKey:@"secondItem"] intValue];
 }
+
+/** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+- (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error
+{
+    
+}
+
+
+
 @end
 
 
