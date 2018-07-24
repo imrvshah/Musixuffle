@@ -7,6 +7,7 @@
 //
 
 #import "ExtensionDelegate.h"
+#import <HealthKit/HealthKit.h>
 
 @implementation ExtensionDelegate
 
@@ -49,5 +50,7 @@
         }
     }
 }
+
+
 
 @end

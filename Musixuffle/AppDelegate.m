@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <HealthKit/HealthKit.h>
+
 
 @interface AppDelegate ()
 
@@ -47,5 +49,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+-(void)applicationShouldRequestHealthAuthorization:(UIApplication *)application{
+    HKHealthStore *healthStore = [[HKHealthStore alloc]init];
+    [healthStore handleAuthorizationForExtensionWithCompletion:^(BOOL success, NSError * _Nullable error) {
+        if (success) {
+            NSLog(@"phone recieved health kit request");
+        }
+    }];
+}
 
 @end
