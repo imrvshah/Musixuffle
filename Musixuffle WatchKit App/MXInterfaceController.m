@@ -41,6 +41,7 @@
 - (IBAction)buttonHeartBeatClicked
 {
     [self takePermission];
+    [self updateHeartbeat:[NSDate date]];
 //    [self fakeWorkout];
     // TODO: Prevent this if already authorized
 }
