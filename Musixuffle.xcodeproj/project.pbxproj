@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */; };
+		471EA84C2106BB7C00FEB317 /* SDWebImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */; };
 		473889BA2106AF720004E3C1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473889B92106AF720004E3C1 /* SDWebImage.framework */; };
 		561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC52721068CEC00F68C23 /* AppDelegate.m */; };
 		561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52C21068CEC00F68C23 /* Main.storyboard */; };
@@ -71,6 +72,8 @@
 /* Begin PBXFileReference section */
 		1A7CE944539608FBF0469AFA /* Pods-Musixuffle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musixuffle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Musixuffle/Pods-Musixuffle.debug.xcconfig"; sourceTree = "<group>"; };
 		387B6D15C4A79BBA9248E1CD /* Pods_Musixuffle_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		471EA84A2106BB7C00FEB317 /* SDWebImageTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebImageTestViewController.h; sourceTree = "<group>"; };
+		471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTestViewController.m; sourceTree = "<group>"; };
 		473889B92106AF720004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BB2106B36A0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BD2106B43E0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +174,8 @@
 				561DC53121068CF100F68C23 /* LaunchScreen.storyboard */,
 				561DC53421068CF100F68C23 /* Info.plist */,
 				561DC53521068CF100F68C23 /* main.m */,
+				471EA84A2106BB7C00FEB317 /* SDWebImageTestViewController.h */,
+				471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */,
 			);
 			path = Musixuffle;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				561DC53621068CF100F68C23 /* main.m in Sources */,
+				471EA84C2106BB7C00FEB317 /* SDWebImageTestViewController.m in Sources */,
 				561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

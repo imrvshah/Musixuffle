@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,21 +18,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAN-rP-zpU">
-                                <rect key="frame" x="142" y="51" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Heart Beat"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMr-Wd-0Fb">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <state key="normal" title="Go next"/>
                                 <connections>
-                                    <action selector="buttonHeartBeatClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ib-md-HN0"/>
+                                    <segue destination="60D-Ee-gKn" kind="show" id="vfK-lT-gr1"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kMr-Wd-0Fb" firstAttribute="centerY" secondItem="Uee-0j-aNJ" secondAttribute="centerY" id="2qj-RX-EhW"/>
+                            <constraint firstItem="kMr-Wd-0Fb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="6tp-95-SY0"/>
+                            <constraint firstItem="kMr-Wd-0Fb" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="FyB-ZI-vuV"/>
+                            <constraint firstItem="kMr-Wd-0Fb" firstAttribute="centerX" secondItem="Uee-0j-aNJ" secondAttribute="centerX" id="kg4-da-YW1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Web Image Test View Controller-->
+        <scene sceneID="7Kj-yl-gPF">
+            <objects>
+                <viewController id="60D-Ee-gKn" customClass="SDWebImageTestViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c9v-3V-yqe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gWn-8H-Qoj">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gWn-8H-Qoj" firstAttribute="width" secondItem="c9v-3V-yqe" secondAttribute="width" id="4LH-eR-Lyf"/>
+                            <constraint firstItem="gWn-8H-Qoj" firstAttribute="centerX" secondItem="G5X-bt-dZG" secondAttribute="centerX" id="52t-Ms-pXc"/>
+                            <constraint firstItem="gWn-8H-Qoj" firstAttribute="centerY" secondItem="G5X-bt-dZG" secondAttribute="centerY" id="Pqz-Lj-Wos"/>
+                            <constraint firstItem="gWn-8H-Qoj" firstAttribute="height" secondItem="c9v-3V-yqe" secondAttribute="height" id="vKp-gs-mZz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G5X-bt-dZG"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="gWn-8H-Qoj" id="GR5-Nh-Qyy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JXh-ws-V6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1486" y="32"/>
         </scene>
     </scenes>
 </document>
