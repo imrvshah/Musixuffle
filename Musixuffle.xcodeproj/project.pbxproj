@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */; };
 		471EA84C2106BB7C00FEB317 /* SDWebImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */; };
+		471EA8662106C40100FEB317 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471EA8632106C40100FEB317 /* SpotifyMetadata.framework */; };
+		471EA8672106C40100FEB317 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471EA8642106C40100FEB317 /* SpotifyAudioPlayback.framework */; };
+		471EA8682106C40100FEB317 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 471EA8652106C40100FEB317 /* SpotifyAuthentication.framework */; };
 		473889BA2106AF720004E3C1 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 473889B92106AF720004E3C1 /* SDWebImage.framework */; };
 		561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC52721068CEC00F68C23 /* AppDelegate.m */; };
 		561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52C21068CEC00F68C23 /* Main.storyboard */; };
@@ -74,6 +77,9 @@
 		387B6D15C4A79BBA9248E1CD /* Pods_Musixuffle_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		471EA84A2106BB7C00FEB317 /* SDWebImageTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDWebImageTestViewController.h; sourceTree = "<group>"; };
 		471EA84B2106BB7C00FEB317 /* SDWebImageTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWebImageTestViewController.m; sourceTree = "<group>"; };
+		471EA8632106C40100FEB317 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = Libs/SpotifyMetadata.framework; sourceTree = "<group>"; };
+		471EA8642106C40100FEB317 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = Libs/SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
+		471EA8652106C40100FEB317 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = Libs/SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		473889B92106AF720004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BB2106B36A0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BD2106B43E0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,9 +121,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				471EA8662106C40100FEB317 /* SpotifyMetadata.framework in Frameworks */,
+				471EA8682106C40100FEB317 /* SpotifyAuthentication.framework in Frameworks */,
 				473889BA2106AF720004E3C1 /* SDWebImage.framework in Frameworks */,
 				561DC56A210690CB00F68C23 /* HealthKit.framework in Frameworks */,
 				027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */,
+				471EA8672106C40100FEB317 /* SpotifyAudioPlayback.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +219,9 @@
 		561DC568210690CB00F68C23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				471EA8642106C40100FEB317 /* SpotifyAudioPlayback.framework */,
+				471EA8652106C40100FEB317 /* SpotifyAuthentication.framework */,
+				471EA8632106C40100FEB317 /* SpotifyMetadata.framework */,
 				473889BD2106B43E0004E3C1 /* SDWebImage.framework */,
 				473889BB2106B36A0004E3C1 /* SDWebImage.framework */,
 				473889B92106AF720004E3C1 /* SDWebImage.framework */,
@@ -680,10 +692,22 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Q429UPLE8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/**",
+				);
 				INFOPLIST_FILE = Musixuffle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MSFTHack.Musixuffle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -701,10 +725,22 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Q429UPLE8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libs/**",
+				);
 				INFOPLIST_FILE = Musixuffle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"AFNetworking\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.MSFTHack.Musixuffle;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,6 +9,9 @@
 #import "SDWebImageTestViewController.h"
 @import SDWebImage;
 @import AFNetworking;
+#import <SpotifyAuthentication/SpotifyAuthentication.h>
+
+
 
 @interface SDWebImageTestViewController ()
 
