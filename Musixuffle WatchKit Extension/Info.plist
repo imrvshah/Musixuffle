@@ -25,16 +25,16 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>MSFTHack.Musixuffle.watchkitapp</string>
+			<string>com.MSFTHack.Musixuffle.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
-	<key>WKExtensionDelegateClassName</key>
-	<string>ExtensionDelegate</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>making curated playlist for user on their heartbeat</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>making curated playlist for user on their heartbeat</string>
+	<key>WKExtensionDelegateClassName</key>
+	<string>ExtensionDelegate</string>
 </dict>
 </plist>

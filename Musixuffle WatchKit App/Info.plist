@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>MSFTHack.Musixuffle</string>
+	<string>com.MSFTHack.Musixuffle</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
