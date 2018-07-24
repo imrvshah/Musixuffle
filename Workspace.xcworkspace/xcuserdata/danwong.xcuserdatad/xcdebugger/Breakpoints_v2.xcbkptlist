@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/AppDelegate.m"
-            timestampString = "554158006.3528481"
+            timestampString = "554158379.717833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "118"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/AppDelegate.m"
-            timestampString = "554158006.353003"
+            timestampString = "554158379.717924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/TestViewController.m"
-            timestampString = "554158006.353124"
+            timestampString = "554158379.717995"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/TestViewController.m"
-            timestampString = "554158006.353248"
+            timestampString = "554158379.718456"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/TestViewController.m"
-            timestampString = "554158006.353351"
+            timestampString = "554158379.7187769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -266,12 +266,12 @@
                   moduleName = "Musixuffle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/danwong/Desktop/projects/Musixuffle/Musixuffle/TestViewController.m"
-                  timestampString = "554158006.524509"
+                  timestampString = "554163878.004019"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "129">
+                  offsetFromSymbolStart = "136">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -281,7 +281,7 @@
                   moduleName = "Musixuffle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/danwong/Desktop/projects/Musixuffle/Musixuffle/TestViewController.m"
-                  timestampString = "554158006.528203"
+                  timestampString = "554163878.007374"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/TestViewController.m"
-            timestampString = "554158006.353441"
+            timestampString = "554158379.719161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -314,44 +314,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/SpotifyAuthPage.m"
-            timestampString = "554158006.353529"
+            timestampString = "554163877.9005311"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-showPlayer"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Musixuffle/SpotifyAuthPage.m"
-            timestampString = "554158006.354054"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "-openLoginPage"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Musixuffle/SpotifyAuthPage.m"
-            timestampString = "554158006.354437"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "-sessionUpdatedNotification:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

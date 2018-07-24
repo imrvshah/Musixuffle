@@ -129,8 +129,9 @@
 {
     self.firstLoad = NO;
     self.statusLabel.text = @"Logged in.";
-    TestViewController *vc = [[TestViewController alloc] init];
-    // avi dubey
+    UIViewController *viewController = [[UIStoryboard storyboardWithName:@"Player" bundle:NSBundle.mainBundle] instantiateViewControllerWithIdentifier:@"Player"];
+    [self presentViewController:viewController animated:YES completion:nil];
+    
 }
 
 #pragma mark - SPTStoreControllerDelegate
