@@ -25,10 +25,12 @@
 
 #import "TestViewController.h"
 
-
 @interface SpotifyAuthPage ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
+
+@property (nonatomic) WCSession* watchSession;
 @property (atomic, readwrite) UIViewController *authViewController;
 @property (atomic, readwrite) BOOL firstLoad;
+@property (weak, nonatomic) IBOutlet UILabel *labelHeartRate;
 @property (nonatomic, strong) UILabel *statusLabel;
 @end
 
@@ -37,19 +39,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     if ([WCSession isSupported]) {
-        WCSession *session = [WCSession defaultSession];
-        session.delegate = self;
-        [session activateSession];
+        self.watchSession = [WCSession defaultSession];
+        self.watchSession.delegate = self;
+        [self.watchSession activateSession];
         NSLog(@"WCSession is supported");
     }
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionUpdatedNotification:) name:@"sessionUpdated" object:nil];
 }
 
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionUpdatedNotification:) name:@"sessionUpdated" object:nil];
     
     SPTAuth *auth = [SPTAuth defaultInstance];
     // Uncomment to turn off native/SSO/flip-flop login flow
@@ -128,10 +130,7 @@
     self.firstLoad = NO;
     self.statusLabel.text = @"Logged in.";
     TestViewController *vc = [[TestViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:NO];
-    [self presentViewController:vc animated:NO completion:^{
-        
-    }];
+    // avi dubey
 }
 
 #pragma mark - SPTStoreControllerDelegate
@@ -147,25 +146,29 @@
     self.statusLabel.text = @"Logging in...";
     SPTAuth *auth = [SPTAuth defaultInstance];
     auth.clientID = @kClientId;
-    auth.requestedScopes = @[SPTAuthStreamingScope];
     auth.redirectURL = [NSURL URLWithString:@kCallbackURL];
-#ifdef kTokenSwapServiceURL
-    auth.tokenSwapURL = [NSURL URLWithString:@kTokenSwapServiceURL];
-#endif
-#ifdef kTokenRefreshServiceURL
-    auth.tokenRefreshURL = [NSURL URLWithString:@kTokenRefreshServiceURL];
-#endif
-    auth.sessionUserDefaultsKey = @kSessionUserDefaultsKey;
     
-//    [[UIApplication sharedApplication] openURL:[auth spotifyAppAuthenticationURL] options:nil completionHandler:^(BOOL success) {
-//
-//    }];
-//    else
-//    {
-        self.authViewController = [self authViewControllerWithURL:[auth spotifyWebAuthenticationURL]];
+    if ([SPTAuth supportsApplicationAuthentication])
+    {
+        [[UIApplication sharedApplication] openURL:[auth spotifyAppAuthenticationURL]];
+    }
+    else
+    {
+        self.authViewController = [self authViewControllerWithURL:[[SPTAuth defaultInstance] spotifyWebAuthenticationURL]];
         self.definesPresentationContext = YES;
         [self presentViewController:self.authViewController animated:YES completion:nil];
-//    }
+    }
+    
+    if(self.watchSession){
+        NSError *error = nil;
+        if(![self.watchSession
+             updateApplicationContext:
+             @{@"message" : @"test" }
+             error:&error]){
+            NSLog(@"Updating the context failed: %@", error.localizedDescription);
+        }
+        
+    }
 }
 
 - (void)renewTokenAndShowPlayer
@@ -228,14 +231,18 @@
     self.statusLabel.text = @"Cookies cleared.";
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) session:(nonnull WCSession *)session didReceiveApplicationContext:(nonnull NSDictionary<NSString *,id> *)applicationContext
+{
+    self.labelHeartRate.text = [[applicationContext objectForKey:@"heartRate"] stringValue];
 }
-*/
 
-@end
+-(void)session:(WCSession *)session didReceiveMessageData:(NSData *)messageData replyHandler:(void(^)(NSData *replyMessageData))replyHandler
+{
+    NSLog(@"didReceiveMessageData");
+}
+
+/** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+- (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error
+{
+    
+}@end
