@@ -234,7 +234,10 @@
 
 - (void) session:(nonnull WCSession *)session didReceiveApplicationContext:(nonnull NSDictionary<NSString *,id> *)applicationContext
 {
-    self.labelHeartRate.text = [[applicationContext objectForKey:@"heartRate"] stringValue];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.labelHeartRate.text = [[applicationContext objectForKey:@"heartRate"] stringValue];
+    });
+    
 }
 
 -(void)session:(WCSession *)session didReceiveMessageData:(NSData *)messageData replyHandler:(void(^)(NSData *replyMessageData))replyHandler

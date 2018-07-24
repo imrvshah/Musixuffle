@@ -37,6 +37,12 @@
 	<string>making curated playlist for user on their heartbeat</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>making curated playlist for user on their heartbeat</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+		<string>fetch</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
