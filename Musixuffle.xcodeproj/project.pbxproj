@@ -80,6 +80,7 @@
 		473889B92106AF720004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BB2106B36A0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BD2106B43E0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47BED4312107024E009FF862 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		561DC52321068CEB00F68C23 /* Musixuffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musixuffle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561DC52621068CEC00F68C23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		561DC52721068CEC00F68C23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 		561DC52521068CEB00F68C23 /* Musixuffle */ = {
 			isa = PBXGroup;
 			children = (
+				47BED4312107024E009FF862 /* Config.h */,
 				5654E5AA2106ECB500DF32B0 /* WebViewController.h */,
 				5654E5A92106ECB500DF32B0 /* WebViewController.m */,
 				561DC567210690CB00F68C23 /* Musixuffle.entitlements */,
