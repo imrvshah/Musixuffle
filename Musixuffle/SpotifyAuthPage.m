@@ -6,7 +6,7 @@
 //  Copyright © 2018 Microsoft. All rights reserved.
 //
 
-#import "SDWebImageTestViewController.h"
+#import "SpotifyAuthPage.h"
 @import SDWebImage;
 @import AFNetworking;
 #import <SpotifyAuthentication/SpotifyAuthentication.h>
@@ -23,17 +23,18 @@
 #import <WebKit/WebKit.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 
+#import "TestViewController.h"
 
-@interface SDWebImageTestViewController ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
+@interface SpotifyAuthPage ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
+
 @property (nonatomic) WCSession* watchSession;
-
 @property (atomic, readwrite) UIViewController *authViewController;
 @property (atomic, readwrite) BOOL firstLoad;
 @property (weak, nonatomic) IBOutlet UILabel *labelHeartRate;
 @property (nonatomic, strong) UILabel *statusLabel;
 @end
 
-@implementation SDWebImageTestViewController
+@implementation SpotifyAuthPage
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +45,7 @@
         NSLog(@"WCSession is supported");
     }
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionUpdatedNotification:) name:@"sessionUpdated" object:nil];
 }
 
 
@@ -127,7 +129,8 @@
 {
     self.firstLoad = NO;
     self.statusLabel.text = @"Logged in.";
-    [self performSegueWithIdentifier:@"ShowPlayer" sender:nil];
+    TestViewController *vc = [[TestViewController alloc] init];
+    // avi dubey
 }
 
 #pragma mark - SPTStoreControllerDelegate
@@ -142,14 +145,20 @@
 {
     self.statusLabel.text = @"Logging in...";
     SPTAuth *auth = [SPTAuth defaultInstance];
+    auth.clientID = @kClientId;
+    auth.redirectURL = [NSURL URLWithString:@kCallbackURL];
     
-    if ([SPTAuth supportsApplicationAuthentication]) {
+    if ([SPTAuth supportsApplicationAuthentication])
+    {
         [[UIApplication sharedApplication] openURL:[auth spotifyAppAuthenticationURL]];
-    } else {
+    }
+    else
+    {
         self.authViewController = [self authViewControllerWithURL:[[SPTAuth defaultInstance] spotifyWebAuthenticationURL]];
         self.definesPresentationContext = YES;
         [self presentViewController:self.authViewController animated:YES completion:nil];
     }
+    
     if(self.watchSession){
         NSError *error = nil;
         if(![self.watchSession
@@ -239,31 +248,4 @@
 - (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error
 {
     
-}
-
-/** ------------------------- iOS App State For Watch ------------------------ */
-
-/** Called when the session can no longer be used to modify or add any new transfers and, all interactive messages will be cancelled, but delegate callbacks for background transfers can still occur. This will happen when the selected watch is being changed. */
-- (void)sessionDidBecomeInactive:(WCSession *)session
-{
-    
-}
-
-/** Called when all delegate callbacks for the previously selected watch has occurred. The session can be re-activated for the now selected watch using activateSession. */
-- (void)sessionDidDeactivate:(WCSession *)session
-{
-    
-}
-
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
-@end
+}@end

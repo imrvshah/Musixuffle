@@ -6,7 +6,6 @@
 //  Copyright © 2016 Your Company. All rights reserved.
 //
 
-#import "SDWebImageTestViewController.h"
 #import "WebViewController.h"
 #import <WebKit/WebKit.h>
 
