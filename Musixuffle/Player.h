@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SplashScreenViewController : UIViewController
+#import <SpotifyAudioPlayback/SpotifyAudioPlayback.h>
+
+@interface Player : UIViewController<SPTAudioStreamingDelegate, SPTAudioStreamingPlaybackDelegate>
 
 @end
