@@ -38,11 +38,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle WatchKit App/MXInterfaceController.m"
-            timestampString = "554107204.692858"
+            timestampString = "554175288.273347"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "-workoutSession:didFailWithError:"
             landmarkType = "7">
          </BreakpointContent>
@@ -54,11 +54,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle WatchKit App/MXInterfaceController.m"
-            timestampString = "554107204.693844"
+            timestampString = "554175288.27341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "-workoutSession:didChangeToState:fromState:date:"
             landmarkType = "7">
          </BreakpointContent>
@@ -102,11 +102,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle WatchKit App/MXInterfaceController.m"
-            timestampString = "554107204.695255"
+            timestampString = "554175288.273517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-workoutSession:didGenerateEvent:"
             landmarkType = "7">
          </BreakpointContent>
@@ -118,59 +118,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle WatchKit App/MXInterfaceController.m"
-            timestampString = "554107204.696226"
+            timestampString = "554175288.273582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "-updateHeartbeat:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[MXInterfaceController updateHeartbeat:]"
-                  moduleName = "Musixuffle WatchKit Extension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ravishah/Desktop/Musixuffle/Musixuffle%20WatchKit%20App/MXInterfaceController.m"
-                  timestampString = "554107204.979372"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__41-[MXInterfaceController updateHeartbeat:]_block_invoke"
-                  moduleName = "Musixuffle WatchKit Extension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ravishah/Desktop/Musixuffle/Musixuffle%20WatchKit%20App/MXInterfaceController.m"
-                  timestampString = "554107204.985761"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "45">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Musixuffle WatchKit App/MXInterfaceController.m"
-            timestampString = "554107204.696915"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-updateHeartbeat:"
             landmarkType = "7">
          </BreakpointContent>
@@ -182,43 +134,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle WatchKit App/MXInterfaceController.m"
-            timestampString = "554107204.697583"
+            timestampString = "554175288.273643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "-updateHeartbeat:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Musixuffle WatchKit App/MXInterfaceController.m"
-            timestampString = "554107204.698119"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "-fakeWorkout"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Musixuffle WatchKit App/MXInterfaceController.m"
-            timestampString = "554107204.698601"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "-workoutSession:didChangeToState:fromState:date:"
             landmarkType = "7">
          </BreakpointContent>
@@ -230,11 +150,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle WatchKit App/MXInterfaceController.m"
-            timestampString = "554107204.69911"
+            timestampString = "554175288.2737041"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "-workoutSession:didChangeToState:fromState:date:"
             landmarkType = "7">
          </BreakpointContent>

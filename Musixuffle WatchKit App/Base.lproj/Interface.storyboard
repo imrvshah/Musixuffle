@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QN5-l1-VqB">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QN5-l1-VqB">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14033"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -23,27 +23,124 @@
                     <items>
                         <group width="1" alignment="left" id="SYf-02-LTe">
                             <items>
-                                <button width="1" alignment="left" title="HeartBeat" id="EIB-24-1fv">
+                                <button width="1" alignment="left" title="Quick Start" id="EIB-24-1fv">
                                     <connections>
-                                        <action selector="buttonHeartBeatClicked" destination="QN5-l1-VqB" id="f5K-jt-eXT"/>
+                                        <action selector="quickStartClicked" destination="QN5-l1-VqB" id="oLb-Uv-h9q"/>
                                     </connections>
                                 </button>
                             </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="18" bottom="0.0"/>
                         </group>
-                        <group width="1" height="37" alignment="left" id="Gw5-Sg-MKr">
+                        <group width="1" alignment="left" id="Ybr-GL-i5Y">
                             <items>
-                                <label width="136" height="36" alignment="left" text="Label" textAlignment="center" id="fuT-d0-dlD"/>
+                                <button width="1" alignment="left" title="Start" id="Sdj-dh-4fD">
+                                    <connections>
+                                        <action selector="startClicked" destination="QN5-l1-VqB" id="26j-FB-O0g"/>
+                                    </connections>
+                                </button>
                             </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="18" bottom="0.0"/>
                         </group>
-                        <imageView alignment="left" id="x5X-AN-7j6"/>
                     </items>
-                    <connections>
-                        <outlet property="imageViewTest" destination="x5X-AN-7j6" id="YZy-ca-IjC"/>
-                        <outlet property="lableHeartRate" destination="fuT-d0-dlD" id="y1d-pA-JYh"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="491" y="345"/>
+        </scene>
+        <!--HeartRateInterfaceController-->
+        <scene sceneID="aPy-s5-4wn">
+            <objects>
+                <controller identifier="HeartRateInterfaceController" id="z4t-Xx-mob" customClass="HeartRateInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" id="xFq-MV-vrG">
+                            <items>
+                                <label width="125" alignment="left" text="labelCalories" textAlignment="left" id="7XA-mg-vzL"/>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" id="Jpu-Kh-9y1">
+                            <items>
+                                <label width="125" alignment="left" text="labelSteps" textAlignment="left" id="FGc-NC-PZG"/>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" id="vGS-4t-Xa9">
+                            <items>
+                                <label width="125" alignment="left" text="labelHeartRate" textAlignment="left" id="cfa-UE-5hO"/>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" id="aex-2l-Zae">
+                            <items>
+                                <label width="125" alignment="left" text="labelDistance" textAlignment="left" id="xGb-iV-fhs"/>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="10" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="labelCalories" destination="7XA-mg-vzL" id="2Ar-bE-g9E"/>
+                        <outlet property="labelDistance" destination="xGb-iV-fhs" id="6vz-V1-rTd"/>
+                        <outlet property="labelHeartRate" destination="cfa-UE-5hO" id="dFz-eo-dj9"/>
+                        <outlet property="labelSteps" destination="FGc-NC-PZG" id="B7E-PQ-aS6"/>
+                        <segue destination="FgY-Yn-1xl" kind="relationship" relationship="nextPage" id="RLW-8O-Mlh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="721" y="348"/>
+        </scene>
+        <!--MusicInterfaceController-->
+        <scene sceneID="qgC-LA-3fs">
+            <objects>
+                <controller identifier="MusicInterfaceController" id="FgY-Yn-1xl" customClass="MusicInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" id="ZHx-6Q-Khr">
+                            <items>
+                                <label width="136" alignment="left" text="Song Name" textAlignment="center" id="PAC-a0-gsI"/>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="30" bottom="0.0"/>
+                        </group>
+                        <group width="1" alignment="left" id="nZ0-pr-qpL">
+                            <items>
+                                <button width="63" alignment="left" title="Like" id="aRz-pj-hWd">
+                                    <connections>
+                                        <action selector="buttonLikeClicked" destination="FgY-Yn-1xl" id="fjR-3i-Br5"/>
+                                    </connections>
+                                </button>
+                                <button width="74" alignment="left" title="DisLike" id="s1w-0N-Tfa">
+                                    <connections>
+                                        <action selector="buttonDisLikeClicked" destination="FgY-Yn-1xl" id="t2Z-bU-2CD"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="49" bottom="0.0"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="lableSong" destination="PAC-a0-gsI" id="0el-gS-zrY"/>
+                        <segue destination="8ol-Es-f7r" kind="relationship" relationship="nextPage" id="RQO-ro-vZI"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="943" y="348"/>
+        </scene>
+        <!--EndWorkOutInterfaceController-->
+        <scene sceneID="vbE-Zr-AYE">
+            <objects>
+                <controller identifier="EndWorkOutInterfaceController" id="8ol-Es-f7r" customClass="EndWorkOutInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" id="7pk-i7-n08">
+                            <items>
+                                <button width="1" alignment="left" title="End Workout" id="ku4-OE-la4">
+                                    <connections>
+                                        <action selector="buttonEndWorkOutClicked" destination="8ol-Es-f7r" id="63k-5n-fdW"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="46" bottom="0.0"/>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1198" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

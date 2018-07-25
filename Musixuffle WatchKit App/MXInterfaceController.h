@@ -10,7 +10,8 @@
 #import <Foundation/Foundation.h>
 
 @interface MXInterfaceController : WKInterfaceController
-- (IBAction)buttonHeartBeatClicked;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *lableHeartRate;
+- (IBAction)quickStartClicked;
+- (IBAction)startClicked;
 
 @end
