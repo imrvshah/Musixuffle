@@ -12,7 +12,7 @@
 		47A5DDC02107CE6100568A00 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A5DDBF2107CE6100568A00 /* Player.storyboard */; };
 		47A5DDC32107D72600568A00 /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC22107D72600568A00 /* Playlist.m */; };
 		47A5DDC62107E12100568A00 /* StartUpPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC52107E12100568A00 /* StartUpPage.m */; };
-		47A5DDC82107F48A00568A00 /* Spotify_Logo_CMYK_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A5DDC72107F48A00568A00 /* Spotify_Logo_CMYK_Green.png */; };
+		47A5DDC82107F48A00568A00 /* Spotify_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A5DDC72107F48A00568A00 /* Spotify_Green.png */; };
 		47A5DDCA2108402700568A00 /* PlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47A5DDC92108402700568A00 /* PlaylistCell.xib */; };
 		47A5DDCD2108415800568A00 /* PlaylistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDCC2108415800568A00 /* PlaylistCell.m */; };
 		47BD2BD12107B26000BA089B /* SpotifyAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD02107B26000BA089B /* SpotifyAPIController.m */; };
@@ -40,6 +40,7 @@
 		563C7B912106EB49009C00C8 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */; };
 		563C7B922106EB49009C00C8 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */; };
 		5654E5AB2106ECB500DF32B0 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5654E5A92106ECB500DF32B0 /* WebViewController.m */; };
+		8170864A21091EE300331CBB /* Spotify_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8170864921091EE300331CBB /* Spotify_Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +98,7 @@
 		47A5DDC22107D72600568A00 /* Playlist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Playlist.m; sourceTree = "<group>"; };
 		47A5DDC42107E12100568A00 /* StartUpPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartUpPage.h; sourceTree = "<group>"; };
 		47A5DDC52107E12100568A00 /* StartUpPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartUpPage.m; sourceTree = "<group>"; };
-		47A5DDC72107F48A00568A00 /* Spotify_Logo_CMYK_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spotify_Logo_CMYK_Green.png; sourceTree = "<group>"; };
+		47A5DDC72107F48A00568A00 /* Spotify_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spotify_Green.png; sourceTree = "<group>"; };
 		47A5DDC92108402700568A00 /* PlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCell.xib; sourceTree = "<group>"; };
 		47A5DDCB2108415800568A00 /* PlaylistCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaylistCell.h; sourceTree = "<group>"; };
 		47A5DDCC2108415800568A00 /* PlaylistCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaylistCell.m; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 		5654E5A92106ECB500DF32B0 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		5654E5AA2106ECB500DF32B0 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8170864921091EE300331CBB /* Spotify_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spotify_Icon.png; path = ../../Spotify_Icon.png; sourceTree = "<group>"; };
 		990DD4D993E0D278420E5251 /* Pods_Musixuffle_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D933CD5E24DF45E3149961 /* Pods-Musixuffle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musixuffle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Musixuffle/Pods-Musixuffle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -206,7 +208,8 @@
 		561DC52521068CEB00F68C23 /* Musixuffle */ = {
 			isa = PBXGroup;
 			children = (
-				47A5DDC72107F48A00568A00 /* Spotify_Logo_CMYK_Green.png */,
+				47A5DDC72107F48A00568A00 /* Spotify_Green.png */,
+				8170864921091EE300331CBB /* Spotify_Icon.png */,
 				47BED4312107024E009FF862 /* Config.h */,
 				5654E5AA2106ECB500DF32B0 /* WebViewController.h */,
 				5654E5A92106ECB500DF32B0 /* WebViewController.m */,
@@ -419,11 +422,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47A5DDC82107F48A00568A00 /* Spotify_Logo_CMYK_Green.png in Resources */,
+				47A5DDC82107F48A00568A00 /* Spotify_Green.png in Resources */,
 				561DC53321068CF100F68C23 /* LaunchScreen.storyboard in Resources */,
 				561DC53021068CF100F68C23 /* Assets.xcassets in Resources */,
 				47A5DDCA2108402700568A00 /* PlaylistCell.xib in Resources */,
 				47A5DDC02107CE6100568A00 /* Player.storyboard in Resources */,
+				8170864A21091EE300331CBB /* Spotify_Icon.png in Resources */,
 				561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

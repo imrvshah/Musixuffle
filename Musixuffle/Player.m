@@ -31,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *playbackSourceTitle;
 @property (nonatomic) WCSession* watchSession;
 
+@property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
+
 @property (nonatomic, strong) SPTAudioStreamingController *player;
 
 @property IBOutlet UIButton* nextButton;
@@ -53,8 +55,15 @@
     }
     
     [super viewDidLoad];
-    self.trackTitle.text = @"Nothing Playing";
-    self.artistTitle.text = @"";
+    
+    self.title = @"Musixuffle";
+    self.trackTitle.text = @" ";
+    self.artistTitle.text = @" ";
+    
+    [self.playPauseButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    
+//    UINavigationBar *bar = [self.navigationController navigationBar];
+//    [bar setTintColor:[UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0]];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -68,8 +77,10 @@
 }
 
 -(IBAction)playPause:(id)sender {
-   
-    [self.player setIsPlaying:!self.player.playbackState.isPlaying callback:^(NSError *error) {
+    __weak typeof(self) weakSelf = self;
+    BOOL wasPlaying = self.player.playbackState.isPlaying;
+    [self.player setIsPlaying:!wasPlaying callback:^(NSError *error) {
+        [weakSelf.playPauseButton setTitle:wasPlaying ? @"Play" : @"Pause" forState:UIControlStateNormal];
         NSLog(@"%@", error);
     }];
 }
@@ -138,6 +149,8 @@
     self.artistTitle.text = self.player.metadata.currentTrack.artistName;
     self.playbackSourceTitle.text = self.player.metadata.currentTrack.playbackSourceName;
     
+    [self.playPauseButton setTitle:@"Pause" forState:UIControlStateNormal];
+    
     [SPTTrack trackWithURI: [NSURL URLWithString:self.player.metadata.currentTrack.uri]
                accessToken:auth.session.accessToken
                     market:nil
@@ -184,6 +197,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self handleNewSession];
+//    self.playPauseButton.titleLabel.text = self.player.playbackState.isPlaying ? @"Pause" : @"Play";
 }
 
 -(void)handleNewSession {
@@ -334,9 +348,9 @@
 - (IBAction)onOpenPlaylistTapped:(id)sender
 {
     Playlist *p = Playlist.new;
+    p.player = self.player;
     [self.navigationController pushViewController:p animated:YES];
 }
-
 
 - (void) session:(nonnull WCSession *)session didReceiveApplicationContext:(nonnull NSDictionary<NSString *,id> *)applicationContext
 {

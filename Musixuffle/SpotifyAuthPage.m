@@ -32,6 +32,9 @@
 @property (atomic, readwrite) BOOL firstLoad;
 @property (weak, nonatomic) IBOutlet UILabel *labelHeartRate;
 @property (nonatomic, strong) UILabel *statusLabel;
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation SpotifyAuthPage
@@ -45,6 +48,11 @@
         [self.watchSession activateSession];
         NSLog(@"WCSession is supported");
     }
+    
+    [self.view setBackgroundColor:[UIColor colorWithRed:229.0/255.0 green:117.0/255.0 blue:75.0/255.0 alpha:1.0]];
+    
+    UIImage *img = [UIImage imageNamed:@"Spotify_Icon"];
+    self.imageView.image = [UIImage imageWithCGImage:[img CGImage] scale:[img scale]/10 orientation:UIImageOrientationUp];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionUpdatedNotification:) name:@"sessionUpdated" object:nil];
 }

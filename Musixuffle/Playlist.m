@@ -79,4 +79,29 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *dict = [_viewItems objectAtIndex:indexPath.row];
+    [self.player playSpotifyURI:dict[@"uri"] startingWithIndex:0 startingWithPosition:10 callback:^(NSError *err)
+     {
+         if (!err)
+         {
+             [self.navigationController popViewControllerAnimated:YES];
+         }
+     }];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+//        [self updateMemberWithUpdateType:TSTeamSyncManagerUpdateTypeLeave fromIndexPath:indexPath];
+    }
+}
+
 @end

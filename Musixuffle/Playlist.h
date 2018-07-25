@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Player.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Playlist : UITableViewController
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic, strong) SPTAudioStreamingController *player;
 @end
 
 NS_ASSUME_NONNULL_END

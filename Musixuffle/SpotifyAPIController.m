@@ -75,8 +75,8 @@
     [manager.requestSerializer setValue:SpotifyAPIController.sharedInstance.getBearerToken forHTTPHeaderField:@"Authorization"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
-    NSString *minTempo = [[NSNumber numberWithInt:80] stringValue];
-    NSString *maxTempo = [[NSNumber numberWithInt:150] stringValue];
+    NSString *minTempo = [@(80) stringValue];
+    NSString *maxTempo = [@(150) stringValue];
 
     // other parameters: max_instrumentalness, max_energy
     
@@ -90,22 +90,50 @@
                    @"seed_tracks" : [seedTrackArray componentsJoinedByString:@","],
                    @"min_tempo" :  @(self.heartRate - 5),
                    @"max_tempo" :  @(self.heartRate + 5),
-                   @"limit" : @"2"}
+                   @"limit" : @"5"
+                   }
         progress:nil
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             
              id trackObjArray = [self processRecommendations:responseObject];
              
-             if (completion && trackObjArray)
-             {
-                 [self updatePlaylist:trackObjArray];
-                 completion(trackObjArray);
-             }
+             NSString *first = [trackObjArray[0][@"uri"] componentsSeparatedByString:@":"][2];
+             NSString *second = [trackObjArray[1][@"uri"] componentsSeparatedByString:@":"][2];
+             
+             [manager GET:@"recommendations"
+               parameters:@{
+                            @"seed_tracks" : [NSString stringWithFormat:@"%@,%@", first, second],
+                            @"min_tempo" :  @(self.heartRate - 5),
+                            @"max_tempo" :  @(self.heartRate + 5),
+                            @"limit" : @"5"
+                            }
+                 progress:nil
+                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                      
+                      id trackObjArray2 = [self processRecommendations:responseObject];
+                      NSArray *allTrackObj = [trackObjArray arrayByAddingObjectsFromArray:trackObjArray2];
+                      
+                      if (completion && allTrackObj)
+                      {
+                          [self updatePlaylist:allTrackObj];
+                          completion(allTrackObj);
+                      }
+                  }
+                  failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                      if (completion && trackObjArray)
+                      {
+                          [self updatePlaylist:trackObjArray];
+                          completion(trackObjArray);
+                      }
+                  }];
      }
          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
              NSLog(@"%@", error);
              completion(nil);
      }];
 }
+
+
 
 - (NSMutableArray *)processRecommendations:(NSDictionary *)response
 {
@@ -162,7 +190,6 @@
         NSDictionary *trackDictionary = item[@"track"];
 //        for (NSDictionary *trackDictionary in item[@"track"])
         {
-            NSError *err = nil;
             NSArray *trackURI = [trackDictionary valueForKey:@"uri"];
             if (trackURI)
             {
@@ -179,7 +206,7 @@
     return  self.playlist;
 }
 
-- (void) updatePlaylist:(NSMutableArray *)array
+- (void) updatePlaylist:(NSArray *)array
 {
     @synchronized (self)
     {
