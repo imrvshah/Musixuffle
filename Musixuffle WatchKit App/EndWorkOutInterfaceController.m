@@ -30,6 +30,8 @@
     [super didDeactivate];
 }
 
+- (IBAction)buttonEndWorkOutClicked {
+}
 @end
 
 

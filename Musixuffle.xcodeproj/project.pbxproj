@@ -12,6 +12,10 @@
 		47BD2BD12107B26000BA089B /* SpotifyAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD02107B26000BA089B /* SpotifyAPIController.m */; };
 		47BD2BD42107B3D100BA089B /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD32107B3D100BA089B /* TestViewController.m */; };
 		47BD2BD72107C15200BA089B /* SplashScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD62107C15200BA089B /* SplashScreenViewController.m */; };
+		5612BE4A2107F3BE0019CAAF /* MusicInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5612BE452107E3F50019CAAF /* MusicInterfaceController.m */; };
+		5612BE4B2107F3C10019CAAF /* HeartRateInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5612BE472107E4460019CAAF /* HeartRateInterfaceController.m */; };
+		5612BE4C2107F3C40019CAAF /* EndWorkOutInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5612BE492107E45B0019CAAF /* EndWorkOutInterfaceController.m */; };
+		5612BE4E21080B210019CAAF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5612BE4D21080B210019CAAF /* HealthKit.framework */; };
 		561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC52721068CEC00F68C23 /* AppDelegate.m */; };
 		561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52C21068CEC00F68C23 /* Main.storyboard */; };
 		561DC53021068CF100F68C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52F21068CF100F68C23 /* Assets.xcassets */; };
@@ -26,7 +30,6 @@
 		561DC56A210690CB00F68C23 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561DC569210690CB00F68C23 /* HealthKit.framework */; };
 		561DC57421069AD800F68C23 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC57321069AD800F68C23 /* ExtensionDelegate.m */; };
 		561DC57521069B2F00F68C23 /* MXInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC5712106996400F68C23 /* MXInterfaceController.m */; };
-		561DC57721069CFC00F68C23 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 561DC57621069CFC00F68C23 /* HealthKit.framework */; };
 		563C7B902106EB49009C00C8 /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8D2106EB49009C00C8 /* SpotifyMetadata.framework */; };
 		563C7B912106EB49009C00C8 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */; };
 		563C7B922106EB49009C00C8 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */; };
@@ -90,6 +93,13 @@
 		47BD2BD52107C15200BA089B /* SplashScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashScreenViewController.h; sourceTree = "<group>"; };
 		47BD2BD62107C15200BA089B /* SplashScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashScreenViewController.m; sourceTree = "<group>"; };
 		47BED4312107024E009FF862 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		5612BE442107E3F50019CAAF /* MusicInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicInterfaceController.h; sourceTree = "<group>"; };
+		5612BE452107E3F50019CAAF /* MusicInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicInterfaceController.m; sourceTree = "<group>"; };
+		5612BE462107E4460019CAAF /* HeartRateInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartRateInterfaceController.h; sourceTree = "<group>"; };
+		5612BE472107E4460019CAAF /* HeartRateInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeartRateInterfaceController.m; sourceTree = "<group>"; };
+		5612BE482107E45B0019CAAF /* EndWorkOutInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndWorkOutInterfaceController.h; sourceTree = "<group>"; };
+		5612BE492107E45B0019CAAF /* EndWorkOutInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EndWorkOutInterfaceController.m; sourceTree = "<group>"; };
+		5612BE4D21080B210019CAAF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		561DC52321068CEB00F68C23 /* Musixuffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musixuffle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561DC52621068CEC00F68C23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		561DC52721068CEC00F68C23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,7 +124,6 @@
 		561DC5712106996400F68C23 /* MXInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MXInterfaceController.m; sourceTree = "<group>"; };
 		561DC57221069AD800F68C23 /* ExtensionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
 		561DC57321069AD800F68C23 /* ExtensionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
-		561DC57621069CFC00F68C23 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		561DC57821069CFC00F68C23 /* Musixuffle WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Musixuffle WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		563C7B8D2106EB49009C00C8 /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyMetadata.framework; path = Libs/SpotifyMetadata.framework; sourceTree = "<group>"; };
 		563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAudioPlayback.framework; path = Libs/SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
@@ -143,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				561DC57721069CFC00F68C23 /* HealthKit.framework in Frameworks */,
+				5612BE4E21080B210019CAAF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +222,12 @@
 				561DC54321068CF200F68C23 /* Info.plist */,
 				561DC5702106996400F68C23 /* MXInterfaceController.h */,
 				561DC5712106996400F68C23 /* MXInterfaceController.m */,
+				5612BE442107E3F50019CAAF /* MusicInterfaceController.h */,
+				5612BE452107E3F50019CAAF /* MusicInterfaceController.m */,
+				5612BE462107E4460019CAAF /* HeartRateInterfaceController.h */,
+				5612BE472107E4460019CAAF /* HeartRateInterfaceController.m */,
+				5612BE482107E45B0019CAAF /* EndWorkOutInterfaceController.h */,
+				5612BE492107E45B0019CAAF /* EndWorkOutInterfaceController.m */,
 			);
 			path = "Musixuffle WatchKit App";
 			sourceTree = "<group>";
@@ -235,13 +250,13 @@
 		561DC568210690CB00F68C23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5612BE4D21080B210019CAAF /* HealthKit.framework */,
 				563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */,
 				563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */,
 				563C7B8D2106EB49009C00C8 /* SpotifyMetadata.framework */,
 				473889BD2106B43E0004E3C1 /* SDWebImage.framework */,
 				473889BB2106B36A0004E3C1 /* SDWebImage.framework */,
 				473889B92106AF720004E3C1 /* SDWebImage.framework */,
-				561DC57621069CFC00F68C23 /* HealthKit.framework */,
 				561DC569210690CB00F68C23 /* HealthKit.framework */,
 				7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */,
 				387B6D15C4A79BBA9248E1CD /* Pods_Musixuffle_WatchKit_App.framework */,
@@ -480,6 +495,9 @@
 				561DC57421069AD800F68C23 /* ExtensionDelegate.m in Sources */,
 				561DC55521068CF200F68C23 /* NotificationController.m in Sources */,
 				561DC57521069B2F00F68C23 /* MXInterfaceController.m in Sources */,
+				5612BE4B2107F3C10019CAAF /* HeartRateInterfaceController.m in Sources */,
+				5612BE4A2107F3BE0019CAAF /* MusicInterfaceController.m in Sources */,
+				5612BE4C2107F3C40019CAAF /* EndWorkOutInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

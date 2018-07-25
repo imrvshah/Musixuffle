@@ -30,6 +30,11 @@
     [super didDeactivate];
 }
 
+- (IBAction)buttonLikeClicked {
+}
+
+- (IBAction)buttonDisLikeClicked {
+}
 @end
 
 

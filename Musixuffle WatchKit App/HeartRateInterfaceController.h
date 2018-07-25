@@ -10,5 +10,8 @@
 #import <Foundation/Foundation.h>
 
 @interface HeartRateInterfaceController : WKInterfaceController
-
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labelCalories;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labelSteps;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labelHeartRate;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labelDistance;
 @end

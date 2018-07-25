@@ -10,5 +10,9 @@
 #import <Foundation/Foundation.h>
 
 @interface MusicInterfaceController : WKInterfaceController
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *lableSong;
+
+- (IBAction)buttonLikeClicked;
+- (IBAction)buttonDisLikeClicked;
 
 @end

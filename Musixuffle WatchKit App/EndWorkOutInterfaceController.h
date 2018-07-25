@@ -10,5 +10,6 @@
 #import <Foundation/Foundation.h>
 
 @interface EndWorkOutInterfaceController : WKInterfaceController
+- (IBAction)buttonEndWorkOutClicked;
 
 @end
