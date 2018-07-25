@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/AppDelegate.m"
-            timestampString = "554165791.855485"
+            timestampString = "554171912.47201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "-application:openURL:sourceApplication:annotation:"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/AppDelegate.m"
-            timestampString = "554165791.856189"
+            timestampString = "554171912.472412"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "-application:openURL:sourceApplication:annotation:"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,7 +266,7 @@
                   moduleName = "Musixuffle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/danwong/Desktop/projects/Musixuffle/Musixuffle/TestViewController.m"
-                  timestampString = "554170721.881223"
+                  timestampString = "554172020.986744"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -281,7 +281,7 @@
                   moduleName = "Musixuffle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/danwong/Desktop/projects/Musixuffle/Musixuffle/TestViewController.m"
-                  timestampString = "554170721.885072"
+                  timestampString = "554172020.990809"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -314,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/SpotifyAuthPage.m"
-            timestampString = "554170721.756837"
+            timestampString = "554172020.877669"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "155"
@@ -329,13 +329,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Musixuffle/Player.m"
-            timestampString = "554170734.9589289"
+            filePath = "Musixuffle/SpotifyAuthPage.m"
+            timestampString = "554172020.87848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "306"
-            endingLineNumber = "306"
-            landmarkName = "-onOpenPlaylistTapped:"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Musixuffle/SpotifyAuthPage.m"
+            timestampString = "554172020.878567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
