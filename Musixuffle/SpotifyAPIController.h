@@ -13,6 +13,8 @@
 - (NSString *) getBearerToken;
 - (void)clearCookiesClicked;
 
-- (void) getRelatedTracksForTracks:(NSArray *)trackArray;
+- (void) getRelatedTracksForTracks:(NSArray *)trackArray withCompletion:(void (^)(NSArray *))completion;
 - (void) getMostRecentSong:(void (^)(NSArray *))completion;
+
+- (NSArray *) getCurrentPlaylist;
 @end

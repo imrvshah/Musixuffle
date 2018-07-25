@@ -279,13 +279,27 @@
 - (void)audioStreamingDidLogin:(SPTAudioStreamingController *)audioStreaming {
     [self updateUI];
     
+    __weak typeof(self) weakSelf = self;
     [[SpotifyAPIController sharedInstance] getMostRecentSong:^(NSArray *arr) {
         NSString *randomObject = arr[rand() % arr.count];
         
-        [self.player playSpotifyURI:randomObject startingWithIndex:0 startingWithPosition:10 callback:^(NSError *error) {
-            if (error != nil) {
+        [weakSelf.player playSpotifyURI:randomObject startingWithIndex:0 startingWithPosition:10 callback:^(NSError *error) {
+            if (error != nil)
+            {
                 NSLog(@"*** failed to play: %@", error);
                 return;
+            }
+            else
+            {
+                [[SpotifyAPIController sharedInstance] getRelatedTracksForTracks:@[] withCompletion:^(NSArray *next) {
+                    for (NSDictionary *next in arr)
+                    {
+//                        [weakSelf.player queueSpotifyURI:next[@"uri"]
+//                                                callback:^(NSError *error) {
+//                                                    NSLog(@"*** failed to play: %@", error);
+//                                                }];
+                    }
+                }];
             }
         }];
     }];

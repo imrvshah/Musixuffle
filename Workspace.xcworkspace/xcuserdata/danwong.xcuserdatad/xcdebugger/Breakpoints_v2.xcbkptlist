@@ -266,12 +266,12 @@
                   moduleName = "Musixuffle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/danwong/Desktop/projects/Musixuffle/Musixuffle/TestViewController.m"
-                  timestampString = "554185432.2000099"
+                  timestampString = "554192716.690865"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "136">
+                  offsetFromSymbolStart = "133">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -281,7 +281,7 @@
                   moduleName = "Musixuffle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/danwong/Desktop/projects/Musixuffle/Musixuffle/TestViewController.m"
-                  timestampString = "554185432.202845"
+                  timestampString = "554192716.694528"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -314,45 +314,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/SpotifyAPIController.m"
-            timestampString = "554185432.078036"
+            timestampString = "554192716.5672719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-processRecommendations:"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "-getMostRecentSong:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SpotifyAPIController processRecommendations:]"
-                  moduleName = "Musixuffle"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danwong/Desktop/projects/Musixuffle/Musixuffle/SpotifyAPIController.m"
-                  timestampString = "554185432.216628"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "139">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SpotifyAPIController processRecommendations:]"
-                  moduleName = "Musixuffle"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/danwong/Desktop/projects/Musixuffle/Musixuffle/SpotifyAPIController.m"
-                  timestampString = "554185432.219228"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "151">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Musixuffle/Player.m"
+            timestampString = "554192716.567363"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-fastForward:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -362,12 +346,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Musixuffle/SpotifyAPIController.m"
-            timestampString = "554185432.0784841"
+            timestampString = "554192716.567847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "-getMostRecentSong:"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-getRelatedTracksForTracks:withCompletion:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Musixuffle/Playlist.m"
+            timestampString = "554189864.434119"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

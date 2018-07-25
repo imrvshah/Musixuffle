@@ -13,6 +13,8 @@
 		47A5DDC32107D72600568A00 /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC22107D72600568A00 /* Playlist.m */; };
 		47A5DDC62107E12100568A00 /* StartUpPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC52107E12100568A00 /* StartUpPage.m */; };
 		47A5DDC82107F48A00568A00 /* Spotify_Logo_CMYK_Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 47A5DDC72107F48A00568A00 /* Spotify_Logo_CMYK_Green.png */; };
+		47A5DDCA2108402700568A00 /* PlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47A5DDC92108402700568A00 /* PlaylistCell.xib */; };
+		47A5DDCD2108415800568A00 /* PlaylistCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDCC2108415800568A00 /* PlaylistCellTableViewCell.m */; };
 		47BD2BD12107B26000BA089B /* SpotifyAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD02107B26000BA089B /* SpotifyAPIController.m */; };
 		47BD2BD42107B3D100BA089B /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD32107B3D100BA089B /* TestViewController.m */; };
 		47BD2BD72107C15200BA089B /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD62107C15200BA089B /* Player.m */; };
@@ -92,6 +94,9 @@
 		47A5DDC42107E12100568A00 /* StartUpPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartUpPage.h; sourceTree = "<group>"; };
 		47A5DDC52107E12100568A00 /* StartUpPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartUpPage.m; sourceTree = "<group>"; };
 		47A5DDC72107F48A00568A00 /* Spotify_Logo_CMYK_Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spotify_Logo_CMYK_Green.png; sourceTree = "<group>"; };
+		47A5DDC92108402700568A00 /* PlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaylistCell.xib; sourceTree = "<group>"; };
+		47A5DDCB2108415800568A00 /* PlaylistCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaylistCellTableViewCell.h; sourceTree = "<group>"; };
+		47A5DDCC2108415800568A00 /* PlaylistCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaylistCellTableViewCell.m; sourceTree = "<group>"; };
 		47BD2BCF2107B25F00BA089B /* SpotifyAPIController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotifyAPIController.h; sourceTree = "<group>"; };
 		47BD2BD02107B26000BA089B /* SpotifyAPIController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotifyAPIController.m; sourceTree = "<group>"; };
 		47BD2BD22107B3D100BA089B /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -214,6 +219,9 @@
 				47A5DDC22107D72600568A00 /* Playlist.m */,
 				47A5DDC42107E12100568A00 /* StartUpPage.h */,
 				47A5DDC52107E12100568A00 /* StartUpPage.m */,
+				47A5DDC92108402700568A00 /* PlaylistCell.xib */,
+				47A5DDCB2108415800568A00 /* PlaylistCellTableViewCell.h */,
+				47A5DDCC2108415800568A00 /* PlaylistCellTableViewCell.m */,
 			);
 			path = Musixuffle;
 			sourceTree = "<group>";
@@ -392,6 +400,7 @@
 				47A5DDC82107F48A00568A00 /* Spotify_Logo_CMYK_Green.png in Resources */,
 				561DC53321068CF100F68C23 /* LaunchScreen.storyboard in Resources */,
 				561DC53021068CF100F68C23 /* Assets.xcassets in Resources */,
+				47A5DDCA2108402700568A00 /* PlaylistCell.xib in Resources */,
 				47A5DDC02107CE6100568A00 /* Player.storyboard in Resources */,
 				561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */,
 			);
@@ -482,6 +491,7 @@
 				47BD2BD72107C15200BA089B /* Player.m in Sources */,
 				47BD2BD12107B26000BA089B /* SpotifyAPIController.m in Sources */,
 				561DC53621068CF100F68C23 /* main.m in Sources */,
+				47A5DDCD2108415800568A00 /* PlaylistCellTableViewCell.m in Sources */,
 				471EA84C2106BB7C00FEB317 /* SpotifyAuthPage.m in Sources */,
 				561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */,
 				5654E5AB2106ECB500DF32B0 /* WebViewController.m in Sources */,

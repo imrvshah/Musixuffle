@@ -24,6 +24,10 @@
 #import <SafariServices/SafariServices.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 
+@interface SpotifyAPIController()
+@property (atomic, strong) NSArray *playlist;
+@end
+
 @implementation SpotifyAPIController
 + (instancetype) sharedInstance
 {
@@ -60,7 +64,7 @@
 }
 
 
-- (void)getRelatedTracksForTracks:(NSArray *)seedTrackArray
+- (void)getRelatedTracksForTracks:(NSArray *)seedTrackArray withCompletion:(void (^)(NSArray *))completion
 {
     NSString *baseURL = @"https://api.spotify.com/v1/";
     AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseURL]];
@@ -86,10 +90,17 @@
                    @"limit" : @"2"}
         progress:nil
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            [self processRecommendations:responseObject];
+             id trackObjArray = [self processRecommendations:responseObject];
+             
+             if (completion && trackObjArray)
+             {
+                 [self updatePlaylist:trackObjArray];
+                 completion(trackObjArray);
+             }
      }
          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
              NSLog(@"%@", error);
+             completion(nil);
      }];
 }
 
@@ -98,7 +109,15 @@
     NSMutableArray *trackObjArray = [[NSMutableArray alloc] init];
     for (id track in response[@"tracks"])
     {
-        [trackObjArray addObject:track[@"href"]];
+        NSString *uri = [track objectForKey:@"uri"];
+        NSString *name = [track objectForKey:@"name"];
+        NSString *imgURL = track[@"album"][@"images"][0][@"url"];
+        NSString *albumName = track[@"album"][@"name"];
+        [trackObjArray addObject:@{@"uri" : uri,
+                                   @"name" : name,
+                                   @"imageURL" : imgURL,
+                                   @"albumName" : albumName
+                                   }];
     }
 
     return trackObjArray;
@@ -129,6 +148,7 @@
          }
          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
              NSLog(@"%@", error);
+             if (completion) completion (nil);
          }];
 }
 - (NSMutableArray *)processMostRecents:(NSDictionary *)response
@@ -151,4 +171,16 @@
     return trackObjArray;
 }
 
+- (NSArray *) getCurrentPlaylist
+{
+    return  self.playlist;
+}
+
+- (void) updatePlaylist:(NSMutableArray *)array
+{
+    @synchronized (self)
+    {
+        self.playlist = [array copy];
+    }
+}
 @end
