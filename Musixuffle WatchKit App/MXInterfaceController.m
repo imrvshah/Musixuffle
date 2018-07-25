@@ -73,7 +73,7 @@
         
         HKObjectType *type4 = [HKObjectType workoutType];
         
-        [ self.healthStore requestAuthorizationToShareTypes:[NSSet setWithObjects:type4, type, type2, type3,type5, nil] readTypes:[NSSet setWithObjects:type4, type, type2, type3,type5, nil] completion:^(BOOL success, NSError * _Nullable error) {
+        [self.healthStore requestAuthorizationToShareTypes:[NSSet setWithObjects:type4, type, type2, type3,type5, nil] readTypes:[NSSet setWithObjects:type4, type, type2, type3,type5, nil] completion:^(BOOL success, NSError * _Nullable error) {
             
             if (success) {
                 NSLog(@"health data request success");

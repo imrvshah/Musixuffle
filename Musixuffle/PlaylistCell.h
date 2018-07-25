@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PlaylistCellTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@interface PlaylistCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *imgView2;
 @property (strong, nonatomic) IBOutlet UILabel *title;
 @property (strong, nonatomic) IBOutlet UILabel *subTitle;
 

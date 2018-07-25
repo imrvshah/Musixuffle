@@ -38,7 +38,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if ([WCSession isSupported]) {
+    if ([WCSession isSupported])
+    {
         self.watchSession = [WCSession defaultSession];
         self.watchSession.delegate = self;
         [self.watchSession activateSession];

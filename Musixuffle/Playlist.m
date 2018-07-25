@@ -8,7 +8,7 @@
 
 #import "Playlist.h"
 #import "SpotifyAPIController.h"
-#import "PlaylistCellTableViewCell.h"
+#import "PlaylistCell.h"
 
 @import SDWebImage;
 
@@ -53,9 +53,14 @@
     return _viewItems.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 104;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PlaylistCellTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    PlaylistCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
     NSDictionary *dict = [_viewItems objectAtIndex:indexPath.row];
     if (dict)
     {
@@ -63,8 +68,8 @@
         cell.subTitle.text = [dict objectForKey:@"albumName"];
         
         __weak typeof(cell) weakCell = cell;
-        [weakCell.imageView sd_setImageWithURL:[dict objectForKey:@"imageURL"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-            weakCell.imageView.image = image;
+        [weakCell.imgView2 sd_setImageWithURL:[dict objectForKey:@"imageURL"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            weakCell.imgView2.image = image;
             [weakCell setNeedsDisplay];
             [weakCell setNeedsLayout];
             [weakCell updateConstraints];

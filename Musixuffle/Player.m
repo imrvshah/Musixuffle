@@ -13,9 +13,14 @@
 #import <SpotifyAuthentication/SpotifyAuthentication.h>
 #import <SpotifyMetadata/SpotifyMetadata.h>
 #import <AVFoundation/AVFoundation.h>
+
+#import <SafariServices/SafariServices.h>
+#import <WebKit/WebKit.h>
+#import <WatchConnectivity/WatchConnectivity.h>
+
 #import "SpotifyAPIController.h"
 
-@interface Player ()
+@interface Player () <WCSessionDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *trackTitle;
 @property (weak, nonatomic) IBOutlet UILabel *artistTitle;
@@ -24,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UISlider *progressSlider;
 @property (weak, nonatomic) IBOutlet UILabel *playbackSourceTitle;
+@property (nonatomic) WCSession* watchSession;
 
 @property (nonatomic, strong) SPTAudioStreamingController *player;
 
@@ -36,7 +42,16 @@
 
 @implementation Player
 
--(void)viewDidLoad {
+-(void)viewDidLoad
+{
+    if ([WCSession isSupported])
+    {
+        self.watchSession = [WCSession defaultSession];
+        self.watchSession.delegate = self;
+        [self.watchSession activateSession];
+        NSLog(@"WCSession is supported");
+    }
+    
     [super viewDidLoad];
     self.trackTitle.text = @"Nothing Playing";
     self.artistTitle.text = @"";
@@ -294,10 +309,7 @@
                 [[SpotifyAPIController sharedInstance] getRelatedTracksForTracks:@[] withCompletion:^(NSArray *next) {
                     for (NSDictionary *next in arr)
                     {
-//                        [weakSelf.player queueSpotifyURI:next[@"uri"]
-//                                                callback:^(NSError *error) {
-//                                                    NSLog(@"*** failed to play: %@", error);
-//                                                }];
+                        
                     }
                 }];
             }
@@ -323,6 +335,29 @@
 {
     Playlist *p = Playlist.new;
     [self.navigationController pushViewController:p animated:YES];
+}
+
+
+- (void) session:(nonnull WCSession *)session didReceiveApplicationContext:(nonnull NSDictionary<NSString *,id> *)applicationContext
+{
+    if ([applicationContext objectForKey:@"heartRate"])
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSUInteger inq = [[applicationContext objectForKey:@"heartRate"] unsignedIntegerValue];
+            [[SpotifyAPIController sharedInstance] updateLastHeartRate:inq];
+        });
+        
+    }
+    else if ([applicationContext objectForKey:@"like"])
+    {
+        
+    }
+    else if ([applicationContext objectForKey:@"disLike"])
+    {
+        
+    }
+    
+    
 }
 
 @end

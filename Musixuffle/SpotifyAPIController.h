@@ -17,4 +17,5 @@
 - (void) getMostRecentSong:(void (^)(NSArray *))completion;
 
 - (NSArray *) getCurrentPlaylist;
+- (void) updateLastHeartRate:(NSUInteger)heartRate;
 @end

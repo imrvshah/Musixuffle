@@ -6,9 +6,9 @@
 //  Copyright © 2018 Microsoft. All rights reserved.
 //
 
-#import "PlaylistCellTableViewCell.h"
+#import "PlaylistCell.h"
 
-@implementation PlaylistCellTableViewCell
+@implementation PlaylistCell
 
 @synthesize imageView;
 

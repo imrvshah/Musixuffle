@@ -14,7 +14,8 @@
 
 @implementation EndWorkOutInterfaceController
 
-- (void)awakeWithContext:(id)context {
+- (void)awakeWithContext:(id)context
+{
     [super awakeWithContext:context];
     
     // Configure interface objects here.
@@ -30,7 +31,9 @@
     [super didDeactivate];
 }
 
-- (IBAction)buttonEndWorkOutClicked {
+- (IBAction)buttonEndWorkOutClicked
+{
+    [self dismissController];
 }
 @end
 

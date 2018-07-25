@@ -26,6 +26,8 @@
 
 @interface SpotifyAPIController()
 @property (atomic, strong) NSArray *playlist;
+@property (atomic) NSUInteger heartRate;
+
 @end
 
 @implementation SpotifyAPIController
@@ -35,6 +37,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         controller = [[SpotifyAPIController alloc] init];
+        controller.heartRate = 100;
     });
     
     return controller;
@@ -85,8 +88,8 @@
     [manager GET:@"recommendations"
       parameters:@{
                    @"seed_tracks" : [seedTrackArray componentsJoinedByString:@","],
-                   @"min_tempo" : minTempo,
-                   @"max_tempo" : maxTempo,
+                   @"min_tempo" :  @(self.heartRate - 5),
+                   @"max_tempo" :  @(self.heartRate + 5),
                    @"limit" : @"2"}
         progress:nil
          success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -182,5 +185,11 @@
     {
         self.playlist = [array copy];
     }
+}
+
+- (void) updateLastHeartRate:(NSUInteger)heartRate
+{
+    NSLog(@"User heart rate %lu", heartRate);
+    self.heartRate = heartRate;
 }
 @end
