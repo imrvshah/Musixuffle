@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Fo-V2-yRa">
-                                <rect key="frame" x="195" y="601" width="50" height="30"/>
+                                <rect key="frame" x="294" y="601" width="50" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="GDY-3o-nCD"/>
                                 </constraints>
@@ -63,18 +63,8 @@
                                     <constraint firstAttribute="width" secondItem="4RF-G1-IKI" secondAttribute="height" id="a5p-0w-l0T"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGZ-UT-7Fe">
-                                <rect key="frame" x="120.5" y="634" width="134" height="30"/>
-                                <state key="normal" title="Log out from player">
-                                    <color key="titleColor" red="0.46784092589999998" green="1" blue="0.44851382670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutClicked:" destination="7FI-3t-gaJ" eventType="touchUpInside" id="XUl-hA-3k2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8Z-wY-5hh">
-                                <rect key="frame" x="101" y="601" width="74" height="30"/>
+                                <rect key="frame" x="150.5" y="601" width="74" height="30"/>
                                 <state key="normal" title="Play/Pause">
                                     <color key="titleColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -113,10 +103,11 @@
                         <color key="backgroundColor" red="0.097284675010000002" green="0.091569580050000002" blue="0.097326144370000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="i0y-av-kQ2" firstAttribute="top" secondItem="4RF-G1-IKI" secondAttribute="top" id="0jo-jd-9DP"/>
-                            <constraint firstItem="7Fo-V2-yRa" firstAttribute="leading" secondItem="E8Z-wY-5hh" secondAttribute="trailing" constant="20" id="15M-sk-ZaQ"/>
+                            <constraint firstItem="7Fo-V2-yRa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E8Z-wY-5hh" secondAttribute="trailing" constant="20" id="15M-sk-ZaQ"/>
                             <constraint firstItem="7Fo-V2-yRa" firstAttribute="centerY" secondItem="E8Z-wY-5hh" secondAttribute="centerY" id="2R0-7G-6oJ"/>
                             <constraint firstItem="aVj-xe-rj0" firstAttribute="leading" secondItem="U5F-cg-eiA" secondAttribute="leadingMargin" constant="10" id="3aD-kS-MHP"/>
                             <constraint firstAttribute="centerX" secondItem="i0y-av-kQ2" secondAttribute="centerX" id="5i3-LK-ge3"/>
+                            <constraint firstItem="7Fo-V2-yRa" firstAttribute="trailing" secondItem="DSB-lr-wNT" secondAttribute="trailing" id="8RB-sj-sbI"/>
                             <constraint firstAttribute="centerY" secondItem="i0y-av-kQ2" secondAttribute="centerY" id="Ad7-oT-RFD"/>
                             <constraint firstItem="bOd-8l-b1v" firstAttribute="leading" secondItem="U5F-cg-eiA" secondAttribute="leadingMargin" constant="10" id="CX3-ya-Z0L"/>
                             <constraint firstItem="GaP-5y-EcF" firstAttribute="centerX" secondItem="U5F-cg-eiA" secondAttribute="centerX" id="GTS-0d-2lO"/>
@@ -136,16 +127,15 @@
                             <constraint firstItem="i0y-av-kQ2" firstAttribute="centerX" secondItem="bOd-8l-b1v" secondAttribute="centerX" priority="999" id="e5b-RE-LCh"/>
                             <constraint firstItem="GaP-5y-EcF" firstAttribute="leading" secondItem="U5F-cg-eiA" secondAttribute="leadingMargin" constant="10" id="fbR-Xd-wjY"/>
                             <constraint firstItem="CEk-xt-lku" firstAttribute="centerY" secondItem="Bxc-3d-hP7" secondAttribute="centerY" id="fd3-hy-9AO"/>
-                            <constraint firstItem="mGZ-UT-7Fe" firstAttribute="top" secondItem="E8Z-wY-5hh" secondAttribute="bottom" constant="3" id="hec-eN-t6p"/>
                             <constraint firstItem="LB1-xa-Jzs" firstAttribute="leading" secondItem="i0y-av-kQ2" secondAttribute="leading" id="iK3-hK-RjS"/>
                             <constraint firstItem="GaP-5y-EcF" firstAttribute="top" secondItem="bOd-8l-b1v" secondAttribute="bottom" constant="8" id="idx-ec-0bt"/>
                             <constraint firstItem="4RF-G1-IKI" firstAttribute="centerX" secondItem="bOd-8l-b1v" secondAttribute="centerX" id="nYH-6S-ZYd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GaP-5y-EcF" secondAttribute="trailing" constant="10" id="sUX-Np-WZj"/>
                             <constraint firstAttribute="height" secondItem="i0y-av-kQ2" secondAttribute="height" id="sWE-t9-vIC"/>
-                            <constraint firstItem="E8Z-wY-5hh" firstAttribute="leading" secondItem="YSd-e0-1dd" secondAttribute="trailing" constant="20" id="uho-ji-hUz"/>
+                            <constraint firstItem="E8Z-wY-5hh" firstAttribute="centerX" secondItem="Bxc-3d-hP7" secondAttribute="centerX" id="tCQ-Ya-KH2"/>
+                            <constraint firstItem="E8Z-wY-5hh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YSd-e0-1dd" secondAttribute="trailing" constant="20" id="uho-ji-hUz"/>
                             <constraint firstItem="aVj-xe-rj0" firstAttribute="top" secondItem="Bxc-3d-hP7" secondAttribute="top" id="vHB-CR-76Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DSB-lr-wNT" secondAttribute="trailing" constant="15" id="wSR-1T-Wqb"/>
-                            <constraint firstItem="i0y-av-kQ2" firstAttribute="centerX" secondItem="mGZ-UT-7Fe" secondAttribute="centerX" id="wZG-o7-rAE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bxc-3d-hP7"/>
                     </view>

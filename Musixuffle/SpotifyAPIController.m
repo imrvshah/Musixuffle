@@ -119,7 +119,7 @@
     
     [manager GET:@"me/player/recently-played"
       parameters:@{
-                   @"limit" : @1,
+                   @"limit" : @10,
                    @"type"  : @"track"
                    }
         progress:nil

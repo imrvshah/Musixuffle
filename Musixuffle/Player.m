@@ -127,7 +127,6 @@
                accessToken:auth.session.accessToken
                     market:nil
                   callback:^(NSError *error, SPTTrack *track) {
-                      
                       NSURL *imageURL = track.album.largestCover.imageURL;
                       if (imageURL == nil) {
                           NSLog(@"Album %@ doesn't have any images!", track.album);
@@ -281,7 +280,9 @@
     [self updateUI];
     
     [[SpotifyAPIController sharedInstance] getMostRecentSong:^(NSArray *arr) {
-        [self.player playSpotifyURI:arr.firstObject startingWithIndex:0 startingWithPosition:10 callback:^(NSError *error) {
+        NSString *randomObject = arr[rand() % arr.count];
+        
+        [self.player playSpotifyURI:randomObject startingWithIndex:0 startingWithPosition:10 callback:^(NSError *error) {
             if (error != nil) {
                 NSLog(@"*** failed to play: %@", error);
                 return;
