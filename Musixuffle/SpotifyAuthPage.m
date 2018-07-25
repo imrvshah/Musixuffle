@@ -22,7 +22,7 @@
 #import <SafariServices/SafariServices.h>
 #import <WebKit/WebKit.h>
 #import <WatchConnectivity/WatchConnectivity.h>
-
+#import "SpotifyAPIController.h"
 #import "TempViewController.h"
 
 @interface SpotifyAuthPage ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
@@ -45,9 +45,17 @@
         NSLog(@"WCSession is supported");
     }
     
-    [self openLoginPage];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionUpdatedNotification:) name:@"sessionUpdated" object:nil];
+}
+
+- (IBAction)onSignInTapped:(id)sender
+{
+    [self openLoginPage];
+}
+
+- (IBAction)onClearCookies:(id)sender
+{
+    [[SpotifyAPIController sharedInstance] clearCookiesClicked];
 }
 
 
@@ -156,7 +164,7 @@
     SPTAuth *auth = [SPTAuth defaultInstance];
     auth.clientID = @kClientId;
     auth.redirectURL = [NSURL URLWithString:@kCallbackURL];
-    
+    auth.requestedScopes = @[SPTAuthStreamingScope, SPTAuthPlaylistReadPrivateScope, SPTAuthPlaylistReadCollaborativeScope, SPTAuthPlaylistModifyPublicScope, SPTAuthPlaylistModifyPrivateScope, SPTAuthUserFollowModifyScope, SPTAuthUserFollowReadScope, SPTAuthUserLibraryReadScope, SPTAuthUserLibraryModifyScope, SPTAuthUserReadPrivateScope, SPTAuthUserReadTopScope, SPTAuthUserReadBirthDateScope, SPTAuthUserReadEmailScope, @"user-read-recently-played"];
     if ([SPTAuth supportsApplicationAuthentication])
     {
         [[UIApplication sharedApplication] openURL:[auth spotifyAppAuthenticationURL]];

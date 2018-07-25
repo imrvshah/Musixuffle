@@ -13,6 +13,7 @@
 #import <SpotifyAuthentication/SpotifyAuthentication.h>
 #import <SpotifyMetadata/SpotifyMetadata.h>
 #import <AVFoundation/AVFoundation.h>
+#import "SpotifyAPIController.h"
 
 @interface Player ()
 
@@ -53,7 +54,7 @@
 
 -(IBAction)playPause:(id)sender {
    
-    [self.player setIsPlaying:YES callback:^(NSError *error) {
+    [self.player setIsPlaying:!self.player.playbackState.isPlaying callback:^(NSError *error) {
         NSLog(@"%@", error);
     }];
 }
@@ -126,7 +127,6 @@
                accessToken:auth.session.accessToken
                     market:nil
                   callback:^(NSError *error, SPTTrack *track) {
-                      
                       NSURL *imageURL = track.album.largestCover.imageURL;
                       if (imageURL == nil) {
                           NSLog(@"Album %@ doesn't have any images!", track.album);
@@ -180,7 +180,7 @@
         if ([self.player startWithClientId:auth.clientID audioController:nil allowCaching:YES error:&error]) {
             self.player.delegate = self;
             self.player.playbackDelegate = self;
-            self.player.diskCache = [[SPTDiskCache alloc] initWithCapacity:1024 * 1024 * 64];
+            self.player.diskCache = [[SPTDiskCache alloc] initWithCapacity:1024 * 1024 * 6400];
             [self.player loginWithAccessToken:auth.session.accessToken];
         } else {
             self.player = nil;
@@ -278,11 +278,16 @@
 
 - (void)audioStreamingDidLogin:(SPTAudioStreamingController *)audioStreaming {
     [self updateUI];
-    [self.player playSpotifyURI:@"spotify:user:spotify:playlist:2yLXxKhhziG2xzy7eyD4TD" startingWithIndex:0 startingWithPosition:10 callback:^(NSError *error) {
-        if (error != nil) {
-            NSLog(@"*** failed to play: %@", error);
-            return;
-        }
+    
+    [[SpotifyAPIController sharedInstance] getMostRecentSong:^(NSArray *arr) {
+        NSString *randomObject = arr[rand() % arr.count];
+        
+        [self.player playSpotifyURI:randomObject startingWithIndex:0 startingWithPosition:10 callback:^(NSError *error) {
+            if (error != nil) {
+                NSLog(@"*** failed to play: %@", error);
+                return;
+            }
+        }];
     }];
 }
 
@@ -307,3 +312,4 @@
 }
 
 @end
+
