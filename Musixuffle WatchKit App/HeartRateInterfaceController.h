@@ -14,4 +14,9 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labelSteps;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labelHeartRate;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *labelDistance;
+@property (nonatomic) float calories;
+@property (nonatomic) NSInteger steps;
+@property (nonatomic) NSInteger heartRate;
+@property (nonatomic) float distance;
+
 @end

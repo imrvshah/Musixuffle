@@ -41,8 +41,12 @@
 - (IBAction)quickStartClicked
 {
     [self takePermission];
-    [self fakeWorkout];
-    [self updateHeartbeat:[NSDate date]];
+    NSDate *matchDateCD = [NSDate date];
+    NSDate *fiveminBefore = [matchDateCD dateByAddingTimeInterval:-(5*60)];
+    [self updateHeartbeat:fiveminBefore];
+//    [self queryObserver];
+
+   
 }
 - (IBAction)startClicked
 {
@@ -69,13 +73,13 @@
         
         HKObjectType *type4 = [HKObjectType workoutType];
         
-        [ self.healthStore requestAuthorizationToShareTypes:[NSSet setWithObjects:type4, type, type2, type3, type5, nil] readTypes:[NSSet setWithObjects:type4, type, type2, type3, type5, nil] completion:^(BOOL success, NSError * _Nullable error) {
+        [ self.healthStore requestAuthorizationToShareTypes:[NSSet setWithObjects:type4, type, type2, type3,type5, nil] readTypes:[NSSet setWithObjects:type4, type, type2, type3,type5, nil] completion:^(BOOL success, NSError * _Nullable error) {
             
             if (success) {
                 NSLog(@"health data request success");
                
                 [self fakeWorkout];
-//                [[self class] reloadRootControllersWithNames:@[@"MusicInterfaceController",@"HeartRateInterfaceController", @"EndWorkOutInterfaceController"] contexts:nil];
+                [[self class] reloadRootControllersWithNames:@[@"HeartRateInterfaceController",@"MusicInterfaceController", @"EndWorkOutInterfaceController"] contexts:nil];
             }else{
                 NSLog(@"error %@", error);
             }
@@ -128,16 +132,23 @@
     //Then we create a sample type which is HKQuantityTypeIdentifierHeartRate
     HKSampleType *object = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
     
-//    HKSampleType *walkingDistance = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
+    HKSampleType *walkingDistance = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
 //
-//    HKSampleType *steps = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
+    HKSampleType *steps = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
 //
 //    //Then we create a sample type which is HKQuantityTypeIdentifierHeartRate
-//    HKSampleType *calories = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
+    HKSampleType *calories = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
 //
-    
+  
+
     //ok, now, create a HKAnchoredObjectQuery with all the mess that we just created.
-    HKAnchoredObjectQuery *heartQuery = [[HKAnchoredObjectQuery alloc] initWithType:object predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
+    HKAnchoredObjectQuery *heartQuery = [[HKAnchoredObjectQuery alloc]
+                                         initWithType:object
+                                         predicate:Predicate
+                                         anchor:0
+                                         limit:0
+                                         resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error)
+                                         {
         
         if (!error && sampleObjects.count > 0) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
@@ -149,41 +160,43 @@
         
     }];
     
-//    HKAnchoredObjectQuery *walkingDistanceQuery = [[HKAnchoredObjectQuery alloc] initWithType:walkingDistance predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
+
+    
+    HKAnchoredObjectQuery *walkingDistanceQuery = [[HKAnchoredObjectQuery alloc] initWithType:walkingDistance predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
+
+        if (!error && sampleObjects.count > 0) {
+            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
+            HKQuantity *quantity = sample.quantity;
+            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]]);
+        }else{
+            NSLog(@"query %@", error);
+        }
+
+    }];
 //
-//        if (!error && sampleObjects.count > 0) {
-//            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
-//            HKQuantity *quantity = sample.quantity;
-//            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]]);
-//        }else{
-//            NSLog(@"query %@", error);
-//        }
-//
-//    }];
-//
-//    HKAnchoredObjectQuery *stepsQuery = [[HKAnchoredObjectQuery alloc] initWithType:steps predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
-//
-//        if (!error && sampleObjects.count > 0) {
-//            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
-//            HKQuantity *quantity = sample.quantity;
-//            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
-//        }else{
-//            NSLog(@"query %@", error);
-//        }
-//
-//    }];
-//
-//    HKAnchoredObjectQuery *caloriesQuery = [[HKAnchoredObjectQuery alloc] initWithType:calories predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
-//
-//        if (!error && sampleObjects.count > 0) {
-//            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
-//            HKQuantity *quantity = sample.quantity;
-//            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
-//        }else{
-//            NSLog(@"query %@", error);
-//        }
-//
-//    }];
+    HKAnchoredObjectQuery *stepsQuery = [[HKAnchoredObjectQuery alloc] initWithType:steps predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
+
+        if (!error && sampleObjects.count > 0) {
+            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
+            HKQuantity *quantity = sample.quantity;
+            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count"]]);
+        }else{
+            NSLog(@"query %@", error);
+        }
+
+    }];
+
+    HKAnchoredObjectQuery *caloriesQuery = [[HKAnchoredObjectQuery alloc] initWithType:calories predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
+
+        if (!error && sampleObjects.count > 0) {
+            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
+            HKQuantity *quantity = sample.quantity;
+            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"kcal"]]);
+        }else{
+            NSLog(@"query %@", error);
+        }
+
+    }];
     
     
     //wait, it's not over yet, this is the update handler
@@ -192,13 +205,14 @@
         if (!error && SampleArray.count > 0) {
             HKQuantitySample *sample = (HKQuantitySample *)[SampleArray objectAtIndex:0];
             HKQuantity *quantity = sample.quantity;
-            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
+            NSLog(@"heart rate %f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
+           [[NSNotificationCenter defaultCenter]postNotificationName:@"heartRate" object:@{@"heartRate": [NSNumber numberWithFloat:[quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]}];
             WCSession *session = [WCSession defaultSession];
             
             // Send heart rate to iPhone
             if(![session updateApplicationContext:
                  @{@"heartRate" : [NSNumber numberWithFloat:[quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]] }
-                 error:&error])
+                                            error:&error])
             {
                 NSLog(@"Updating the context failed: %@", error.localizedDescription);
             }
@@ -207,74 +221,48 @@
         }
     }];
     
-//    //wait, it's not over yet, this is the update handler
-//    [walkingDistanceQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *SampleArray, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *Anchor, NSError *error) {
-//
-//        if (!error && SampleArray.count > 0) {
-//            HKQuantitySample *sample = (HKQuantitySample *)[SampleArray objectAtIndex:0];
-//            HKQuantity *quantity = sample.quantity;
-//            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
-//            WCSession *session = [WCSession defaultSession];
-//
-//            // Send heart rate to iPhone
-//            if(![session updateApplicationContext:
-//                 @{@"heartRate" : [NSNumber numberWithFloat:[quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]] }
-//                                            error:&error])
-//            {
-//                NSLog(@"Updating the context failed: %@", error.localizedDescription);
-//            }
-//        }else{
-//            NSLog(@"query %@", error);
-//        }
-//    }];
+    //wait, it's not over yet, this is the update handler
+    [walkingDistanceQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *SampleArray, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *Anchor, NSError *error) {
+
+        if (!error && SampleArray.count > 0) {
+            HKQuantitySample *sample = (HKQuantitySample *)[SampleArray objectAtIndex:0];
+            HKQuantity *quantity = sample.quantity;
+            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]]);
+             [[NSNotificationCenter defaultCenter]postNotificationName:@"walkingDistance" object:@{@"walkingDistance": [NSNumber numberWithFloat:[quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]]]}];
+        }else{
+            NSLog(@"query %@", error);
+        }
+    }];
 //
 //    //wait, it's not over yet, this is the update handler
-//    [stepsQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *SampleArray, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *Anchor, NSError *error) {
-//
-//        if (!error && SampleArray.count > 0) {
-//            HKQuantitySample *sample = (HKQuantitySample *)[SampleArray objectAtIndex:0];
-//            HKQuantity *quantity = sample.quantity;
-//            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
-//            WCSession *session = [WCSession defaultSession];
-//
-//            // Send heart rate to iPhone
-//            if(![session updateApplicationContext:
-//                 @{@"heartRate" : [NSNumber numberWithFloat:[quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]] }
-//                                            error:&error])
-//            {
-//                NSLog(@"Updating the context failed: %@", error.localizedDescription);
-//            }
-//        }else{
-//            NSLog(@"query %@", error);
-//        }
-//    }];
-//
-//    //wait, it's not over yet, this is the update handler
-//    [caloriesQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *SampleArray, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *Anchor, NSError *error) {
-//
-//        if (!error && SampleArray.count > 0) {
-//            HKQuantitySample *sample = (HKQuantitySample *)[SampleArray objectAtIndex:0];
-//            HKQuantity *quantity = sample.quantity;
-//            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
-//            WCSession *session = [WCSession defaultSession];
-//
-//            // Send heart rate to iPhone
-//            if(![session updateApplicationContext:
-//                 @{@"heartRate" : [NSNumber numberWithFloat:[quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]] }
-//                                            error:&error])
-//            {
-//                NSLog(@"Updating the context failed: %@", error.localizedDescription);
-//            }
-//        }else{
-//            NSLog(@"query %@", error);
-//        }
-//    }];
+    [stepsQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *SampleArray, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *Anchor, NSError *error) {
+
+        if (!error && SampleArray.count > 0) {
+            HKQuantitySample *sample = (HKQuantitySample *)[SampleArray objectAtIndex:0];
+            HKQuantity *quantity = sample.quantity;
+            NSLog(@" steps%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count"]]);
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"steps" object:@{@"steps": [NSNumber numberWithFloat:[quantity doubleValueForUnit:[HKUnit unitFromString:@"count"]]]}];
+        }else{
+            NSLog(@"query %@", error);
+        }
+    }];
+
+    //wait, it's not over yet, this is the update handler
+    [caloriesQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *SampleArray, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *Anchor, NSError *error) {
+
+        if (!error && SampleArray.count > 0) {
+            HKQuantitySample *sample = (HKQuantitySample *)[SampleArray objectAtIndex:0];
+            HKQuantity *quantity = sample.quantity;
+            NSLog(@" calories %f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"kcal"]]);
+            [[NSNotificationCenter defaultCenter]postNotificationName:@"calories" object:@{@"calories": [NSNumber numberWithFloat:[quantity doubleValueForUnit:[HKUnit unitFromString:@"kcal"]]]}];
+        }
+    }];
     
     //now excute query and wait for the result showing up in the log. Yeah!
     [self.healthStore executeQuery:heartQuery];
-//    [self.healthStore executeQuery:walkingDistanceQuery];
-//    [self.healthStore executeQuery:stepsQuery];
-//    [self.healthStore executeQuery:caloriesQuery];
+    [self.healthStore executeQuery:walkingDistanceQuery];
+    [self.healthStore executeQuery:stepsQuery];
+    [self.healthStore executeQuery:caloriesQuery];
 }
 
 - (void)fakeWorkout
@@ -295,7 +283,7 @@
 - (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *, id> *)applicationContext
 {
     NSLog(@"%@", applicationContext);
-    self.lableHeartRate.text = @"didReceiveApplicationContext";
+    self.lblDummy.text = @"didReceiveApplicationContext";
 }
 
 /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
@@ -303,6 +291,7 @@
 {
     
 }
+
 
 @end
 

@@ -7,6 +7,7 @@
 //
 
 #import "MusicInterfaceController.h"
+#import <WatchConnectivity/WatchConnectivity.h>
 
 @interface MusicInterfaceController ()
 
@@ -16,7 +17,12 @@
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
-    
+    if ([WCSession isSupported]) {
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        NSLog(@"WCSession is supported");
+    }
     // Configure interface objects here.
 }
 
@@ -31,10 +37,36 @@
 }
 
 - (IBAction)buttonLikeClicked {
+    WCSession *session = [WCSession defaultSession];
+    NSError *error = nil;
+    // Send heart rate to iPhone
+    if(![session updateApplicationContext:
+         @{@"like" : [NSNumber numberWithInt:1] }
+                                    error:&error])
+    {
+        NSLog(@"Updating the context failed: %@", error.localizedDescription);
+    }
+    
 }
 
 - (IBAction)buttonDisLikeClicked {
+    WCSession *session = [WCSession defaultSession];
+    NSError *error = nil;
+    // Send heart rate to iPhone
+    if(![session updateApplicationContext:
+         @{@"disLike" : [NSNumber numberWithInt:1] }
+                                    error:&error])
+    {
+        NSLog(@"Updating the context failed: %@", error.localizedDescription);
+    }
 }
+
+/** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
+- (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error
+{
+    
+}
+
 @end
 
 
