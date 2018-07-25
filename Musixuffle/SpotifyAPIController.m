@@ -59,6 +59,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
+
 - (void)getRelatedTracksForTracks:(NSArray *)seedTrackArray
 {
     NSString *baseURL = @"https://api.spotify.com/v1/";
@@ -69,6 +70,7 @@
     
     NSString *minTempo = [[NSNumber numberWithInt:80] stringValue];
     NSString *maxTempo = [[NSNumber numberWithInt:150] stringValue];
+
     // other parameters: max_instrumentalness, max_energy
     
     if ([seedTrackArray count] < 1) // default
@@ -91,7 +93,7 @@
      }];
 }
 
-- (void)processRecommendations:(NSDictionary *)response
+- (NSMutableArray *)processRecommendations:(NSDictionary *)response
 {
     NSMutableArray *trackObjArray = [[NSMutableArray alloc] init];
     for (id track in response[@"tracks"])
@@ -99,7 +101,54 @@
         [trackObjArray addObject:track[@"href"]];
     }
 
-//    return trackObjArray;
+    return trackObjArray;
+}
+
+- (void) addHeadersForSDWebImage
+{
+    [SDWebImageDownloader.sharedDownloader setValue:self.getBearerToken forHTTPHeaderField:@"Authorization"];
+}
+
+- (void) getMostRecentSong:(void (^)(NSArray *))completion
+{
+    NSString *baseURL = @"https://api.spotify.com/v1/";
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseURL]];
+    
+    [manager.requestSerializer setValue:SpotifyAPIController.sharedInstance.getBearerToken forHTTPHeaderField:@"Authorization"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [manager GET:@"me/player/recently-played"
+      parameters:@{
+                   @"limit" : @1,
+                   @"type"  : @"track"
+                   }
+        progress:nil
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             id trackObjArray = [self processMostRecents:responseObject];
+             if (completion) completion (trackObjArray);
+         }
+         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             NSLog(@"%@", error);
+         }];
+}
+- (NSMutableArray *)processMostRecents:(NSDictionary *)response
+{
+    NSMutableArray *trackObjArray = [[NSMutableArray alloc] init];
+    for (NSDictionary *item in response[@"items"])
+    {
+        NSDictionary *trackDictionary = item[@"track"];
+//        for (NSDictionary *trackDictionary in item[@"track"])
+        {
+            NSError *err = nil;
+            NSArray *trackURI = [trackDictionary valueForKey:@"uri"];
+            if (trackURI)
+            {
+                [trackObjArray addObject:trackURI];
+            }
+        }
+    }
+    
+    return trackObjArray;
 }
 
 @end

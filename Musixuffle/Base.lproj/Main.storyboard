@@ -33,7 +33,32 @@
                     <view key="view" contentMode="scaleToFill" id="c9v-3V-yqe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DF4-Ht-faC">
+                                <rect key="frame" x="140" y="335.5" width="95" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-U1-c8c">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                                        <state key="normal" title="Sign In"/>
+                                        <connections>
+                                            <action selector="onSignInTapped:" destination="60D-Ee-gKn" eventType="touchUpInside" id="uvD-s9-9Uz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-vc-KL6">
+                                        <rect key="frame" x="0.0" y="30" width="95" height="30"/>
+                                        <state key="normal" title="Clear Cookies"/>
+                                        <connections>
+                                            <action selector="onClearCookies:" destination="60D-Ee-gKn" eventType="touchUpInside" id="VeV-AP-g0G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DF4-Ht-faC" firstAttribute="centerY" secondItem="G5X-bt-dZG" secondAttribute="centerY" id="7DQ-aV-py5"/>
+                            <constraint firstItem="DF4-Ht-faC" firstAttribute="centerX" secondItem="G5X-bt-dZG" secondAttribute="centerX" id="kS0-zV-6aE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="G5X-bt-dZG"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
