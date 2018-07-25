@@ -13,5 +13,6 @@
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *lableHeartRate;
 - (IBAction)quickStartClicked;
 - (IBAction)startClicked;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *lblDummy;
 
 @end

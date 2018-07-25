@@ -18,6 +18,10 @@
 		47BD2BD12107B26000BA089B /* SpotifyAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD02107B26000BA089B /* SpotifyAPIController.m */; };
 		47BD2BD42107B3D100BA089B /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD32107B3D100BA089B /* TestViewController.m */; };
 		47BD2BD72107C15200BA089B /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 47BD2BD62107C15200BA089B /* Player.m */; };
+		5612BE56210816D30019CAAF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5612BE55210816D30019CAAF /* HealthKit.framework */; };
+		5612BE572108369D0019CAAF /* EndWorkOutInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5612BE5221080BC00019CAAF /* EndWorkOutInterfaceController.m */; };
+		5612BE58210836A10019CAAF /* HeartRateInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5612BE5321080BC00019CAAF /* HeartRateInterfaceController.m */; };
+		5612BE59210836A40019CAAF /* MusicInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5612BE5021080BC00019CAAF /* MusicInterfaceController.m */; };
 		561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561DC52721068CEC00F68C23 /* AppDelegate.m */; };
 		561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52C21068CEC00F68C23 /* Main.storyboard */; };
 		561DC53021068CF100F68C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561DC52F21068CF100F68C23 /* Assets.xcassets */; };
@@ -104,6 +108,13 @@
 		47BD2BD52107C15200BA089B /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		47BD2BD62107C15200BA089B /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		47BED4312107024E009FF862 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		5612BE4F21080BC00019CAAF /* HeartRateInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRateInterfaceController.h; sourceTree = "<group>"; };
+		5612BE5021080BC00019CAAF /* MusicInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicInterfaceController.m; sourceTree = "<group>"; };
+		5612BE5121080BC00019CAAF /* EndWorkOutInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndWorkOutInterfaceController.h; sourceTree = "<group>"; };
+		5612BE5221080BC00019CAAF /* EndWorkOutInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndWorkOutInterfaceController.m; sourceTree = "<group>"; };
+		5612BE5321080BC00019CAAF /* HeartRateInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartRateInterfaceController.m; sourceTree = "<group>"; };
+		5612BE5421080BC00019CAAF /* MusicInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicInterfaceController.h; sourceTree = "<group>"; };
+		5612BE55210816D30019CAAF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		561DC52321068CEB00F68C23 /* Musixuffle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Musixuffle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		561DC52621068CEC00F68C23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		561DC52721068CEC00F68C23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -148,6 +159,7 @@
 				563C7B922106EB49009C00C8 /* SpotifyAuthentication.framework in Frameworks */,
 				027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */,
 				563C7B912106EB49009C00C8 /* SpotifyAudioPlayback.framework in Frameworks */,
+				5612BE56210816D30019CAAF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +241,12 @@
 		561DC53D21068CF100F68C23 /* Musixuffle WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				5612BE5121080BC00019CAAF /* EndWorkOutInterfaceController.h */,
+				5612BE5221080BC00019CAAF /* EndWorkOutInterfaceController.m */,
+				5612BE4F21080BC00019CAAF /* HeartRateInterfaceController.h */,
+				5612BE5321080BC00019CAAF /* HeartRateInterfaceController.m */,
+				5612BE5421080BC00019CAAF /* MusicInterfaceController.h */,
+				5612BE5021080BC00019CAAF /* MusicInterfaceController.m */,
 				561DC53E21068CF100F68C23 /* Interface.storyboard */,
 				561DC54121068CF200F68C23 /* Assets.xcassets */,
 				561DC54321068CF200F68C23 /* Info.plist */,
@@ -256,6 +274,7 @@
 		561DC568210690CB00F68C23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5612BE55210816D30019CAAF /* HealthKit.framework */,
 				563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */,
 				563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */,
 				563C7B8D2106EB49009C00C8 /* SpotifyMetadata.framework */,
@@ -351,8 +370,11 @@
 					561DC52221068CEB00F68C23 = {
 						CreatedOnToolsVersion = 9.3.1;
 						SystemCapabilities = {
-							com.apple.HealthKit = {
+							com.apple.BackgroundModes = {
 								enabled = 0;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
 							};
 							com.apple.SafariKeychain = {
 								enabled = 0;
@@ -504,7 +526,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				561DC57421069AD800F68C23 /* ExtensionDelegate.m in Sources */,
+				5612BE572108369D0019CAAF /* EndWorkOutInterfaceController.m in Sources */,
 				561DC55521068CF200F68C23 /* NotificationController.m in Sources */,
+				5612BE59210836A40019CAAF /* MusicInterfaceController.m in Sources */,
+				5612BE58210836A10019CAAF /* HeartRateInterfaceController.m in Sources */,
 				561DC57521069B2F00F68C23 /* MXInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +778,7 @@
 			baseConfigurationReference = 1A7CE944539608FBF0469AFA /* Pods-Musixuffle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Musixuffle/Musixuffle.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Q429UPLE8;
@@ -777,6 +803,7 @@
 			baseConfigurationReference = C3D933CD5E24DF45E3149961 /* Pods-Musixuffle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Musixuffle/Musixuffle.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Q429UPLE8;

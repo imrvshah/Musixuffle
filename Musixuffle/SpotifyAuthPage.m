@@ -251,9 +251,22 @@
 
 - (void) session:(nonnull WCSession *)session didReceiveApplicationContext:(nonnull NSDictionary<NSString *,id> *)applicationContext
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.labelHeartRate.text = [[applicationContext objectForKey:@"heartRate"] stringValue];
-    });
+    if ([applicationContext objectForKey:@"heartRate"])
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.labelHeartRate.text = [[applicationContext objectForKey:@"heartRate"] stringValue];
+        });
+        
+    }
+    else if ([applicationContext objectForKey:@"like"])
+    {
+        
+    }
+    else if ([applicationContext objectForKey:@"disLike"])
+    {
+        
+    }
+    
     
 }
 
@@ -266,4 +279,5 @@
 - (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error
 {
     
-}@end
+}
+@end
