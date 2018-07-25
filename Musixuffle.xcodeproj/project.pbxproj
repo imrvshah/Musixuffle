@@ -31,6 +31,8 @@
 		563C7B912106EB49009C00C8 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */; };
 		563C7B922106EB49009C00C8 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */; };
 		5654E5AB2106ECB500DF32B0 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5654E5A92106ECB500DF32B0 /* WebViewController.m */; };
+		8182E6C52107D61B0032706F /* Temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8182E6C42107D61B0032706F /* Temp.storyboard */; };
+		8182E6C82107D6650032706F /* TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8182E6C72107D6650032706F /* TempViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,9 @@
 		5654E5A92106ECB500DF32B0 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		5654E5AA2106ECB500DF32B0 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8182E6C42107D61B0032706F /* Temp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Temp.storyboard; sourceTree = "<group>"; };
+		8182E6C62107D6510032706F /* TempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempViewController.h; sourceTree = "<group>"; };
+		8182E6C72107D6650032706F /* TempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempViewController.m; sourceTree = "<group>"; };
 		990DD4D993E0D278420E5251 /* Pods_Musixuffle_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D933CD5E24DF45E3149961 /* Pods-Musixuffle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musixuffle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Musixuffle/Pods-Musixuffle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +206,9 @@
 				47BD2BD32107B3D100BA089B /* TestViewController.m */,
 				47BD2BD52107C15200BA089B /* SplashScreenViewController.h */,
 				47BD2BD62107C15200BA089B /* SplashScreenViewController.m */,
+				8182E6C42107D61B0032706F /* Temp.storyboard */,
+				8182E6C62107D6510032706F /* TempViewController.h */,
+				8182E6C72107D6650032706F /* TempViewController.m */,
 			);
 			path = Musixuffle;
 			sourceTree = "<group>";
@@ -377,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8182E6C52107D61B0032706F /* Temp.storyboard in Resources */,
 				561DC53321068CF100F68C23 /* LaunchScreen.storyboard in Resources */,
 				561DC53021068CF100F68C23 /* Assets.xcassets in Resources */,
 				561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */,
@@ -467,6 +476,7 @@
 				47BD2BD72107C15200BA089B /* SplashScreenViewController.m in Sources */,
 				47BD2BD12107B26000BA089B /* SpotifyAPIController.m in Sources */,
 				561DC53621068CF100F68C23 /* main.m in Sources */,
+				8182E6C82107D6650032706F /* TempViewController.m in Sources */,
 				471EA84C2106BB7C00FEB317 /* SpotifyAuthPage.m in Sources */,
 				561DC52821068CEC00F68C23 /* AppDelegate.m in Sources */,
 				5654E5AB2106ECB500DF32B0 /* WebViewController.m in Sources */,

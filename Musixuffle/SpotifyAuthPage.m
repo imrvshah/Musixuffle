@@ -23,7 +23,7 @@
 #import <WebKit/WebKit.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 
-#import "TestViewController.h"
+#import "TempViewController.h"
 
 @interface SpotifyAuthPage ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
 
@@ -129,7 +129,11 @@
 {
     self.firstLoad = NO;
     self.statusLabel.text = @"Logged in.";
-    TestViewController *vc = [[TestViewController alloc] init];
+  
+    UIStoryboard *tmp = [UIStoryboard storyboardWithName:@"Temp" bundle:NSBundle.mainBundle];
+    TempViewController *tempVC = [tmp instantiateViewControllerWithIdentifier:@"TempViewController"];
+
+    [self presentViewController:tempVC animated:YES completion:nil];
     // avi dubey
 }
 
