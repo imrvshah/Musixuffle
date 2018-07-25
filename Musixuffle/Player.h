@@ -10,6 +10,6 @@
 
 #import <SpotifyAudioPlayback/SpotifyAudioPlayback.h>
 
-@interface SplashScreenViewController : UIViewController<SPTAudioStreamingDelegate, SPTAudioStreamingPlaybackDelegate>
+@interface Player : UIViewController<SPTAudioStreamingDelegate, SPTAudioStreamingPlaybackDelegate>
 
 @end

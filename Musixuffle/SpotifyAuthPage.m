@@ -45,6 +45,8 @@
         NSLog(@"WCSession is supported");
     }
     
+    [self openLoginPage];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionUpdatedNotification:) name:@"sessionUpdated" object:nil];
 }
 
@@ -88,22 +90,22 @@
 
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+    return NO;
 }
 
 
 - (UIViewController *)authViewControllerWithURL:(NSURL *)url
 {
     UIViewController *viewController;
-    if ([SFSafariViewController class]) {
-        SFSafariViewController *safari = [[SFSafariViewController alloc] initWithURL:url];
-        safari.delegate = self;
-        viewController = safari;
-    } else {
+//    if ([SFSafariViewController class]) {
+//        SFSafariViewController *safari = [[SFSafariViewController alloc] initWithURL:url];
+//        safari.delegate = self;
+//        viewController = safari;
+//    } else {
         WebViewController *webView = [[WebViewController alloc] initWithURL:url];
         webView.delegate = self;
         viewController = [[UINavigationController alloc] initWithRootViewController:webView];
-    }
+//    }
     viewController.modalPresentationStyle = UIModalPresentationPageSheet;
     return viewController;
 }
@@ -130,8 +132,7 @@
     self.firstLoad = NO;
     self.statusLabel.text = @"Logged in.";
     UIViewController *viewController = [[UIStoryboard storyboardWithName:@"Player" bundle:NSBundle.mainBundle] instantiateViewControllerWithIdentifier:@"Player"];
-    [self presentViewController:viewController animated:YES completion:nil];
-    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 #pragma mark - SPTStoreControllerDelegate
@@ -157,6 +158,7 @@
     {
         self.authViewController = [self authViewControllerWithURL:[[SPTAuth defaultInstance] spotifyWebAuthenticationURL]];
         self.definesPresentationContext = YES;
+
         [self presentViewController:self.authViewController animated:YES completion:nil];
     }
     

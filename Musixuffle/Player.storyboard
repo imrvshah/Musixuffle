@@ -13,7 +13,7 @@
         <!--Player-->
         <scene sceneID="wuP-st-NKi">
             <objects>
-                <viewController storyboardIdentifier="Player" title="Player" id="7FI-3t-gaJ" customClass="SplashScreenViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Player" autoresizesArchivedViewToFullSize="NO" title="Player" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="pageSheet" id="7FI-3t-gaJ" customClass="Player" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U5F-cg-eiA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -106,10 +106,7 @@
                                 <rect key="frame" x="142.5" y="328.5" width="90" height="30"/>
                                 <state key="normal" title="Show Playlist"/>
                                 <connections>
-                                    <segue destination="5dD-3a-yJM" kind="show" id="Gai-mo-H55">
-                                        <segue key="commit" inheritsFrom="parent" id="nnH-DJ-ewu"/>
-                                        <segue key="preview" inheritsFrom="commit" id="FU4-hs-84i"/>
-                                    </segue>
+                                    <action selector="onOpenPlaylistTapped:" destination="7FI-3t-gaJ" eventType="touchUpInside" id="u8j-DX-siG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -152,6 +149,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bxc-3d-hP7"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="artistTitle" destination="GaP-5y-EcF" id="Zm5-qT-4Nf"/>
                         <outlet property="coverView" destination="i0y-av-kQ2" id="SCL-aa-1rQ"/>
@@ -171,7 +169,7 @@
         <!--Playlist-->
         <scene sceneID="UDF-gz-gQo">
             <objects>
-                <viewController id="cs7-6N-bd2" customClass="Playlist" sceneMemberID="viewController">
+                <viewController title="Playlist" id="cs7-6N-bd2" customClass="Playlist" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Prf-9M-R8M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -196,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zBc-QI-NLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1546" y="605"/>
+            <point key="canvasLocation" x="1625" y="-243"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="5i0-aq-C9i">
@@ -233,25 +231,5 @@
             </objects>
             <point key="canvasLocation" x="3266" y="42"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="bcC-bJ-gNr">
-            <objects>
-                <navigationController id="5dD-3a-yJM" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="XNY-ZM-mbv"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YqN-bz-enk">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="gbd-3f-OHg" kind="relationship" relationship="rootViewController" id="K4L-Ff-v6E"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I9e-cb-DL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2490" y="-645"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Gai-mo-H55"/>
-    </inferredMetricsTieBreakers>
 </document>

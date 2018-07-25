@@ -6,14 +6,15 @@
 //  Copyright © 2018 Microsoft. All rights reserved.
 //
 
-#import "SplashScreenViewController.h"
+#import "Player.h"
 #import "SpotifyAuthPage.h"
 #import "Config.h"
+#import "Playlist.h"
 #import <SpotifyAuthentication/SpotifyAuthentication.h>
 #import <SpotifyMetadata/SpotifyMetadata.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface SplashScreenViewController ()
+@interface Player ()
 
 @property (weak, nonatomic) IBOutlet UILabel *trackTitle;
 @property (weak, nonatomic) IBOutlet UILabel *artistTitle;
@@ -32,7 +33,7 @@
 
 @end
 
-@implementation SplashScreenViewController
+@implementation Player
 
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -41,7 +42,7 @@
 }
 
 - (BOOL)prefersStatusBarHidden {
-    return YES;
+    return NO;
 }
 
 #pragma mark - Actions
@@ -299,5 +300,10 @@
     [[AVAudioSession sharedInstance] setActive:NO error:nil];
 }
 
+- (IBAction)onOpenPlaylistTapped:(id)sender
+{
+    Playlist *p = Playlist.new;
+    [self.navigationController pushViewController:p animated:YES];
+}
 
 @end
