@@ -12,4 +12,7 @@
 + (instancetype) sharedInstance;
 - (NSString *) getBearerToken;
 - (void)clearCookiesClicked;
+
+- (void)getRelatedTracksForTracks:(NSArray *)trackArray;
+
 @end
