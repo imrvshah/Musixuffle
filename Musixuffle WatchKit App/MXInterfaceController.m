@@ -10,7 +10,6 @@
 #import <HealthKit/HealthKit.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 
-
 @interface MXInterfaceController () <HKWorkoutSessionDelegate, WCSessionDelegate>
 @property(nonatomic, strong)HKHealthStore *healthStore;
 @end
