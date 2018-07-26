@@ -23,7 +23,6 @@
 #import <WebKit/WebKit.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 #import "SpotifyAPIController.h"
-#import "TempViewController.h"
 
 @interface SpotifyAuthPage ()<SFSafariViewControllerDelegate, WebViewControllerDelegate, SPTStoreControllerDelegate, WCSessionDelegate>
 
@@ -97,7 +96,15 @@
 
 - (IBAction)onSignInTapped:(id)sender
 {
-    [self openLoginPage];
+    SPTAuth *auth = [SPTAuth defaultInstance];
+    if ([auth.session isValid])
+    {
+        [self showPlayer];
+    }
+    else
+    {
+        [self openLoginPage];
+    }
 }
 
 - (IBAction)onClearCookies:(id)sender
@@ -181,12 +188,6 @@
     self.firstLoad = NO;
     self.statusLabel.text = @"Logged in.";
     
-    //    UIStoryboard *tmp = [UIStoryboard storyboardWithName:@"Temp" bundle:NSBundle.mainBundle];
-//    TempViewController *tempVC = [tmp instantiateViewControllerWithIdentifier:@"TempViewController"];
-//
-//    [self presentViewController:tempVC animated:YES completion:nil];
-    // avi dubey
-
     UIViewController *viewController = [[UIStoryboard storyboardWithName:@"Player" bundle:NSBundle.mainBundle] instantiateViewControllerWithIdentifier:@"Player"];
     [self.navigationController pushViewController:viewController animated:YES];
 }
@@ -208,7 +209,7 @@
     auth.requestedScopes = @[SPTAuthStreamingScope, SPTAuthPlaylistReadPrivateScope, SPTAuthPlaylistReadCollaborativeScope, SPTAuthPlaylistModifyPublicScope, SPTAuthPlaylistModifyPrivateScope, SPTAuthUserFollowModifyScope, SPTAuthUserFollowReadScope, SPTAuthUserLibraryReadScope, SPTAuthUserLibraryModifyScope, SPTAuthUserReadPrivateScope, SPTAuthUserReadTopScope, SPTAuthUserReadBirthDateScope, SPTAuthUserReadEmailScope, @"user-read-recently-played"];
     if ([SPTAuth supportsApplicationAuthentication])
     {
-        [[UIApplication sharedApplication] openURL:[auth spotifyAppAuthenticationURL]];
+        [[UIApplication sharedApplication] openURL:[auth spotifyAppAuthenticationURL] options:@{} completionHandler:nil];
     }
     else
     {
