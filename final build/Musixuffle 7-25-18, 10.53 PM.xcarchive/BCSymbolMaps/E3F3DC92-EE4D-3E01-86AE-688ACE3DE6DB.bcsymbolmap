@@ -1,0 +1,1840 @@
+BCSymbolMap Version: 2.0
+-[StartUpPage viewDidLoad]
+-[StartUpPage numberOfSectionsInTableView:]
+-[StartUpPage tableView:numberOfRowsInSection:]
+-[StartUpPage tableView:heightForHeaderInSection:]
+-[StartUpPage tableView:viewForHeaderInSection:]
+-[StartUpPage tableView:cellForRowAtIndexPath:]
+-[StartUpPage tableView:didSelectRowAtIndexPath:]
+_OBJC_CLASS_$_StartUpPage
+_OBJC_METACLASS_$_StartUpPage
+Apple LLVM version 9.1.0 (clang-902.0.39.2)
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/StartUpPage.m
+/Users/danwong/Desktop/projects/Musixuffle
+-[TestViewController onWebTest:]
+___32-[TestViewController onWebTest:]_block_invoke
+___32-[TestViewController onWebTest:]_block_invoke_2
+-[TestViewController viewDidLoad]
+-[TestViewController didReceiveMemoryWarning]
+_OBJC_CLASS_$_SpotifyAPIController
+___block_descriptor_tmp
+___block_literal_global
+___block_descriptor_tmp.19
+___block_literal_global.20
+_OBJC_CLASS_$_TestViewController
+_OBJC_METACLASS_$_TestViewController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/TestViewController.m
+__32-[TestViewController onWebTest:]_block_invoke_2
+__32-[TestViewController onWebTest:]_block_invoke
+-[Player viewDidLoad]
+-[Player prefersStatusBarHidden]
+-[Player rewind:]
+-[Player playPause:]
+___20-[Player playPause:]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+-[Player fastForward:]
+-[Player seekValueChanged:]
+-[Player logoutClicked:]
+-[Player proggressTouchDown:]
+-[Player applyBlurOnImage:withRadius:]
+-[Player updateUI]
+___18-[Player updateUI]_block_invoke
+___18-[Player updateUI]_block_invoke_2
+___copy_helper_block_.158
+___destroy_helper_block_.159
+___18-[Player updateUI]_block_invoke.164
+___copy_helper_block_.165
+___destroy_helper_block_.166
+___copy_helper_block_.168
+___destroy_helper_block_.169
+-[Player viewDidAppear:]
+-[Player handleNewSession]
+-[Player closeSession]
+-[Player audioStreaming:didReceiveMessage:]
+-[Player audioStreaming:didChangePlaybackStatus:]
+-[Player audioStreaming:didChangeMetadata:]
+-[Player audioStreaming:didReceivePlaybackEvent:withName:]
+-[Player audioStreamingDidLogout:]
+-[Player audioStreaming:didReceiveError:]
+___41-[Player audioStreaming:didReceiveError:]_block_invoke
+___copy_helper_block_.263
+___destroy_helper_block_.264
+-[Player audioStreaming:didChangePosition:]
+-[Player audioStreaming:didStartPlayingTrack:]
+-[Player sendSongNameToWatch:]
+-[Player audioStreaming:didStopPlayingTrack:]
+-[Player audioStreamingDidLogin:]
+___33-[Player audioStreamingDidLogin:]_block_invoke
+___33-[Player audioStreamingDidLogin:]_block_invoke_2
+___33-[Player audioStreamingDidLogin:]_block_invoke_3
+___copy_helper_block_.310
+___destroy_helper_block_.311
+-[Player activateAudioSession]
+-[Player deactivateAudioSession]
+-[Player onOpenPlaylistTapped:]
+-[Player session:didReceiveApplicationContext:]
+___47-[Player session:didReceiveApplicationContext:]_block_invoke
+___copy_helper_block_.331
+___destroy_helper_block_.332
+___47-[Player session:didReceiveApplicationContext:]_block_invoke.338
+___47-[Player session:didReceiveApplicationContext:]_block_invoke_2
+___47-[Player session:didReceiveApplicationContext:]_block_invoke_3
+___copy_helper_block_.345
+___destroy_helper_block_.346
+-[Player trackTitle]
+-[Player setTrackTitle:]
+-[Player artistTitle]
+-[Player setArtistTitle:]
+-[Player coverView]
+-[Player setCoverView:]
+-[Player coverView2]
+-[Player setCoverView2:]
+-[Player spinner]
+-[Player setSpinner:]
+-[Player progressSlider]
+-[Player setProgressSlider:]
+-[Player playbackSourceTitle]
+-[Player setPlaybackSourceTitle:]
+-[Player watchSession]
+-[Player setWatchSession:]
+-[Player playPauseButton]
+-[Player setPlayPauseButton:]
+-[Player player]
+-[Player setPlayer:]
+-[Player nextButton]
+-[Player setNextButton:]
+-[Player prevButton]
+-[Player setPrevButton:]
+-[Player isChangingProgress]
+-[Player setIsChangingProgress:]
+-[Player .cxx_destruct]
+_OBJC_CLASS_$_Player
+___block_descriptor_tmp.161
+___block_descriptor_tmp.167
+___block_descriptor_tmp.170
+_OBJC_CLASS_$_SPTAuth
+_OBJC_CLASS_$_SPTAudioStreamingController
+_OBJC_CLASS_$_SPTDiskCache
+___block_descriptor_tmp.266
+___block_descriptor_tmp.300
+___block_descriptor_tmp.304
+___block_literal_global.305
+___block_descriptor_tmp.312
+_OBJC_CLASS_$_Playlist
+___block_descriptor_tmp.333
+___block_descriptor_tmp.341
+___block_literal_global.342
+___block_descriptor_tmp.343
+___block_literal_global.344
+___block_descriptor_tmp.347
+_OBJC_IVAR_$_Player._trackTitle
+_OBJC_IVAR_$_Player._artistTitle
+_OBJC_IVAR_$_Player._coverView
+_OBJC_IVAR_$_Player._coverView2
+_OBJC_IVAR_$_Player._spinner
+_OBJC_IVAR_$_Player._progressSlider
+_OBJC_IVAR_$_Player._playbackSourceTitle
+_OBJC_IVAR_$_Player._watchSession
+_OBJC_IVAR_$_Player._playPauseButton
+_OBJC_IVAR_$_Player._player
+_OBJC_IVAR_$_Player._nextButton
+_OBJC_IVAR_$_Player._prevButton
+_OBJC_IVAR_$_Player._isChangingProgress
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_WCSessionDelegate
+l_OBJC_LABEL_PROTOCOL_$_WCSessionDelegate
+l_OBJC_PROTOCOL_$_SPTAudioStreamingDelegate
+l_OBJC_LABEL_PROTOCOL_$_SPTAudioStreamingDelegate
+l_OBJC_PROTOCOL_$_SPTAudioStreamingPlaybackDelegate
+l_OBJC_LABEL_PROTOCOL_$_SPTAudioStreamingPlaybackDelegate
+_OBJC_METACLASS_$_Player
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/Player.m
+__destroy_helper_block_
+__copy_helper_block_
+__47-[Player session:didReceiveApplicationContext:]_block_invoke_3
+__47-[Player session:didReceiveApplicationContext:]_block_invoke_2
+__47-[Player session:didReceiveApplicationContext:]_block_invoke.338
+__47-[Player session:didReceiveApplicationContext:]_block_invoke
+__33-[Player audioStreamingDidLogin:]_block_invoke_3
+__33-[Player audioStreamingDidLogin:]_block_invoke_2
+__33-[Player audioStreamingDidLogin:]_block_invoke
+__41-[Player audioStreaming:didReceiveError:]_block_invoke
+__18-[Player updateUI]_block_invoke.164
+__18-[Player updateUI]_block_invoke_2
+__18-[Player updateUI]_block_invoke
+__20-[Player playPause:]_block_invoke
++[SpotifyAPIController sharedInstance]
+___38+[SpotifyAPIController sharedInstance]_block_invoke
+-[SpotifyAPIController getBearerToken]
+-[SpotifyAPIController clearCookiesClicked]
+-[SpotifyAPIController getRelatedTracksForTracks:withCompletion:]
+___65-[SpotifyAPIController getRelatedTracksForTracks:withCompletion:]_block_invoke
+___65-[SpotifyAPIController getRelatedTracksForTracks:withCompletion:]_block_invoke_2
+___65-[SpotifyAPIController getRelatedTracksForTracks:withCompletion:]_block_invoke.121
+___copy_helper_block_.122
+___destroy_helper_block_.123
+___copy_helper_block_.128
+___destroy_helper_block_.129
+___65-[SpotifyAPIController getRelatedTracksForTracks:withCompletion:]_block_invoke.131
+___copy_helper_block_.134
+___destroy_helper_block_.135
+-[SpotifyAPIController processRecommendations:]
+-[SpotifyAPIController addHeadersForSDWebImage]
+-[SpotifyAPIController getMostRecentSong:]
+___42-[SpotifyAPIController getMostRecentSong:]_block_invoke
+___copy_helper_block_.167
+___destroy_helper_block_.168
+___42-[SpotifyAPIController getMostRecentSong:]_block_invoke.170
+___copy_helper_block_.171
+___destroy_helper_block_.172
+-[SpotifyAPIController processMostRecents:]
+-[SpotifyAPIController getCurrentPlaylist]
+-[SpotifyAPIController updatePlaylist:]
+-[SpotifyAPIController replaceSongByRemovingAtIndex:withCompletion:]
+___68-[SpotifyAPIController replaceSongByRemovingAtIndex:withCompletion:]_block_invoke
+___copy_helper_block_.194
+___destroy_helper_block_.195
+___68-[SpotifyAPIController replaceSongByRemovingAtIndex:withCompletion:]_block_invoke.197
+-[SpotifyAPIController updateLastHeartRate:]
+-[SpotifyAPIController playlist]
+-[SpotifyAPIController setPlaylist:]
+-[SpotifyAPIController heartRate]
+-[SpotifyAPIController setHeartRate:]
+-[SpotifyAPIController .cxx_destruct]
+_sharedInstance.controller
+_sharedInstance.onceToken
+___block_descriptor_tmp.120
+___block_descriptor_tmp.125
+___block_descriptor_tmp.130
+___block_descriptor_tmp.136
+___block_descriptor_tmp.169
+___block_descriptor_tmp.173
+___block_descriptor_tmp.196
+___block_descriptor_tmp.198
+___block_literal_global.199
+_OBJC_IVAR_$_SpotifyAPIController._playlist
+_OBJC_IVAR_$_SpotifyAPIController._heartRate
+_OBJC_METACLASS_$_SpotifyAPIController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/SpotifyAPIController.m
+__68-[SpotifyAPIController replaceSongByRemovingAtIndex:withCompletion:]_block_invoke.197
+__68-[SpotifyAPIController replaceSongByRemovingAtIndex:withCompletion:]_block_invoke
+__42-[SpotifyAPIController getMostRecentSong:]_block_invoke.170
+__42-[SpotifyAPIController getMostRecentSong:]_block_invoke
+__65-[SpotifyAPIController getRelatedTracksForTracks:withCompletion:]_block_invoke.131
+__65-[SpotifyAPIController getRelatedTracksForTracks:withCompletion:]_block_invoke.121
+__65-[SpotifyAPIController getRelatedTracksForTracks:withCompletion:]_block_invoke_2
+__65-[SpotifyAPIController getRelatedTracksForTracks:withCompletion:]_block_invoke
+__38+[SpotifyAPIController sharedInstance]_block_invoke
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/usr/include/dispatch/once.h
+_OBJC_CLASS_$_AppDelegate
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/main.m
+main
+-[PlaylistCell awakeFromNib]
+-[PlaylistCell layoutSubviews]
+-[PlaylistCell setSelected:animated:]
+-[PlaylistCell imageView]
+-[PlaylistCell imgView2]
+-[PlaylistCell setImgView2:]
+-[PlaylistCell title]
+-[PlaylistCell setTitle:]
+-[PlaylistCell subTitle]
+-[PlaylistCell setSubTitle:]
+-[PlaylistCell .cxx_destruct]
+_OBJC_CLASS_$_PlaylistCell
+_OBJC_IVAR_$_PlaylistCell.imageView
+_OBJC_IVAR_$_PlaylistCell._imgView2
+_OBJC_IVAR_$_PlaylistCell._title
+_OBJC_IVAR_$_PlaylistCell._subTitle
+_OBJC_METACLASS_$_PlaylistCell
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/PlaylistCell.m
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/PlaylistCell.h
+-[UITableViewCell imageView]
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UITableViewCell.h
+-[SpotifyAuthPage viewDidLoad]
+-[SpotifyAuthPage animate]
+___26-[SpotifyAuthPage animate]_block_invoke
+___26-[SpotifyAuthPage animate]_block_invoke.56
+___copy_helper_block_.59
+___destroy_helper_block_.60
+-[SpotifyAuthPage prefersStatusBarHidden]
+-[SpotifyAuthPage viewWillDisappear:]
+-[SpotifyAuthPage onSignInTapped:]
+-[SpotifyAuthPage onClearCookies:]
+-[SpotifyAuthPage viewWillAppear:]
+-[SpotifyAuthPage authViewControllerWithURL:]
+-[SpotifyAuthPage sessionUpdatedNotification:]
+-[SpotifyAuthPage showPlayer]
+-[SpotifyAuthPage productViewControllerDidFinish:]
+-[SpotifyAuthPage openLoginPage]
+-[SpotifyAuthPage renewTokenAndShowPlayer]
+___42-[SpotifyAuthPage renewTokenAndShowPlayer]_block_invoke
+___copy_helper_block_.204
+___destroy_helper_block_.205
+-[SpotifyAuthPage webViewControllerDidFinish:]
+-[SpotifyAuthPage safariViewControllerDidFinish:]
+-[SpotifyAuthPage loginClicked:]
+-[SpotifyAuthPage showSpotifyAppStoreClicked:]
+-[SpotifyAuthPage clearCookiesClicked:]
+-[SpotifyAuthPage session:didReceiveApplicationContext:]
+___56-[SpotifyAuthPage session:didReceiveApplicationContext:]_block_invoke
+___copy_helper_block_.249
+___destroy_helper_block_.250
+-[SpotifyAuthPage session:didReceiveMessageData:replyHandler:]
+-[SpotifyAuthPage session:activationDidCompleteWithState:error:]
+-[SpotifyAuthPage titleLabel]
+-[SpotifyAuthPage setTitleLabel:]
+-[SpotifyAuthPage watchSession]
+-[SpotifyAuthPage setWatchSession:]
+-[SpotifyAuthPage authViewController]
+-[SpotifyAuthPage setAuthViewController:]
+-[SpotifyAuthPage firstLoad]
+-[SpotifyAuthPage setFirstLoad:]
+-[SpotifyAuthPage labelHeartRate]
+-[SpotifyAuthPage setLabelHeartRate:]
+-[SpotifyAuthPage statusLabel]
+-[SpotifyAuthPage setStatusLabel:]
+-[SpotifyAuthPage imageView]
+-[SpotifyAuthPage setImageView:]
+-[SpotifyAuthPage .cxx_destruct]
+_OBJC_CLASS_$_SpotifyAuthPage
+_animate.reverse
+___block_descriptor_tmp.62
+_OBJC_CLASS_$_WebViewController
+_SPTAuthStreamingScope
+_SPTAuthPlaylistReadPrivateScope
+_SPTAuthPlaylistReadCollaborativeScope
+_SPTAuthPlaylistModifyPublicScope
+_SPTAuthPlaylistModifyPrivateScope
+_SPTAuthUserFollowModifyScope
+_SPTAuthUserFollowReadScope
+_SPTAuthUserLibraryReadScope
+_SPTAuthUserLibraryModifyScope
+_SPTAuthUserReadPrivateScope
+_SPTAuthUserReadTopScope
+_SPTAuthUserReadBirthDateScope
+_SPTAuthUserReadEmailScope
+___block_descriptor_tmp.207
+_OBJC_CLASS_$_SPTStoreViewController
+___block_descriptor_tmp.251
+_OBJC_IVAR_$_SpotifyAuthPage._titleLabel
+_OBJC_IVAR_$_SpotifyAuthPage._watchSession
+_OBJC_IVAR_$_SpotifyAuthPage._authViewController
+_OBJC_IVAR_$_SpotifyAuthPage._firstLoad
+_OBJC_IVAR_$_SpotifyAuthPage._labelHeartRate
+_OBJC_IVAR_$_SpotifyAuthPage._statusLabel
+_OBJC_IVAR_$_SpotifyAuthPage._imageView
+l_OBJC_PROTOCOL_$_SFSafariViewControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_SFSafariViewControllerDelegate
+l_OBJC_PROTOCOL_$_WebViewControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_WebViewControllerDelegate
+l_OBJC_PROTOCOL_$_SPTStoreControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_SPTStoreControllerDelegate
+_OBJC_METACLASS_$_SpotifyAuthPage
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/SpotifyAuthPage.m
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/SpotifyAuthPage.h
+__56-[SpotifyAuthPage session:didReceiveApplicationContext:]_block_invoke
+__42-[SpotifyAuthPage renewTokenAndShowPlayer]_block_invoke
+__26-[SpotifyAuthPage animate]_block_invoke.56
+__26-[SpotifyAuthPage animate]_block_invoke
+-[AppDelegate application:didFinishLaunchingWithOptions:]
+-[AppDelegate applicationWillResignActive:]
+-[AppDelegate applicationDidEnterBackground:]
+-[AppDelegate applicationWillEnterForeground:]
+-[AppDelegate applicationDidBecomeActive:]
+-[AppDelegate applicationWillTerminate:]
+-[AppDelegate applicationShouldRequestHealthAuthorization:]
+___59-[AppDelegate applicationShouldRequestHealthAuthorization:]_block_invoke
+-[AppDelegate application:handleEventsForBackgroundURLSession:completionHandler:]
+-[AppDelegate application:willContinueUserActivityWithType:]
+-[AppDelegate application:openURL:options:]
+___43-[AppDelegate application:openURL:options:]_block_invoke
+-[AppDelegate application:openURL:sourceApplication:annotation:]
+___64-[AppDelegate application:openURL:sourceApplication:annotation:]_block_invoke
+___copy_helper_block_.36
+___destroy_helper_block_.37
+-[AppDelegate window]
+-[AppDelegate setWindow:]
+-[AppDelegate .cxx_destruct]
+___block_descriptor_tmp.31
+___block_descriptor_tmp.38
+_OBJC_IVAR_$_AppDelegate._window
+l_OBJC_PROTOCOL_$_UIApplicationDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIApplicationDelegate
+_OBJC_METACLASS_$_AppDelegate
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/AppDelegate.m
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/AppDelegate.h
+__64-[AppDelegate application:openURL:sourceApplication:annotation:]_block_invoke
+__43-[AppDelegate application:openURL:options:]_block_invoke
+__59-[AppDelegate applicationShouldRequestHealthAuthorization:]_block_invoke
+-[WebViewController initWithURL:]
+-[WebViewController viewDidLoad]
+-[WebViewController done]
+-[WebViewController webViewDidFinishLoad:]
+-[WebViewController webView:didFailLoadWithError:]
+-[WebViewController delegate]
+-[WebViewController setDelegate:]
+-[WebViewController webView]
+-[WebViewController setWebView:]
+-[WebViewController initialURL]
+-[WebViewController setInitialURL:]
+-[WebViewController loadComplete]
+-[WebViewController setLoadComplete:]
+-[WebViewController .cxx_destruct]
+_OBJC_IVAR_$_WebViewController._initialURL
+_OBJC_IVAR_$_WebViewController._delegate
+_OBJC_IVAR_$_WebViewController._webView
+_OBJC_IVAR_$_WebViewController._loadComplete
+l_OBJC_PROTOCOL_$_UIWebViewDelegate
+l_OBJC_LABEL_PROTOCOL_$_UIWebViewDelegate
+_OBJC_METACLASS_$_WebViewController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/WebViewController.m
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/WebViewController.h
+-[Playlist viewDidLoad]
+-[Playlist viewWillAppear:]
+-[Playlist onDoneTapped:]
+-[Playlist update]
+-[Playlist numberOfSectionsInTableView:]
+-[Playlist tableView:numberOfRowsInSection:]
+-[Playlist tableView:heightForRowAtIndexPath:]
+-[Playlist tableView:cellForRowAtIndexPath:]
+___44-[Playlist tableView:cellForRowAtIndexPath:]_block_invoke
+-[Playlist tableView:didSelectRowAtIndexPath:]
+___46-[Playlist tableView:didSelectRowAtIndexPath:]_block_invoke
+___copy_helper_block_.74
+___destroy_helper_block_.75
+-[Playlist tableView:canEditRowAtIndexPath:]
+-[Playlist tableView:commitEditingStyle:forRowAtIndexPath:]
+___59-[Playlist tableView:commitEditingStyle:forRowAtIndexPath:]_block_invoke
+___copy_helper_block_.89
+___destroy_helper_block_.90
+-[Playlist player]
+-[Playlist setPlayer:]
+-[Playlist viewItems]
+-[Playlist setViewItems:]
+-[Playlist .cxx_destruct]
+_OBJC_IVAR_$_Playlist._viewItems
+___block_descriptor_tmp.77
+___block_descriptor_tmp.92
+_OBJC_IVAR_$_Playlist._player
+_OBJC_METACLASS_$_Playlist
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/Playlist.m
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle/Playlist.h
+__59-[Playlist tableView:commitEditingStyle:forRowAtIndexPath:]_block_invoke
+__46-[Playlist tableView:didSelectRowAtIndexPath:]_block_invoke
+__44-[Playlist tableView:cellForRowAtIndexPath:]_block_invoke
+-[SPTStoreViewController initWithCampaignToken:storeDelegate:]
+-[SPTStoreViewController load]
+-[SPTStoreViewController productViewControllerDidFinish:]
+-[SPTStoreViewController campaignToken]
+-[SPTStoreViewController setCampaignToken:]
+-[SPTStoreViewController storeDelegate]
+-[SPTStoreViewController setStoreDelegate:]
+-[SPTStoreViewController .cxx_destruct]
+_OBJC_IVAR_$_SPTStoreViewController._campaignToken
+_OBJC_IVAR_$_SPTStoreViewController._storeDelegate
+l_OBJC_PROTOCOL_$_SKStoreProductViewControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_SKStoreProductViewControllerDelegate
+_OBJC_METACLASS_$_SPTStoreViewController
+Apple LLVM version 8.0.0 (clang-800.0.38)
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Authentication/src/SPTStoreViewController.m
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Authentication
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Authentication/src/SPTStoreViewController.h
++[SPTAuth defaultInstance]
+___26+[SPTAuth defaultInstance]_block_invoke
+-[SPTAuth init]
+-[SPTAuth setSession:]
+-[SPTAuth session]
+-[SPTAuth hasTokenSwapService]
+-[SPTAuth hasTokenRefreshService]
+-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke_2
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.152
+___copy_helper_block_.153
+___destroy_helper_block_.154
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.159
+___copy_helper_block_.160
+___destroy_helper_block_.161
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.165
+___copy_helper_block_.175
+___destroy_helper_block_.176
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.205
+___copy_helper_block_.206
+___destroy_helper_block_.207
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.209
+___copy_helper_block_.210
+___destroy_helper_block_.211
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.216
+___copy_helper_block_.217
+___destroy_helper_block_.218
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.222
+___copy_helper_block_.223
+___destroy_helper_block_.224
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.226
+___copy_helper_block_.227
+___destroy_helper_block_.228
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.230
+___copy_helper_block_.236
+___destroy_helper_block_.237
+___90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.239
+___copy_helper_block_.240
+___destroy_helper_block_.241
+___copy_helper_block_.243
+___destroy_helper_block_.244
+-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]
+___59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke
+___59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke_2
+___copy_helper_block_.250
+___destroy_helper_block_.251
+___59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke.257
+___copy_helper_block_.258
+___destroy_helper_block_.259
+___59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke.261
+___copy_helper_block_.262
+___destroy_helper_block_.263
+___59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke.265
+___copy_helper_block_.266
+___destroy_helper_block_.267
+___59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke.273
+___copy_helper_block_.274
+___destroy_helper_block_.275
+___copy_helper_block_.277
+___destroy_helper_block_.278
+-[SPTAuth renewSession:callback:]
++[SPTAuth urlEncodeString:]
++[SPTAuth loginURLForClientId:withRedirectURL:scopes:responseType:endpoint:campaignId:]
++[SPTAuth loginURLForClientId:withRedirectURL:scopes:responseType:]
++[SPTAuth loginURLForClientId:withRedirectURL:scopes:responseType:campaignId:]
++[SPTAuth supportsApplicationAuthentication]
++[SPTAuth spotifyApplicationIsInstalled]
+-[SPTAuth _canHandleURL:withDeclaredRedirectURL:]
+-[SPTAuth canHandleURL:]
+-[SPTAuth _authenticationURLWithEndpoint:]
+-[SPTAuth spotifyWebAuthenticationURL]
+-[SPTAuth spotifyAppAuthenticationURL]
+-[SPTAuth handleAuthCallbackWithTriggeredAuthURL:callback:]
+-[SPTAuth clientID]
+-[SPTAuth setClientID:]
+-[SPTAuth redirectURL]
+-[SPTAuth setRedirectURL:]
+-[SPTAuth requestedScopes]
+-[SPTAuth setRequestedScopes:]
+-[SPTAuth sessionUserDefaultsKey]
+-[SPTAuth setSessionUserDefaultsKey:]
+-[SPTAuth tokenSwapURL]
+-[SPTAuth setTokenSwapURL:]
+-[SPTAuth tokenRefreshURL]
+-[SPTAuth setTokenRefreshURL:]
+-[SPTAuth .cxx_destruct]
+_defaultInstance.defaultInstance
+_defaultInstance.onceToken
+_OBJC_IVAR_$_SPTAuth._session
+___block_descriptor_tmp.128
+___block_descriptor_tmp.155
+___block_descriptor_tmp.162
+_OBJC_CLASS_$_SPTSession
+___block_descriptor_tmp.177
+___block_descriptor_tmp.208
+___block_descriptor_tmp.212
+___block_descriptor_tmp.219
+___block_descriptor_tmp.225
+___block_descriptor_tmp.229
+___block_descriptor_tmp.238
+___block_descriptor_tmp.242
+___block_descriptor_tmp.245
+___block_descriptor_tmp.252
+___block_descriptor_tmp.260
+___block_descriptor_tmp.264
+___block_descriptor_tmp.268
+___block_descriptor_tmp.276
+___block_descriptor_tmp.279
+_OBJC_IVAR_$_SPTAuth._clientID
+_OBJC_IVAR_$_SPTAuth._redirectURL
+_OBJC_IVAR_$_SPTAuth._requestedScopes
+_OBJC_IVAR_$_SPTAuth._sessionUserDefaultsKey
+_OBJC_IVAR_$_SPTAuth._tokenSwapURL
+_OBJC_IVAR_$_SPTAuth._tokenRefreshURL
+_OBJC_METACLASS_$_SPTAuth
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Authentication/src/SPTAuth.m
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Authentication/src/SPTAuth.h
+__59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke.273
+__59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke.265
+__59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke.261
+__59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke.257
+__59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke_2
+__59-[SPTAuth _renewSession:withServiceEndpointAtURL:callback:]_block_invoke
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.239
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.230
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.226
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.222
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.216
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.209
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.205
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.165
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.159
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke.152
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke_2
+__90-[SPTAuth _handleAuthCallbackWithTriggeredAuthURL:tokenSwapServiceEndpointAtURL:callback:]_block_invoke
+__26+[SPTAuth defaultInstance]_block_invoke
+/Applications/Xcode-8.0-GM.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/usr/include/dispatch/once.h
+-[SPTSession initWithUserName:accessToken:encryptedRefreshToken:expirationDate:]
+-[SPTSession initWithUserName:accessToken:expirationDate:]
+-[SPTSession initWithUserName:accessToken:expirationTimeInterval:]
+-[SPTSession isValid]
+-[SPTSession initWithCoder:]
+-[SPTSession encodeWithCoder:]
++[SPTSession supportsSecureCoding]
+-[SPTSession canonicalUsername]
+-[SPTSession setCanonicalUsername:]
+-[SPTSession accessToken]
+-[SPTSession setAccessToken:]
+-[SPTSession encryptedRefreshToken]
+-[SPTSession expirationDate]
+-[SPTSession setExpirationDate:]
+-[SPTSession tokenType]
+-[SPTSession setTokenType:]
+-[SPTSession .cxx_destruct]
+_OBJC_IVAR_$_SPTSession._canonicalUsername
+_OBJC_IVAR_$_SPTSession._accessToken
+_OBJC_IVAR_$_SPTSession._encryptedRefreshToken
+_OBJC_IVAR_$_SPTSession._expirationDate
+_OBJC_IVAR_$_SPTSession._tokenType
+l_OBJC_PROTOCOL_$_NSCoding
+l_OBJC_LABEL_PROTOCOL_$_NSCoding
+l_OBJC_PROTOCOL_$_NSSecureCoding
+l_OBJC_LABEL_PROTOCOL_$_NSSecureCoding
+_OBJC_METACLASS_$_SPTSession
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Authentication/src/SPTSession.m
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Authentication/src/SPTSession.h
+-[SPTCircularBuffer init]
+-[SPTCircularBuffer initWithMaximumLength:]
+-[SPTCircularBuffer clear]
+-[SPTCircularBuffer attemptAppendData:ofLength:]
+-[SPTCircularBuffer attemptAppendData:ofLength:chunkSize:]
+-[SPTCircularBuffer readDataOfLength:intoAllocatedBuffer:]
+-[SPTCircularBuffer length]
+-[SPTCircularBuffer dealloc]
+-[SPTCircularBuffer maximumLength]
+_OBJC_CLASS_$_SPTCircularBuffer
+_OBJC_IVAR_$_SPTCircularBuffer._buffer
+_OBJC_IVAR_$_SPTCircularBuffer._maximumLength
+_OBJC_IVAR_$_SPTCircularBuffer._dataStart
+_OBJC_IVAR_$_SPTCircularBuffer._dataNext
+_OBJC_IVAR_$_SPTCircularBuffer._length
+_OBJC_METACLASS_$_SPTCircularBuffer
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTCircularBuffer.m
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTCircularBuffer.h
++[SPTAudioStreamingController sharedInstance]
+___45+[SPTAudioStreamingController sharedInstance]_block_invoke
+-[SPTAudioStreamingController startWithClientId:error:]
+-[SPTAudioStreamingController startWithClientId:audioController:allowCaching:error:]
+_cb_error_event
+_SpInit
+_SpPlaybackSetBitrate
+_cb_on_connection_notify
+_cb_on_new_credentials
+_cb_on_connection_message
+_SpRegisterConnectionCallbacks
+_cb_playback_on_notify
+_cb_on_audio_data
+_cb_playback_on_seek
+_cb_playback_on_volume
+_SpRegisterPlaybackCallbacks
+_cb_storage_alloc
+_cb_disk_cache_write
+_cb_disk_cache_read
+_cb_storage_close
+_SpRegisterStorageCallbacks
+_SpFree
+-[SPTAudioStreamingController stopWithError:]
+-[SPTAudioStreamingController dealloc]
+-[SPTAudioStreamingController reachabilityDidChange:]
+_SPDispatchAsync
+___53-[SPTAudioStreamingController reachabilityDidChange:]_block_invoke
+_SpConnectionSetConnectivity
+-[SPTAudioStreamingController recheckReachability:]
+-[SPTAudioStreamingController filterCompanyNameOrAppName:]
+-[SPTAudioStreamingController loginWithAccessToken:]
+___52-[SPTAudioStreamingController loginWithAccessToken:]_block_invoke
+_SpConnectionLoginOauthToken
+___52-[SPTAudioStreamingController loginWithAccessToken:]_block_invoke_2
+_NSErrorFromSPErrorCode
+___copy_helper_block_.143
+___destroy_helper_block_.144
+___copy_helper_block_.146
+___destroy_helper_block_.147
+-[SPTAudioStreamingController logout]
+___37-[SPTAudioStreamingController logout]_block_invoke
+_SpConnectionLogout
+___copy_helper_block_.155
+___destroy_helper_block_.156
+-[SPTAudioStreamingController skipNext:]
+___40-[SPTAudioStreamingController skipNext:]_block_invoke
+_SpPlaybackSkipToNext
+___40-[SPTAudioStreamingController skipNext:]_block_invoke_2
+___copy_helper_block_.161
+___destroy_helper_block_.162
+-[SPTAudioStreamingController skipPrevious:]
+___44-[SPTAudioStreamingController skipPrevious:]_block_invoke
+_SpPlaybackSkipToPrev
+___44-[SPTAudioStreamingController skipPrevious:]_block_invoke_2
+___copy_helper_block_.164
+___destroy_helper_block_.165
+-[SPTAudioStreamingController setShuffle:callback:]
+___51-[SPTAudioStreamingController setShuffle:callback:]_block_invoke
+_SpPlaybackEnableShuffle
+___51-[SPTAudioStreamingController setShuffle:callback:]_block_invoke_2
+___copy_helper_block_.170
+___destroy_helper_block_.171
+___copy_helper_block_.173
+___destroy_helper_block_.174
+-[SPTAudioStreamingController setRepeat:callback:]
+___50-[SPTAudioStreamingController setRepeat:callback:]_block_invoke
+_SpPlaybackEnableRepeat
+___50-[SPTAudioStreamingController setRepeat:callback:]_block_invoke_2
+___copy_helper_block_.176
+___destroy_helper_block_.177
+___copy_helper_block_.179
+___destroy_helper_block_.180
+-[SPTAudioStreamingController setVolume:callback:]
+___50-[SPTAudioStreamingController setVolume:callback:]_block_invoke
+_SpPlaybackUpdateVolume
+___50-[SPTAudioStreamingController setVolume:callback:]_block_invoke_2
+___copy_helper_block_.186
+___destroy_helper_block_.187
+___copy_helper_block_.189
+___destroy_helper_block_.190
+-[SPTAudioStreamingController setTargetBitrate:callback:]
+___57-[SPTAudioStreamingController setTargetBitrate:callback:]_block_invoke
+___57-[SPTAudioStreamingController setTargetBitrate:callback:]_block_invoke_2
+___copy_helper_block_.197
+___destroy_helper_block_.198
+-[SPTAudioStreamingController seekTo:callback:]
+_secToMs
+___47-[SPTAudioStreamingController seekTo:callback:]_block_invoke
+_SpPlaybackSeek
+___47-[SPTAudioStreamingController seekTo:callback:]_block_invoke_2
+___copy_helper_block_.200
+___destroy_helper_block_.201
+___copy_helper_block_.203
+___destroy_helper_block_.204
+-[SPTAudioStreamingController setIsPlaying:callback:]
+___53-[SPTAudioStreamingController setIsPlaying:callback:]_block_invoke
+_SpPlaybackPlay
+_SpPlaybackPause
+___53-[SPTAudioStreamingController setIsPlaying:callback:]_block_invoke_2
+___copy_helper_block_.209
+___destroy_helper_block_.210
+-[SPTAudioStreamingController playSpotifyURI:startingWithIndex:startingWithPosition:callback:]
+___94-[SPTAudioStreamingController playSpotifyURI:startingWithIndex:startingWithPosition:callback:]_block_invoke
+_SpPlayUri
+___94-[SPTAudioStreamingController playSpotifyURI:startingWithIndex:startingWithPosition:callback:]_block_invoke_2
+___copy_helper_block_.212
+___destroy_helper_block_.213
+___copy_helper_block_.215
+___destroy_helper_block_.216
+-[SPTAudioStreamingController queueSpotifyURI:callback:]
+___56-[SPTAudioStreamingController queueSpotifyURI:callback:]_block_invoke
+_SpQueueUri
+___56-[SPTAudioStreamingController queueSpotifyURI:callback:]_block_invoke_2
+___copy_helper_block_.218
+___destroy_helper_block_.219
+___copy_helper_block_.221
+___destroy_helper_block_.222
+-[SPTAudioStreamingController coreAudioController:didOutputAudioOfDuration:]
+___76-[SPTAudioStreamingController coreAudioController:didOutputAudioOfDuration:]_block_invoke
+___copy_helper_block_.232
+___destroy_helper_block_.233
+___cb_on_connection_message_block_invoke
+___cb_on_connection_notify_block_invoke
+___cb_on_connection_notify_block_invoke.243
+___copy_helper_block_.248
+___destroy_helper_block_.249
+___cb_on_connection_notify_block_invoke.251
+___copy_helper_block_.254
+___destroy_helper_block_.255
+___cb_on_connection_notify_block_invoke.257
+___copy_helper_block_.260
+___destroy_helper_block_.261
+___cb_on_connection_notify_block_invoke.263
+___cb_on_connection_notify_block_invoke.269
+___copy_helper_block_.272
+___destroy_helper_block_.273
+___cb_error_event_block_invoke
+___copy_helper_block_.275
+___destroy_helper_block_.276
+___cb_playback_on_seek_block_invoke
+_msToSec
+___copy_helper_block_.280
+___destroy_helper_block_.281
+___cb_playback_on_volume_block_invoke
+___copy_helper_block_.285
+___destroy_helper_block_.286
+___cb_playback_on_notify_block_invoke
+_handle_cb_playback_on_notify
+_SpGetMetadata
+_SpGetMetadataImageURL
+_convertMetadataToPlaybackTrackWithMetadata
+_SpPlaybackIsRepeated
+_SpPlaybackIsShuffled
+_SpPlaybackIsActiveDevice
+_SpPlaybackGetPosition
+___handle_cb_playback_on_notify_block_invoke
+___copy_helper_block_.306
+___destroy_helper_block_.307
+___handle_cb_playback_on_notify_block_invoke.309
+___handle_cb_playback_on_notify_block_invoke.313
+___copy_helper_block_.316
+___destroy_helper_block_.317
+___handle_cb_playback_on_notify_block_invoke.319
+___copy_helper_block_.322
+___destroy_helper_block_.323
+___handle_cb_playback_on_notify_block_invoke.325
+___copy_helper_block_.328
+___destroy_helper_block_.329
+___handle_cb_playback_on_notify_block_invoke.331
+___copy_helper_block_.332
+___destroy_helper_block_.333
+___handle_cb_playback_on_notify_block_invoke.335
+_SpPlaybackGetRepeatMode
+___copy_helper_block_.338
+___destroy_helper_block_.339
+___handle_cb_playback_on_notify_block_invoke.341
+___copy_helper_block_.342
+___destroy_helper_block_.343
+___handle_cb_playback_on_notify_block_invoke.345
+___copy_helper_block_.348
+___destroy_helper_block_.349
+___handle_cb_playback_on_notify_block_invoke.351
+___copy_helper_block_.354
+___destroy_helper_block_.355
+___handle_cb_playback_on_notify_block_invoke.357
+___copy_helper_block_.360
+___destroy_helper_block_.361
+___handle_cb_playback_on_notify_block_invoke.363
+___copy_helper_block_.372
+___destroy_helper_block_.373
+___handle_cb_playback_on_notify_block_invoke.375
+___copy_helper_block_.378
+___destroy_helper_block_.379
+___handle_cb_playback_on_notify_block_invoke.381
+___copy_helper_block_.384
+___destroy_helper_block_.385
+___handle_cb_playback_on_notify_block_invoke.387
+___copy_helper_block_.390
+___destroy_helper_block_.391
+-[SPTAudioStreamingController updatePlaybackState]
+_SpPlaybackIsPlaying
+_cb_debug_event
+_audioTimerFired
+_SpPumpEvents
++[SPTAudioStreamingController audioRunloop]
++[SPTAudioStreamingController dispatchToAudioThread:]
+___53+[SPTAudioStreamingController dispatchToAudioThread:]_block_invoke
+___copy_helper_block_.401
+___destroy_helper_block_.402
++[SPTAudioStreamingController runBackgroundRunloop:]
+-[SPTAudioStreamingController allocateESDKMemory]
+-[SPTAudioStreamingController deallocESDKMemory]
+-[SPTAudioStreamingController initialized]
+-[SPTAudioStreamingController setInitialized:]
+-[SPTAudioStreamingController loggedIn]
+-[SPTAudioStreamingController setLoggedIn:]
+-[SPTAudioStreamingController delegate]
+-[SPTAudioStreamingController setDelegate:]
+-[SPTAudioStreamingController playbackDelegate]
+-[SPTAudioStreamingController setPlaybackDelegate:]
+-[SPTAudioStreamingController diskCache]
+-[SPTAudioStreamingController setDiskCache:]
+-[SPTAudioStreamingController volume]
+-[SPTAudioStreamingController setVolume:]
+-[SPTAudioStreamingController metadata]
+-[SPTAudioStreamingController setMetadata:]
+-[SPTAudioStreamingController playbackState]
+-[SPTAudioStreamingController setPlaybackState:]
+-[SPTAudioStreamingController targetBitrate]
+-[SPTAudioStreamingController setTargetBitrate:]
+-[SPTAudioStreamingController audioController]
+-[SPTAudioStreamingController setAudioController:]
+-[SPTAudioStreamingController cacheRoot]
+-[SPTAudioStreamingController setCacheRoot:]
+-[SPTAudioStreamingController cacheAgeLimit]
+-[SPTAudioStreamingController setCacheAgeLimit:]
+-[SPTAudioStreamingController cacheSizeLimit]
+-[SPTAudioStreamingController setCacheSizeLimit:]
+-[SPTAudioStreamingController accessToken]
+-[SPTAudioStreamingController setAccessToken:]
+-[SPTAudioStreamingController reachability]
+-[SPTAudioStreamingController setReachability:]
+-[SPTAudioStreamingController .cxx_destruct]
+_SPTErrorCodeNoError
+_SPTErrorCodeFailed
+_SPTErrorCodeInitFailed
+_SPTErrorCodeWrongAPIVersion
+_SPTErrorCodeNullArgument
+_SPTErrorCodeInvalidArgument
+_SPTErrorCodeUninitialized
+_SPTErrorCodeAlreadyInitialized
+_SPTErrorCodeBadCredentials
+_SPTErrorCodeNeedsPremium
+_SPTErrorCodeTravelRestriction
+_SPTErrorCodeApplicationBanned
+_SPTErrorCodeGeneralLoginError
+_SPTErrorCodeUnsupported
+_SPTErrorCodeNotActiveDevice
+_SPTErrorCodeGeneralPlaybackError
+_SPTErrorCodePlaybackRateLimited
+_SPTErrorCodePlaybackCappingLimitReached
+_sharedInstance.sharedInstance
+_runloopReadyLock
+_OBJC_IVAR_$_SPTAudioStreamingController._initialized
+_OBJC_IVAR_$_SPTAudioStreamingController._esdk_memory_block
+_OBJC_CLASS_$_SPTCoreAudioController
+_OBJC_IVAR_$_SPTAudioStreamingController._audioController
+_OBJC_CLASS_$_SPTReachability
+_OBJC_IVAR_$_SPTAudioStreamingController._reachability
+_spotifyAudioDescription
+_startWithClientId:audioController:allowCaching:error:.g_appkey
+_OBJC_IVAR_$_SPTAudioStreamingController._loggedIn
+_OBJC_IVAR_$_SPTAudioStreamingController._volume
+_OBJC_IVAR_$_SPTAudioStreamingController._targetBitrate
+_SPTReachabilityDidChangeNotification
+_audio_runloop
+_audio_timer
+___block_descriptor_tmp.98
+___block_descriptor_tmp.145
+___block_descriptor_tmp.148
+___block_descriptor_tmp.157
+___block_descriptor_tmp.160
+___block_descriptor_tmp.163
+___block_descriptor_tmp.166
+___block_descriptor_tmp.172
+___block_descriptor_tmp.175
+___block_descriptor_tmp.178
+___block_descriptor_tmp.181
+___block_descriptor_tmp.188
+___block_descriptor_tmp.191
+___block_descriptor_tmp.199
+___block_descriptor_tmp.202
+___block_descriptor_tmp.205
+___block_descriptor_tmp.211
+___block_descriptor_tmp.214
+___block_descriptor_tmp.217
+___block_descriptor_tmp.220
+___block_descriptor_tmp.223
+___block_descriptor_tmp.234
+___block_descriptor_tmp.237
+___block_descriptor_tmp.250
+___block_descriptor_tmp.256
+___block_descriptor_tmp.262
+___block_descriptor_tmp.274
+___block_descriptor_tmp.277
+___block_descriptor_tmp.282
+___block_descriptor_tmp.287
+___block_descriptor_tmp.289
+_OBJC_CLASS_$_SPTPlaybackMetadata
+_OBJC_CLASS_$_SPTPlaybackState
+___block_descriptor_tmp.308
+___block_descriptor_tmp.318
+___block_descriptor_tmp.324
+___block_descriptor_tmp.330
+___block_descriptor_tmp.334
+___block_descriptor_tmp.340
+___block_descriptor_tmp.344
+___block_descriptor_tmp.350
+___block_descriptor_tmp.356
+___block_descriptor_tmp.362
+___block_descriptor_tmp.374
+___block_descriptor_tmp.380
+___block_descriptor_tmp.386
+___block_descriptor_tmp.392
+___block_descriptor_tmp.403
+_audio_runloop_source
+_OBJC_IVAR_$_SPTAudioStreamingController._delegate
+_OBJC_IVAR_$_SPTAudioStreamingController._playbackDelegate
+_OBJC_IVAR_$_SPTAudioStreamingController._diskCache
+_OBJC_IVAR_$_SPTAudioStreamingController._metadata
+_OBJC_IVAR_$_SPTAudioStreamingController._playbackState
+_OBJC_IVAR_$_SPTAudioStreamingController._cacheRoot
+_OBJC_IVAR_$_SPTAudioStreamingController._cacheAgeLimit
+_OBJC_IVAR_$_SPTAudioStreamingController._cacheSizeLimit
+_OBJC_IVAR_$_SPTAudioStreamingController._accessToken
+l_OBJC_PROTOCOL_$_SPTCoreAudioControllerDelegate
+l_OBJC_LABEL_PROTOCOL_$_SPTCoreAudioControllerDelegate
+_OBJC_METACLASS_$_SPTAudioStreamingController
+_OBJC_CLASS_$_SPTPlaybackTrack
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTAudioStreamingController.m
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTAudioStreamingController.h
+__53+[SPTAudioStreamingController dispatchToAudioThread:]_block_invoke
+audioTimerFired
+cb_debug_event
+__handle_cb_playback_on_notify_block_invoke.387
+__handle_cb_playback_on_notify_block_invoke.381
+__handle_cb_playback_on_notify_block_invoke.375
+__handle_cb_playback_on_notify_block_invoke.363
+__handle_cb_playback_on_notify_block_invoke.357
+__handle_cb_playback_on_notify_block_invoke.351
+__handle_cb_playback_on_notify_block_invoke.345
+__handle_cb_playback_on_notify_block_invoke.341
+__handle_cb_playback_on_notify_block_invoke.335
+__handle_cb_playback_on_notify_block_invoke.331
+__handle_cb_playback_on_notify_block_invoke.325
+__handle_cb_playback_on_notify_block_invoke.319
+__handle_cb_playback_on_notify_block_invoke.313
+__handle_cb_playback_on_notify_block_invoke.309
+__handle_cb_playback_on_notify_block_invoke
+convertMetadataToPlaybackTrackWithMetadata
+handle_cb_playback_on_notify
+__cb_playback_on_notify_block_invoke
+__cb_playback_on_volume_block_invoke
+__cb_playback_on_seek_block_invoke
+__cb_error_event_block_invoke
+__cb_on_connection_notify_block_invoke.269
+__cb_on_connection_notify_block_invoke.263
+__cb_on_connection_notify_block_invoke.257
+__cb_on_connection_notify_block_invoke.251
+__cb_on_connection_notify_block_invoke.243
+__cb_on_connection_notify_block_invoke
+__cb_on_connection_message_block_invoke
+__76-[SPTAudioStreamingController coreAudioController:didOutputAudioOfDuration:]_block_invoke
+__56-[SPTAudioStreamingController queueSpotifyURI:callback:]_block_invoke_2
+__56-[SPTAudioStreamingController queueSpotifyURI:callback:]_block_invoke
+SPDispatchAsync
+__94-[SPTAudioStreamingController playSpotifyURI:startingWithIndex:startingWithPosition:callback:]_block_invoke_2
+__94-[SPTAudioStreamingController playSpotifyURI:startingWithIndex:startingWithPosition:callback:]_block_invoke
+__53-[SPTAudioStreamingController setIsPlaying:callback:]_block_invoke_2
+__53-[SPTAudioStreamingController setIsPlaying:callback:]_block_invoke
+__47-[SPTAudioStreamingController seekTo:callback:]_block_invoke_2
+__47-[SPTAudioStreamingController seekTo:callback:]_block_invoke
+__57-[SPTAudioStreamingController setTargetBitrate:callback:]_block_invoke_2
+__57-[SPTAudioStreamingController setTargetBitrate:callback:]_block_invoke
+__50-[SPTAudioStreamingController setVolume:callback:]_block_invoke_2
+__50-[SPTAudioStreamingController setVolume:callback:]_block_invoke
+__50-[SPTAudioStreamingController setRepeat:callback:]_block_invoke_2
+__50-[SPTAudioStreamingController setRepeat:callback:]_block_invoke
+__51-[SPTAudioStreamingController setShuffle:callback:]_block_invoke_2
+__51-[SPTAudioStreamingController setShuffle:callback:]_block_invoke
+__44-[SPTAudioStreamingController skipPrevious:]_block_invoke_2
+__44-[SPTAudioStreamingController skipPrevious:]_block_invoke
+__40-[SPTAudioStreamingController skipNext:]_block_invoke_2
+__40-[SPTAudioStreamingController skipNext:]_block_invoke
+__37-[SPTAudioStreamingController logout]_block_invoke
+__52-[SPTAudioStreamingController loginWithAccessToken:]_block_invoke_2
+__52-[SPTAudioStreamingController loginWithAccessToken:]_block_invoke
+NSMakeRange
+/Applications/Xcode-8.0-GM.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSRange.h
+__53-[SPTAudioStreamingController reachabilityDidChange:]_block_invoke
+cb_storage_close
+cb_disk_cache_read
+cb_disk_cache_write
+cb_storage_alloc
+cb_playback_on_volume
+cb_playback_on_seek
+cb_on_audio_data
+cb_playback_on_notify
+cb_on_connection_message
+cb_on_new_credentials
+cb_on_connection_notify
+cb_error_event
+__45+[SPTAudioStreamingController sharedInstance]_block_invoke
+_descriptionForErrorCode
+_SPTAudioStreamingErrorDomain
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTUtil.m
+secToMs
+msToSec
+NSErrorFromSPErrorCode
+descriptionForErrorCode
+-[SPTPlaybackState initWithIsPlaying:isRepeating:isShuffling:isActiveDevice:position:]
+-[SPTPlaybackState isPlaying]
+-[SPTPlaybackState isRepeating]
+-[SPTPlaybackState isShuffling]
+-[SPTPlaybackState isActiveDevice]
+-[SPTPlaybackState position]
+_OBJC_IVAR_$_SPTPlaybackState._isPlaying
+_OBJC_IVAR_$_SPTPlaybackState._isRepeating
+_OBJC_IVAR_$_SPTPlaybackState._isShuffling
+_OBJC_IVAR_$_SPTPlaybackState._isActiveDevice
+_OBJC_IVAR_$_SPTPlaybackState._position
+_OBJC_METACLASS_$_SPTPlaybackState
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTPlaybackState.m
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTPlaybackState.h
++[NSError(AudioStreaming) errorWithSpError:]
++[NSError(AudioStreaming) humanReadableStringForSpError:]
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/NSError_AudioStreaming.m
+-[SPTCoreAudioController init]
+-[SPTCoreAudioController dealloc]
+-[SPTCoreAudioController observeValueForKeyPath:ofObject:change:context:]
+-[SPTCoreAudioController attemptToDeliverAudioFrames:ofCount:streamDescription:]
+-[SPTCoreAudioController bytesInAudioBuffer]
+-[SPTCoreAudioController applyVolumeToMixerAudioUnit:]
+_fillWithError
+-[SPTCoreAudioController applyAudioStreamDescriptionToInputUnit:]
+-[SPTCoreAudioController startAudioQueue]
+___41-[SPTCoreAudioController startAudioQueue]_block_invoke
+-[SPTCoreAudioController stopAudioQueue]
+-[SPTCoreAudioController clearAudioBuffers]
+-[SPTCoreAudioController teardownCoreAudio]
+-[SPTCoreAudioController disposeOfCustomNodesInGraph:]
+-[SPTCoreAudioController setupCoreAudioWithInputFormat:error:]
+_AudioUnitRenderDelegateCallback
+-[SPTCoreAudioController connectOutputBus:ofNode:toInputBus:ofNode:inGraph:error:]
+-[SPTCoreAudioController setupAudioOutputFromBus:ofNode:inGraph:error:]
+-[SPTCoreAudioController volume]
+-[SPTCoreAudioController setVolume:]
+-[SPTCoreAudioController audioOutputEnabled]
+-[SPTCoreAudioController setAudioOutputEnabled:]
+-[SPTCoreAudioController delegate]
+-[SPTCoreAudioController setDelegate:]
+-[SPTCoreAudioController backgroundPlaybackTask]
+-[SPTCoreAudioController setBackgroundPlaybackTask:]
+-[SPTCoreAudioController inputAudioDescription]
+-[SPTCoreAudioController setInputAudioDescription:]
+-[SPTCoreAudioController audioBuffer]
+-[SPTCoreAudioController setAudioBuffer:]
+-[SPTCoreAudioController .cxx_destruct]
+___AudioUnitRenderDelegateCallback_block_invoke
+___copy_helper_block_.191
+___destroy_helper_block_.192
+_OBJC_IVAR_$_SPTCoreAudioController.audioProcessingGraph
+_OBJC_IVAR_$_SPTCoreAudioController.mixerUnit
+_OBJC_IVAR_$_SPTCoreAudioController.inputConverterUnit
+_OBJC_IVAR_$_SPTCoreAudioController.outputUnit
+_OBJC_IVAR_$_SPTCoreAudioController.mixerNode
+_OBJC_IVAR_$_SPTCoreAudioController.inputConverterNode
+_OBJC_IVAR_$_SPTCoreAudioController.outputNode
+_OBJC_IVAR_$_SPTCoreAudioController._volume
+_OBJC_IVAR_$_SPTCoreAudioController._audioOutputEnabled
+_OBJC_IVAR_$_SPTCoreAudioController._delegate
+_OBJC_IVAR_$_SPTCoreAudioController._backgroundPlaybackTask
+_OBJC_IVAR_$_SPTCoreAudioController._inputAudioDescription
+_OBJC_IVAR_$_SPTCoreAudioController._audioBuffer
+_OBJC_METACLASS_$_SPTCoreAudioController
+_OBJC_IVAR_$_SPTCoreAudioController.framesSinceLastTimeUpdate
+___block_descriptor_tmp.193
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTCoreAudioController.m
+__AudioUnitRenderDelegateCallback_block_invoke
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTCoreAudioController.h
+AudioUnitRenderDelegateCallback
+__41-[SPTCoreAudioController startAudioQueue]_block_invoke
+fillWithError
++[SPTReachability reachabilityWithHostName:]
++[SPTReachability reachabilityWithAddress:]
++[SPTReachability reachabilityForInternetConnection]
++[SPTReachability reachabilityForLocalWiFi]
+-[SPTReachability startNotifier]
+_SPTReachabilityCallback
+-[SPTReachability stopNotifier]
+-[SPTReachability dealloc]
+-[SPTReachability localWiFiStatusForFlags:]
+-[SPTReachability networkStatusForFlags:]
+-[SPTReachability connectionRequired]
+-[SPTReachability currentReachabilityStatus]
+_OBJC_IVAR_$_SPTReachability._reachabilityRef
+_OBJC_IVAR_$_SPTReachability._alwaysReturnLocalWiFiStatus
+_OBJC_METACLASS_$_SPTReachability
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTReachability.m
+SPTReachabilityCallback
+-[SPTDiskCacheResource itemID]
+-[SPTDiskCacheResource setItemID:]
+-[SPTDiskCacheResource fileHandle]
+-[SPTDiskCacheResource setFileHandle:]
+-[SPTDiskCacheResource fileSize]
+-[SPTDiskCacheResource setFileSize:]
+-[SPTDiskCacheResource .cxx_destruct]
++[SPTDiskCache amountOfFreeSpaceTotal]
++[SPTDiskCache getCacheFolder]
+-[SPTDiskCache init]
+-[SPTDiskCache initWithCapacity:]
+-[SPTDiskCache totalCacheBytesFree]
+-[SPTDiskCache setResourceFileSize:size:]
+-[SPTDiskCache resourceForKey:]
+-[SPTDiskCache allocateCacheWithKey:size:]
+-[SPTDiskCache readCacheDataWithKey:length:offset:]
+-[SPTDiskCache writeCacheDataWithKey:data:offset:]
+-[SPTDiskCache closeCacheWithKey:]
+-[SPTDiskCache capacity]
+-[SPTDiskCache cacheDirectory]
+-[SPTDiskCache setCacheDirectory:]
+-[SPTDiskCache fileHandle]
+-[SPTDiskCache setFileHandle:]
+-[SPTDiskCache resources]
+-[SPTDiskCache setResources:]
+-[SPTDiskCache .cxx_destruct]
+_OBJC_IVAR_$_SPTDiskCacheResource.itemID
+_OBJC_IVAR_$_SPTDiskCacheResource.fileHandle
+_OBJC_IVAR_$_SPTDiskCacheResource.fileSize
+_OBJC_METACLASS_$_SPTDiskCacheResource
+_OBJC_CLASS_$_SPTDiskCacheResource
+_OBJC_IVAR_$_SPTDiskCache._capacity
+_OBJC_IVAR_$_SPTDiskCache._resources
+_OBJC_IVAR_$_SPTDiskCache._cacheDirectory
+_OBJC_IVAR_$_SPTDiskCache._fileHandle
+l_OBJC_PROTOCOL_$_SPTDiskCaching
+l_OBJC_LABEL_PROTOCOL_$_SPTDiskCaching
+_OBJC_METACLASS_$_SPTDiskCache
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTDiskCache.m
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTDiskCache.h
+-[SPTPlaybackTrack initWithName:uri:playbackSourceUri:playbackSourceName:artistName:artistUri:albumName:albumUri:albumCoverArtURL:duration:indexInContext:]
+-[SPTPlaybackTrack name]
+-[SPTPlaybackTrack uri]
+-[SPTPlaybackTrack playbackSourceUri]
+-[SPTPlaybackTrack playbackSourceName]
+-[SPTPlaybackTrack artistName]
+-[SPTPlaybackTrack artistUri]
+-[SPTPlaybackTrack albumName]
+-[SPTPlaybackTrack albumUri]
+-[SPTPlaybackTrack albumCoverArtURL]
+-[SPTPlaybackTrack duration]
+-[SPTPlaybackTrack indexInContext]
+-[SPTPlaybackTrack .cxx_destruct]
+-[SPTPlaybackMetadata initWithPrevTrack:currentTrack:nextTrack:]
+-[SPTPlaybackMetadata prevTrack]
+-[SPTPlaybackMetadata currentTrack]
+-[SPTPlaybackMetadata nextTrack]
+-[SPTPlaybackMetadata .cxx_destruct]
+_OBJC_IVAR_$_SPTPlaybackTrack._name
+_OBJC_IVAR_$_SPTPlaybackTrack._uri
+_OBJC_IVAR_$_SPTPlaybackTrack._playbackSourceUri
+_OBJC_IVAR_$_SPTPlaybackTrack._playbackSourceName
+_OBJC_IVAR_$_SPTPlaybackTrack._artistName
+_OBJC_IVAR_$_SPTPlaybackTrack._artistUri
+_OBJC_IVAR_$_SPTPlaybackTrack._albumName
+_OBJC_IVAR_$_SPTPlaybackTrack._albumUri
+_OBJC_IVAR_$_SPTPlaybackTrack._albumCoverArtURL
+_OBJC_IVAR_$_SPTPlaybackTrack._duration
+_OBJC_IVAR_$_SPTPlaybackTrack._indexInContext
+_OBJC_METACLASS_$_SPTPlaybackTrack
+_OBJC_IVAR_$_SPTPlaybackMetadata._prevTrack
+_OBJC_IVAR_$_SPTPlaybackMetadata._currentTrack
+_OBJC_IVAR_$_SPTPlaybackMetadata._nextTrack
+_OBJC_METACLASS_$_SPTPlaybackMetadata
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTPlaybackMetadata.m
+/Users/spotify-buildagent/buildAgent/work/85cacf57c67f3534/Spotify Audio Playback/src/SPTPlaybackMetadata.h
+_sp_93d02852c6fb4ba58683b8245044389c
+_sp_076de4ff10f0458a8ae3e0d24200be68
+_sp_b86d49ba6b4041138a658025c0af3d2c
+_sp_3b050094404c43ef9752cef9b638bcc3
+_sp_265b408891184f148136b41cc3b10d68
+_sp_941ee87398ca40a5ac77d07531ce512f
+_sp_b6ae60994a7a44738ec7dbb16b923b5a
+_sp_f2eef336919b4848b85a1d6321c0843f
+_sp_25fd1e980a534a1e95ab8c0c1a9a6537
+_sp_31bb63969db34e2198aa121ee9080980
+_sp_4e6098cf17c64afc80ac2896edb7da18
+_sp_e2d549a936564afd8717e9514c882d68
+_sp_19cbc088a40e4afdbea72c1fa27d2677
+_sp_0770b3c8dc1a4a8a87421cc2641c609e
+_sp_a3bfb45dca2d47acb68e652aef2e59d4
+_sp_e99da398aff448ea95f35806a13df4df
+_sp_479e96fadf5648bda8557e058060cb0b
+_sp_6138da216bb042cbb21c7cc9c437923b
+_sp_64884e25a78e4072be457195016600d7
+_sp_0019ba688eb646519c19a12d245c3bd4
+_sp_ad9501f9082a41389251ad962057090a
+_sp_2dc4bff3d23847d6b32ed8aba26e90e1
+_sp_bc70d0d500c64f079494fa9195a7f4cd
+_sp_fa50294d246f4e05b018e0613eef4884
+_sp_b4a04eb394004c5e90b08119c7c7bc37
+_sp_709608c2dc464111939f4ff1a9a86e79
+_sp_4cbd3f93bc4c41aa829a409d37090710
+_sp_47b0377a38864b6dbc24537b61ff36e0
+_sp_de55575631de4194b06ea68443e3f0eb
+_sp_ccd7ca80f480474da8a3bb09ab6b14d1
+_sp_c2152e9566b04443b54320ec5b7753d5
+_sp_f81392cbb19d499682d9cade0b385ce7
+_sp_0425e65cc04b42bd9348015451f5f726
+_sp_f4eb1f0a13f84084b64e4de519f4e967
+_sp_16a1b5d5d20c4b76aaf8d32a9cdffbf8
+_sp_7e47beef68f7484ab03684725ea5d6b5
+_sp_eb685202f80240e7b684df1b87dfa3d1
+_sp_1271807f4e884fac807eb07380755a65
+_sp_a8883ad7826e4408b8259edcb99cb935
+_sp_b0eca6f4c5c74840aade89c5e403e71d
+_sp_96e55ada420047d9b5f0b976b0c90123
+_sp_b5ba3ae6601c400c8ba2e9e64cb123bc
+_sp_7d6abadb61ab47fca2e099d582a1c829
+_sp_ea484c03ae41472f871056e75d904aa3
+_sp_00680bec74474b3da844e9d1f7ca451f
+_sp_423e282b862d4b69bc26accf5190d816
+_sp_878c815876404bc4a5a826bd85c2bb6e
+_sp_64c92ebd274f470da23725864d6124ad
+_sp_f9b64fe4417b4fd4bf68e3846f0786b5
+_sp_c35a59c6681a4245a9bbe424f92b48f6
+_sp_ec284281a3f04556baecdf0d9e70ec45
+_sp_3ba469cd1a6b4ff3aa98f649f7d28107
+_sp_cd6ebf550a014efda9421c4dcd8ce8ac
+_sp_a73c33cb722d464fadc0fdfab6f365f0
+_sp_22b887121d514ff8991f4090fa85503e
+_sp_2b280f95689343aab501547c8ebbe884
+_sp_a888b7954ad04823883d122576493d3a
+_sp_677f395297a64ed994bf90d77cc75966
+_sp_e177868f1c23407dbf528ca82dfbe50e
+_sp_feb6e9229c674bf6a088d66c81ec6924
+_sp_ae340711da344860a2d72aa0f1154f83
+_sp_cfdf085c51c34878be16c29ddc9e96be
+_sp_29623dc525fe4f6581718379ddd4cd82
+_sp_4ada0862c4d4468b8948e9ab41a03706
+_sp_350a543eff94437bb4d55ecc4211b214
+_sp_b8d0460bdb3747139533a70ef9eb035f
+_sp_d067513a4aa74d81adeeba20bc15736c
+_sp_f31270ee5c5e40cb8eab58ea611fd838
+_sp_92a3cf0af60a476b977a4bfbc8b90ef8
+_sp_a5b16a574f2d49b3b2507c391a14c946
+_sp_faf0e46e494d4f28afab2ea33433e6cc
+_sp_9500c752aa2b438881c73a69dd9e61ea
+_sp_8a4b617949254e26af0f5322047df68b
+_sp_de90cebbae774c8d98e909ef05a38290
+_sp_c7e48e5f1b854b6fa83578d717ef3a34
+_sp_4aae446398ed4540b5c805a29ff28bf0
+_sp_5d71e957f4a247ffb48be0351d63997f
+_sp_f350c89b3f2840eebe6f704a8a70b1b0
+_sp_a773a08e36c84762989227a59f8518f2
+_sp_4c43e9c3df104021b9fbacdfe9865877
+_sp_a8af507bc3d74453b35941e4244090aa
+_sp_c6c33b7a59c644f0bd92e1ce108e7b72
+_sp_7ba9f626288748d0923c74f8a6cab0f0
+_sp_1cf2ef87f84b4ab59842a0bcb02fdce4
+_sp_2234c72ba7554f17a5782c501918a063
+_sp_8803d4e1f0344d62a90d7bf32670da03
+_sp_17da6eb528b146c0a59f9365dee11700
+_sp_0e36ad59fdc1439a9145e69dfbc8588f
+_sp_5a68745ceabc49faae06031cce8976cc
+_sp_d41e4cd4e8934311bef32c8ba70c2aca
+_sp_7b477b07d47e41e59642daed452e59b5
+_sp_37e7936170544ebeb45f0bd9d23e9f00
+_sp_9b828ecf573a4b5791b928a74ca061a0
+_sp_e81860388dfb47f5868d32c71f8bbd3b
+_sp_45f618877fdf4f20b4d21a761e7d1412
+_sp_c22daaa314964d17ae85516cbdd57b48
+_sp_406d5a6fcc4e4d21950776182d14038b
+_sp_3e2d5f25c4664c95a4ff14ada8984721
+_sp_b791cb39bbe6492f824b95f7e0f5f52c
+_sp_324be968a9d449f4b8fee359f9020cfc
+_sp_18270fa838a9432999142a530774c576
+_sp_bb6f2a7c2ff34df7b889d51b67b3adfc
+_SpGetServerTime
+_sp_954a3e6578ff46b6a05d0d88be53beaa
+_sp_96eec687f7ca4b43b4cbb5dd8e0f75e7
+_sp_3ac6c7bb04844f409c75ab968c9c900c
+_sp_89511755be9d4b3dbb8d5226a536d391
+_sp_66bcc1a15f7c4b569f39a9d215fb1ea7
+_sp_b8d8b0c400d54ce1bed87c33aad859c1
+_sp_827dc626be734132be484008221d7830
+_sp_22847d672e684a73ab6311860ae8490c
+_sp_68a38211226940bb8532a8fb37e6aa14
+_sp_facfd3a5ea65439294fd8a6592aff789
+_sp_f0a08b0c5c7c44d988927f3c8cf7cd59
+_sp_9745ff4aff144599b355e9bd84ed9192
+_sp_330d66cce7e1452eb9e608db9ebee95a
+_sp_9bc8ef6580a4465b8b155f6e51cba0e7
+_sp_7d24b8ab06f84b5eaa12c1ee439f5d5f
+_sp_c2c33103dfef466e91c807e3b696f2a0
+_sp_bc70d0d500c64f079494fa9195a7f4cd.value_2
+_sp_4cbd3f93bc4c41aa829a409d37090710.port_numbers
+_sp_f9b64fe4417b4fd4bf68e3846f0786b5.data
+_sp_28c8af0f7321486f9af99443a121bbea
+_sp_9217b69c73c84c648eb813a365e8d2b6.feature_bits
+_sp_f4dc89ab706c414c9186cada75f53a66
+_sp_82677a96113548398d83dce391fe6846.s200
+_sp_ce02e4b595dc4b4ca307ee4950ea3c5d
+_sp_e8a986de03bb41989ea34db4d9e16bfe
+_sp_3ae4ac2bd4e6426a9bc427d486da2131.sp_b81ebf09d12242cfb70a25e9ac4e1d10
+_sp_5fd58e20cb4841f487def41ff1532c32
+_sp_8693282eabbc448b86c21f73debcd94a
+_sp_985dd2d6b45e45d3a0099baef89110de
+_sp_3003391c51c143feaab82dc05968c076
+_sp_e689b131191f45c0b021305e3b9b078a
+_sp_4bbf61efbc6544fcbf9b2884230866d3
+_sp_10c34f6f51774a0f8688ccf20edb4d6d
+_sp_50b80a86e8934648931fb2bfa2c0ba6f
+_sp_d1a69c4a06c145279067fc4a361095e9
+_sp_493d577647564a8786948b7a0f78b691
+_sp_2b6fee0ebcde41058631098173d1783c.e_constant
+_sp_3dea96285e7e44ef80db70e3f75e5b0d
+_sp_784d047c464f40fc8878ff7ceb0beb43._asn1_part
+_sp_44903d17e6cd47daa21497781461c964
+_sp_4f8ccee25a1a444b9cc07a3d59409d52
+_sp_d8be78211e3e4ccb9514ce2ecaa080e0
+_sp_1b732a8af6b84a0aa6ac8a186e0d6251
+_sp_27664214dbdd4b6a98bbe72519d12770
+_sp_f3f10f30089441b79f80d827533ffd3e
+_sp_d151d8411db245268796e73d2f5e8f50
+_sp_0539d92f4f064df9b5f2f2112a87588d
+_sp_50d9756dbbe149cc95e4257ccbc86600.n
+_sp_50d9756dbbe149cc95e4257ccbc86600.m
+_sp_4c24c674715f4f9e9aaad261efd17d33
+_sp_0e36ad59fdc1439a9145e69dfbc8588f.sp_b81ebf09d12242cfb70a25e9ac4e1d10
+_sp_0e36ad59fdc1439a9145e69dfbc8588f.chksalt
+_sp_6ffb8072f68949e289d5b2eafd221d6a
+_sp_4e20fabc9bb844248e24df0a736095f2
+_sp_8e9ad7294e924e9ea957c47e81f95a28
+_sp_6ed8509a895b4696bd727c20521d53ed
+_sp_d124266c281842f08aa30e6c58b25362
+_sp_6ad2501fb1574c6eb7db196ca45d23d9
+_sp_eac639e821a84ddb9697f8d9c7c88750
+_sp_0b2b491ef4f54701973b27609fe8e1ad
+_sp_97ee333e56314d3dba4801a8aadd3e81
+_sp_2ad40f8593ce449e82162ca98565efcc
+_sp_710b9d07adfe48a09569fec9fa76d4ea
+_sp_95000db96ef742878310e102c4422c51
+_sp_ae7d7ab953444ed090cff81be8da4121
+_sp_c943c4a6dc664b9e85bd6595a2a7b2a5
+_sp_6ad2501fb1574c6eb7db196ca45d23d9.empty_id
+_sp_25890291886048df8321ddddc0f2414f
+_sp_cf91929fddec43f0b213cc6a25d1de67
+_sp_449e45e18a3041549466c165af3c2e55
+_sp_a877a8852b4947019856ad338f856b2e
+_sp_797f4f731d1e4e62a63202243d5abe97
+_sp_681ab6b133eb477d9fc24e8daf87dcb3
+_sp_13bfd86f15a34efda9af83a1b2a77f1a
+_sp_c380d5abbe264041abcbbc205cfae665
+_sp_5be783f6f1a5406bbc6e0493d5917db1
+_sp_4ca2fbbc33ac4caaa95bee948ba085d1
+_sp_12c044da65c54eeea4f24735f7b20392
+_sp_1f3649a2c637492aab57f5f87390c16e
+_sp_b5543b8dc116431ca1ab660236564cac
+_sp_2515aef58c8e4bfbb160c6e6d3bb792f
+_sp_78249203cbab4102bcc33fe00943d1d4
+_sp_fe69d5d1f6ec4588a20e0abffe0be243
+_sp_2780c59aae78429c9dd991b17be5e817
+_sp_9976d154327a4c89afd0fb451b103bda
+_sp_15f48fbed1eb4ea4aeef3db63d4132d5
+_sp_efa317c222294e07b1b7f04d4be293bb
+_sp_5e36513a157f4a9390110f0fb0c9c8b1
+_sp_df6362b87ae04c669ce01a59b5f96a36
+_sp_2cbf1ae06c834b9a9b2a7661672e6756
+_sp_cccae1a4feb64234b1e93406cb66390e
+_sp_6f07e9f64fba4a6791965130521972ca
+_sp_40bca67584a5465d96f6aa539e6b548a
+_sp_e604bebe906643128beba471a55df49b
+_sp_65ce9e8e025a455dbfc7990fb2b66a90
+_sp_a67b8deeec1a46f0ba69c75841378bd0
+_sp_6a9ce7ce262c41f088e00e89227bcfd7
+_sp_83b41c619ee44458925b2e75a76db9be
+_sp_5857c919172040efb8105268c8f5eeb3
+_sp_6f50a12320104342aeb699e2f6eb64f9
+_sp_c722fe4bc0024f6f9786f379d1844373
+_sp_9e3cc437a1e44f0387640aecce62740d
+_sp_220062dfa35a41f69c52a738f4f26888
+_sp_77030a73929c4e95b086be4989dc27d2
+_sp_1dff2203592b4a409591b1bae9574ca7
+_sp_815f8edeb524407ca7700ee6b1921d04
+_sp_dd9e564e5b5d4e2a9738c82040f1b7a3
+_sp_1e363705721b41b9abd98c51801c8dbd
+_sp_b9b9d69ad486469784b18707b0635573
+_sp_96802ab13dd240fa94548707930bb61d
+_sp_050a7cd4b3dc4192aefc53cf461cf861
+_sp_9ad06b75e4a547129f4c542547886267
+_sp_b2c5a70fdcf8493ea02f9ab40da0a545
+_sp_050a7cd4b3dc4192aefc53cf461cf861.salt
+_sp_b2c5a70fdcf8493ea02f9ab40da0a545.sp_b81ebf09d12242cfb70a25e9ac4e1d10
+_sp_b2c5a70fdcf8493ea02f9ab40da0a545.chksalt
+_sp_78d5565c7d584a3cb936846c9170bddc.value_2
+_sp_216ecf0cb238474e80d55964da51c7e6
+_SpGetLibraryVersion
+_sp_bf4fe755c5814669b9d17f0f44aad5a2
+_sp_58b4a5cfd0a24df69f564165f1f74461
+_sp_6ba54fc1c2e54beeb9a8d83a01a99213
+_sp_1033c78128ba49fe8afd2afc7483a75e
+_SpRegisterDebugCallbacks
+_sp_98401d6f0a4d4f30bdd34f1c69d8fea8
+_sp_59d096935d2e463faf79e006ba2e398f
+_sp_c8239a24700843e7885ebef0441c302f
+_sp_9ebfc7762a8d4c4496a26162949554a9
+_sp_0601acccc844463984a6d360549d93aa
+_sp_834e51deeb114d119f7ec733e15968ed
+_sp_235535d4d19549ed873d38832c9b8a83
+_sp_969a5018811c4ccabadaccf08ede80fc
+_sp_ad9363a66fe947dca376bb010d596703
+_SpPlaybackGetVolume
+_sp_68384390eca94cb588ecbd6db248caeb
+_sp_f769ea726da542b081176f0a5f60e18a
+_SpPlaybackIsAdPlaying
+_sp_6499b2b246074754b6e9cd1e9df5041e
+_sp_0335b08438e04ab2a1e839efab580a7b
+_sp_a22480e641ef4929b221414b5610886a
+_sp_efcc90cfc8a64bbd867a388607aabdc8
+_sp_c81568ec1dd945ec808a059de1692d2a
+_sp_03effa93e9a346678f209c52d4ffd9d1
+_SpConnectionLoginBlob
+_sp_27ad3981468242e69d4742e9aced335e
+_SpConnectionLoginPassword
+_sp_049fba6d555b4398b25863763c621221
+_sp_1bc3a8166a6d4104b2fc7f7110e18b25
+_sp_765af8b3803c4fda9cd59504e178e95c
+_SpConnectionGetConnectivity
+_sp_2e755e7567ef46b596874b0f4f8acb0e
+_sp_bd8d85824a5d4f4685127d10b41010f8
+_SpConnectionIsLoggedIn
+_sp_fbbe38435e654f10a59e5786c5392cff
+_SpGetCanonicalUsername
+_sp_827e1320cb50418b8160d585fd20afc8
+_sp_eb83a0fb0263462ba2a3a8573dfcb5c1
+_sp_ef85853272f64ddba0eae38f4aac207f
+_SpGetMetadataValidRange
+_sp_a4efe88eeebd46298b0aae8be0d9bde6
+_SpSetDisplayName
+_sp_6bb162f8ad934eb8a5e90c8a2ed1cf74
+_SpSetVolumeSteps
+_sp_ea3a7c2915d3482e9b915e20cad2f61f
+_SpSetDeviceIsGroup
+_sp_7c24b8d9c0444ef8b25c8ab427c3750d
+_sp_4e1a4ef574554bbdbe5e65dd04c77cc4
+_SpZeroConfGetVars
+_sp_5a8f927ae0f94f20abe67e15508ecfc5
+_SpZeroConfAnnouncePause
+_sp_0e093a79a6fe4e888b592cd4f5563a49
+_SpZeroConfAnnounceResume
+_sp_b8e1cf2ec9314d9682a45a9a1d4bf736
+_SpConnectionLoginZeroConf
+_sp_58eeb262175d47ecb7e8b7c757b7c8e5
+_SpPresetSubscribe
+_sp_68849a511d2a4663ab18d17d6f3aa63b
+_SpPresetUnsubscribe
+_sp_beabcd6ea1784fe6b07692a6acaa6387
+_SpPlayPreset
+_sp_3b697253c5bb48ac943fd476236d7d70
+_SpPlayPresetEx
+_sp_b100a06ea94f4a81930f6390377e4b57
+_SpSetAlarmClock
+_sp_4ed3c0910d034885ae81158752f80432
+_SpCancelAlarmClock
+_sp_5ce4781f79c245f4be92f974b96d48a5
+_sp_454f9b34fc4642e28c7827577904be6a
+_SpRegisterContentCallbacks
+_sp_192a5a9b79a9491482bc63e3459ce3cc
+_sp_03a1a7401de3483da11885c50fe5592e
+_sp_03f590df4df04dc6bebedaad7f988dbe
+_SpGetBrandName
+_sp_c31da4c12932430f8756d4ad3432b168
+_SpGetModelName
+_sp_5b67ff139fc548d9a4dd14f37a56d49f
+_SpRegisterPrefetchCallbacks
+_sp_f9c4f54f39e2434d89b8d6ee0407ccd2
+_SpPrefetchItem
+_sp_e18d0bc047ac4c46800aecf6d0b69d30
+_SpStopPrefetchingItem
+_sp_4af51fcfc1aa47eaad9330abcd8b05fc
+_SpRegisterDnsHALCallbacks
+_sp_8986f633263c4c529e5f025677c44ea1
+_SpRegisterSocketHALCallbacks
+_sp_cdfe3d34e0cf43fe93ccbba3606944af
+_SpPumpEvents.calling_time
+_sp_b6ef633f55904842877a9228b580f6c4
+_sp_d41e4cd4e8934311bef32c8ba70c2aca.base64_alphabet
+_sp_d41e4cd4e8934311bef32c8ba70c2aca.base64_alphabet_initialized
+_sp_13883ba652184a17a40e75a33b0c7cb0
+_sp_69e4d42658754a95b22eec5d60f45778
+_sp_0618cd7252fd4ff2a1c8975a31c7833f
+_sp_4aa2b2a24cc24b59b9877617e2147e26
+_sp_33f798183af144408a1fb5b8eb842a7d
+_sp_cf4a3d2fd6734e1391a86dc7a65d53e1
+_sp_3fe9a32c264d4ffabe417950afedda6c
+_sp_2c076c37ab8b49feb65111aa4d774a28
+_sp_2e2e37321b9a4de2865366e2c44dbed2
+_sp_51e90a13a4db4bd9b39136c17bd2a050
+_sp_e1a3b94d6c72448d8d0ab182295d14b2
+_sp_35cb782c2a8e45b2b001a52075c10e1a
+_sp_9623c7eb693c491f89271789335573d6
+_SpGetProductType
+_SpSetBackendEnv
+_sp_7a4d86410a254d90aacd16ae59cd4967
+_sp_dd2f171553f9464a81b69106f5995334
+_sp_15b4c73967454ee9b314499294a9fddd
+_sp_cfe461c8885e43919d2a2738b3bd697a
+_sp_204aaf86a358497fa9abfe16ddf39f70
+_sp_f087f41153ac4d6e865e772bdba583a1
+_sp_7d185a413a484c1f8b16ac26c57ab160
+_sp_ab6cb3c106444ee183bb70b0dd3f7bb0
+_sp_932a8e1bde76421aab348dc8fdf46f0a
+_sp_b8516ad7ec0842e6bbe752e7e27f5f5b
+_sp_7f17608e4b2f49fbb95f99184e86290b
+_sp_8fd330cc4d03400493dae70c82e2e56f
+_sp_60ac9c85348b4e54b8d17efd834a9fd9
+_sp_7a9b82430ba94d59965a483d79c82ad1
+_sp_f18609393e904c2282e342add1e6a207.UUID_HYPHEN_INDEX
+_sp_6108faaed05648438764e9e1d2dbfea2.limited
+_sp_6108faaed05648438764e9e1d2dbfea2.quota
+_sp_6108faaed05648438764e9e1d2dbfea2.last_check
+_sp_2e2e37321b9a4de2865366e2c44dbed2.blob_aligned
+_sp_2e2e37321b9a4de2865366e2c44dbed2.device_id_hash
+_sp_2e2e37321b9a4de2865366e2c44dbed2.key
+_sp_00a20e3dcf1d46b288b8a3a5ca0b6b85.remembermeblob
+_sp_edbbbd7b695f427d88eb841f729592a1
+_sp_183944bcaea64b3da377f55a64718620
+_sp_f77fce5cd3a7459c8c91da66ee8ca15e
+_sp_8a44e6d8e9d0491c91d6389b6a0e90d5
+_sp_2498dbe0aa634980acb440f0e82e6429
+_sp_945fb7161d3b485c97836a09753ce990
+_sp_288bfa9cc44e47299880dda3f4b6aee0
+_sp_7971d6a92fe4438e87628e7d4cc71749
+_sp_02e8bbbe77f242de898f8e6eb91b1518
+_sp_1e3c532337b2485aa6234d87510a3cc5
+_sp_0cc54d88e3b14af9ba8653d98909364d
+_sp_78584fdeddba463296844dcf07461f50
+_sp_ba05944c44a9424a92ec91f75140674b
+_sp_46f30e79d8aa4c6fbad2e1a64f7af27f
+_sp_654591ee71554361a6874981c7d95d93
+_sp_355ef8fa5cf046cc8eb69c821ad7a335
+_sp_d5d2dcd28b4e467caaa4c4a698a1ec79
+_sp_5c4710f12c79423c8ad81776e87eef0a
+_sp_f23da41c248e42f38fe091eeb9dd77e2
+_sp_7341852ce1ff425f927c70f6b3c4558b
+_sp_caa09c6c3e3246eb8632266ea77cf094
+_sp_8e1b6d6195ad49ab989b7eafad16716d
+_sp_154cdd15ea194b479e862fe265679b0a
+_sp_c37fcfc0c9d94a81a155ba9ac1713c22
+_sp_631744123d0b424d8e86817aeecafe9e.recent_position
+_sp_631744123d0b424d8e86817aeecafe9e.recent_position_expiry
+_sp_631744123d0b424d8e86817aeecafe9e.recent_position_max_expiry
+_sp_9ee2d44e73e74cac8fbfafa4573b914e
+_sp_a8096f511f2242bca413a94fe233af63
+_sp_2a18962ba20945dead5442d536f69f13
+_sp_55998f5813f74fe786cf107289dd1286
+_sp_f96cbbbc985341b0b8b2464cc50e0b5c
+_sp_7997e656c6aa415e9ed361a32cae139f
+_sp_e7e3b7bbe0e04f54b321568bf9d84b45
+_sp_8f3a25c1dff74063a300f344c00abdf7
+_sp_c330301a03f9401ab558e821ae3889d8
+_sp_1744779340894c3badad143f09fbd854
+_sp_32eb1a36975f45589f3dcf7bb194009d
+_sp_5ebf07eb5e9c4d8aa03d4bbdb4012c57
+_sp_1405c1ca01244e478ce33540311c3b2f
+_sp_7aa3214b34ce43dea340a2d104a69757
+_sp_680f4c8dedbf4cc8b644dd363305d7d6
+_sp_0f7e753c1c6e4590b89c2e83034d408b
+_sp_49efbc5d02e14c0a8349d7cf6183cf78
+_sp_887724cdb71a42738e3e3c4b4fc3e8b0
+_sp_284e3010d2e0402eb13182c41b0ca901
+_sp_2185b693175d4da3ad6d343a1a7282ae
+_sp_eaa59b89a8834dabbf9eb2dfc46d4557
+_sp_96c5759b65394c6daf77114393ea2cff
+_sp_4ceb483a1931497996794a9022e02732
+_sp_494c7ea03ed144dc9c90dc2a7ba02e8e
+_sp_af63ca6072ca4c819d8c2de03e9731be
+_sp_f2d089503bc94ea389bf13a819644752
+_sp_fb38659ea5ed40fc84d41e03b3b88a29
+_sp_f2d3945ad480445497dbfb6f66550063
+_sp_747faea964f84682ab8777faec672df6
+_sp_eff1775a11804b0791d635e32a47b2d5
+_sp_ed09f69ba80a45f29091ce4d315cc22a
+_sp_9a423f8399034aed8c30e5221c6f5d65
+_sp_1edfdd72136e47a4a7e4e5836658232d
+_sp_77bbf14f6cdf4579a3b69b6a1b0ebd03
+_sp_a73aa84d1d4848638646f5f849ebfdf0
+_sp_ac1564eea7df4a0dac5018f58f40401f
+_sp_a18f9b7726e84d38b074b925c0ee2f43
+_sp_f5c3c604d3f84877b122d6134316d797
+_sp_9a5384a26693441bafaa9b243d1e9e7f
+_sp_fd7e522bde4a4f8da2f551abf12f28af
+_sp_9ea100d53bcd40f1abada66772f7a810
+_sp_25c0e0fda34243e2be35d8e7b408301f
+_sp_f5182a6ed3044cf9a5beafb6308e587b
+_sp_590b41e189fa4b48aea46cf2154393cb
+_sp_a3078251f5534978a5588860492423d3
+_sp_30bbdfd88f5b4183ac75b2812f0ed0d9
+_sp_74d0690a66ec48b083b736af7ecc0f52
+_sp_6dd02298f3fb451794fd214c6f1b320c
+_sp_8455ef77f80d456bad92200c5608fe4a
+_sp_09036f4a32a94b60afe920dd3aba430e
+_sp_6a4b96930a3740ad9d1a88e6cfd10a1b
+_sp_a5e83fd04e1f46a2ba85d4bdb8da9059
+_sp_914d754823764948b2498444fc9904a5
+_sp_ab960c3c59ec492cb906c6edb2782de9
+_sp_aae931d979454b45890feb09166760db
+_sp_6318971156c24b9cbaf86c1c12993d96
+_sp_a030987d03454459b5c24f1c22954da5
+_sp_c5aaf1e456af4887ba13196dd096f816
+_sp_9171b00fccd344cfa5160ed9f3220441
+_sp_755e2c7ca4814a24af4ba27c8b11089a
+_sp_28ecb9aedbd0432786c48069b58c69b2
+_sp_ecb406b3e9974e578a98d986196ec475
+_sp_d626639fd9a6477abb156b2abe80b9ae
+_sp_ecbc248b08dd4d7b8e317003b19ec112
+_sp_a855b77d42484ca388127eb4687eecf6
+_sp_7d9b3e8d72674adaa8b89174ef21e6ba
+_sp_47fff34e457941e5975ef4feaa808788
+_sp_c6030cc4d1df424fadc1d82d69c9d083
+_sp_9cff1915dcba4d0ebc78a5edb35804de
+_sp_82963d0d2b19485c898214ae412f1b14
+_sp_43465aab5e9b4775bcd7b568bf5ad638
+_sp_32bc9ca48ecd49a08053691fe80dd322
+_sp_7943aab5ee05432a97c64ebb0c748d6d
+_sp_09d1625ef3f4467a8be907ffafe27176
+_sp_f719dca9a8514006b6b66579954a4a44
+_sp_16b60e99ff404c50a87bad93e1ac9c4c
+_sp_1bcc5f1cf5e141d88507a7fe9efd8a63
+_sp_732e18ba3b964e068f5b37df9d39b8bd
+_sp_a6268ae8982b4e90a1a37b3eb6d955a8
+_sp_430bff6e8fc947ff89fdf28967e6ceee
+_sp_94eac93bce304c0386b080353d02b095
+_sp_d89906e04dbf46f9a2aab608e8243558
+_sp_9bffce5c3c334e038f9270ae72529116
+_sp_8dce9974415248549fbcba3cedbef531
+_vwin64
+_vwin128
+_vwin256
+_vwin512
+_vwin1024
+_vwin2048
+_vwin4096
+_sp_8cadc64bce9a4a23b852d78b39a0c863
+_sp_9a97ad4de94249a5a1b539ff7dd9e1ff
+_sp_cfff77359e2d466ca7380c2ffbe8bcf7
+_sp_5d63fac1793e4e0b885d488bcd81dd37
+_sp_4d8903fda03e450da956887546112ff5
+_sp_4d887e5348884482a47bef320335ed82
+_sp_1c3c1bf7d8c84a119c5ed93ba522c809
+_sp_ae375336befa4811a1777a0ba18d7b97
+_sp_dca80bf71d9a4e42abd9c6130055118d
+_sp_2b024f767e484ef9896ba6b43e7bb8c9
+_sp_42a1d55bc70f4357a4f16fd09a170fd3
+_sp_28ca7a1b3d7c41a9af83fc36305ff3bc
+_sp_62c4652b1ee74f5998ff63e3b528362a
+_sp_59d492ae17074a4b837697ddfc2b73a9
+_sp_19dee358d43f4d3cbc5efaa46a2d36e3
+_sp_dabf98ef5688420c8c376893faf3a6a5
+_sp_3486e8f1c17a4b33a15b2db185773b3a
+_sp_95daebaea23c420c8c8558d2e6786ae1
+_sp_32060591c1c84d20a4d922048df10450
+_sp_0d630abea50f46e294033f12f0929656
+_sp_55be7f1cb28045bda276a0f4ceb42304
+_sp_062a715cbaf041b8967c4017f0b0656d
+_sp_52f52d57d5ea4e19b068246f266de365
+_sp_028aae6832a042c7a756a6c54622ca4d
+_sp_e89a18e051d24d59bc572fa3d2ed94ff
+_sp_2ee7ef1712f442d68fab3b3b400438e1
+_sincos_lookup0
+_sp_0ce4e7b5740746aab79e2af493f02be4
+_sincos_lookup1
+_sp_acc218cf22614ffd8f24502338e0a6fc
+_sp_571d1410716449638c236f35907877c4
+_sp_f959e6fc503d4795a8ec2df0d41440ac
+_sp_ce1156be4dc54cbc9d3d73a297239159
+_sp_01eadb4e72af4b7f9100f80b3cbe6a06
+_sp_788f38eb175a48f6a621d28a39655d60
+_sp_f6d21076335947c3aa39f90d318108b6
+_sp_1ebb90d11e5c4b89a612fbe114cfef92
+_sp_971be2300e98408cb84e41a4be673162
+_sp_e72aefb64c844ee1b7c4007af81f93a4
+_sp_7e91d8cfed984ad1a2d57098c1f5a207
+_sp_5e75c419d80a404bb170073edd955b09
+_sp_c59aa7822a91441bb059f18ef92e4ac9
+_sp_ea56cd9a31784e8b8629a2286d508b9d
+_sp_a2dbfea097eb4fabaf8c96c5782c85d9
+_sp_81e3ea292298441bb9a356a225a69c33
+_sp_9777748b2f1b48919857a77adc473dd3
+_sp_d2f3df8c9a164d3791627be40c8bc91f
+_sp_088ffa897e44483c9b069bb6647f7ebc
+_sp_35b2e071827e46a0b6dce946c88053f2
+_sp_5d46d462d719463998d10354d2a5e5f8
+_sp_d8c22baaa4754ea089e63676701d4687
+_sp_ab4d343b35b048c290e6cd01c41ca47a
+_sp_20dd40ad28894724853e514def2677ea
+_sp_0f03880626e949088a2c8a854340f2be
+_sp_9e979135cdb84a769b3256e1e38614f2
+_sp_dab5aede610248e5a08503545d97f637
+_sp_172f5f7044884ee0a97385f724611f9b
+_sp_b930b5f894c04510b06490bac990f793
+_sp_a992b44db5354d6892f1ad94e6d0d0b7
+_sp_98ebb16baa5642628cfa88f7205c9ca8
+_sp_9fcd5d16ef6d4e289d1057a78f483b16
+_sp_0f25fd0d03a14f0fbdcfbb642beb2dfe
+_sp_a0d1629d97ce44b2a324d8d6252a748b
+_sp_72dbc10eac024b878b92d0f241c1643d
+_sp_8fe1847fc6874fd990541896a5af7449
+_sp_00ee479688fb401588906ad6e0fbfc3b
+_sp_d688b6941309408ab3be5bed54b2ef23
+_sp_45f6b2d619204270972c8f8774852390
+_sp_ccb558f9be4e4d77a1148fe91a01ed7a
+_sp_814665f53e374b0a9049f8ecd0b3c3c9
+_sp_2bd916a1b33947629051167181bf7d75
+_sp_571deea699444396a84a0ccdcdc966a4
+_sp_44d63a018559448ea513525e4e405ca8
+_sp_e2aeccd5de31434abcb812391796708e
+_sp_3bc66c740a1946e083a22ce5849d78fd
+_sp_98c683e1e13a462e9b20067e8d5d1b35
+_sp_a3a68070a4dc4da098393e79866c8c92
+_sp_53bc2f5d5c97490c9011620fe0a769bd
+_sp_fbe166be7e984310afc64255db30f29c
+_sp_87faba4eb5274d4aab0db8cd49b8cc05
+_sp_0af7b80b6a804de0ad09d7386dbd5ca2
+_sp_2becb970f13c4f99a98e7181906b1de5
+_sp_25255051717a4496be1d28e4a65dd181
+_sp_c4c9f31ba3fa4c16b04d39c852b67b56
+_sp_82a0868eb37e4d619fbf518f7c7d51cf
+_sp_f1bb1d0fa322437b9e9811a09a4f007b
+_sp_538e9702393b4464bd8b4a65438dc2fe
+_sp_affdf25382ac487badd86d49553dfd50
+_sp_a78d3082333545a39323dc8644be6d25
+_sp_1789d49170af461aa5ee8509ce6416f1
+_sp_a23d76fe8a994bc792d53f144cc4c745
+_sp_7939c0cb2930466fbfe34bd6eedd443d
+_sp_35ffc6ff69d340759d9149afedda95b2
+_sp_667866d081f64481ad9df575aa78fd4b
+_sp_5d0ac96c62a54545814bba787dca9bb8
+_sp_594098bd01574b50a5ed90f27cd6c2b6
+_sp_3bcebe68181444d2a8774c46f2667699
+_sp_98676e8e85ee493f9fc372fd24aad7a2
+_sp_735d3f10bd2349ebb54c8d31571581b9
+_sp_2ff1787ea0654a05acb26ec493380728
+_sp_243bf1b2219e456c88d5874b799d0984
+_sp_744ee1cae46c4c339cd275cd0f4dd361
+_sp_6ae635f319c2426488a22644d111dc1e
+_sp_5eb301710cd54bc9b083f537f58bf551
+_sp_690d411f91d34d439dedb2de53b7fbc0
+_sp_87159c5dde214d1da49b8d3da40d48ad
+_sp_81a23d89e1e34bdb8d72caf1f2041940
+_sp_38c89562f21e4befad82102673313b75
+_sp_b71901f9174e43ec9ad17740241bceed
+_sp_d158059b654340f6b2d71c72a57368db
+_sp_98f17e6496804beb96dd4e782bbe2988
+_sp_b81ebf09d12242cfb70a25e9ac4e1d10
+_sp_3b49ced4cc654613af088b5dee3105e4
+_sp_c5d3b265ac2d42cf923456efa47651ab
+_sp_d580dfbd605449eba7fba296b6ec4ebb
+_sp_89e47853f2e44240b8b09fe59f0ec1b9
+_sp_f079153aeccc45a189ea386104f52271
+_sp_84c6d310cc1346058e343947d799a3bd
+_sp_1ed0fe0899124770940d59f261c3974d
+_sp_cbd6b8e6667547fb8714d6e259e764d6
+_sp_729c5dcfbb2f4eaa88f0a8f01f9aae73
+_sp_fc37dddb0e4b4928aa3c06e3246e4719
+_sp_45364bc227ae4b53929f7bc0d93b5cd2
+_sp_f358b0ec89594ff79ed2a9cf51c77e4a.msg_string
+_sp_f6053b5595a146bf8d7bb50b5c9c46d6
+_sp_494a85cdf3d7436f88a720bf982304ad
+_sp_d879bba2e7f54abfb61f8c83dcac5702
+_sp_77447af875fa41b4af8b6cb3a7a77e8c
+_sp_eb1a2b1a1ae644dbba924e7ee3ab5fc8
+_sp_c4815566a81e41f4a4367d9a3aebe0cb
+_sp_1a28d530ac2841c7aabeb871c63bc2fc
+_sp_fbeaa6219cd84a869776f53d659f7d64
+_sp_b1d6b530269f479eae0d642e93a57f8a
+_sp_9f4e214c34004bb5a18d810b9b12e453
+_sp_4645ab0693b842d88344b42dc9ecf872
+_sp_7595f435c2ed4b6cb8ca62d4e6f4209d
+_sp_50dd2e62114c41f8a78bb095ca278dfc
+_sp_c1fdd94e2d6942c98d47001b823cf4c3
+_sp_31ed3495c3ad4e279ae7718bd5b3d6d7
+_sp_de8dc7ce3b3a4945874668c826c928e6
+_sp_2ed65eb39e764c7ca598a33e6cfa201b
+_sp_cbe9ee8e5cc440989c9a449126cafdf1
+_sp_0791cccc243548ff8aa2c808b9d6847d
+_sp_08925fa30be6487b8149dbc86c7ddded
+_sp_5e42fa6727054b1bbd797a94bc6ba24b
+_sp_7c8325411bcf4bddad57236608ec57f4
+_sp_982ddaebea634eb7b3d6cece6d281035
+_sp_2eb23f2a5e4d4e30b9ee48764c89382c
+_sp_245a72d217754669a522585ecc87ccd2
+_sp_3b5cf9f3b1234f62bf2e8b7cf7265f6a
+_sp_b6eaaf7e876743e8aa48314340cceace
+_sp_e3293cd78f0c4d14a6d71091196259ac
+_sp_cf5f64249a5f44d2881c2c225b1e0e3e
+_sp_32cdee3caca249b784f4d447394e7aba
+_sp_a1713802458540eb884d058029790a58
+_sp_1427790577d145c48e8dfb7d01f5f250
+_sp_d0dc683c4afc4f9ea1791ba4d9074e17

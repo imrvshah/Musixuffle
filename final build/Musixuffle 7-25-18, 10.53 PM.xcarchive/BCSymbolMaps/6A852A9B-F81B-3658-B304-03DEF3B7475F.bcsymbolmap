@@ -1,0 +1,186 @@
+BCSymbolMap Version: 2.0
+-[ExtensionDelegate applicationDidFinishLaunching]
+-[ExtensionDelegate applicationDidBecomeActive]
+-[ExtensionDelegate applicationWillResignActive]
+-[ExtensionDelegate handleBackgroundTasks:]
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_WKExtensionDelegate
+l_OBJC_LABEL_PROTOCOL_$_WKExtensionDelegate
+_OBJC_METACLASS_$_ExtensionDelegate
+_OBJC_CLASS_$_ExtensionDelegate
+Apple LLVM version 9.1.0 (clang-902.0.39.2)
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit Extension/ExtensionDelegate.m
+/Users/danwong/Desktop/projects/Musixuffle
++[BaseController startWorkout:]
+l_OBJC_PROTOCOL_$_HKWorkoutSessionDelegate
+l_OBJC_LABEL_PROTOCOL_$_HKWorkoutSessionDelegate
+_OBJC_METACLASS_$_BaseController
+_OBJC_CLASS_$_BaseController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/BaseController.m
+-[EndWorkOutInterfaceController awakeWithContext:]
+-[EndWorkOutInterfaceController willActivate]
+-[EndWorkOutInterfaceController didDeactivate]
+-[EndWorkOutInterfaceController buttonEndWorkOutClicked]
+_OBJC_CLASS_$_EndWorkOutInterfaceController
+_OBJC_METACLASS_$_EndWorkOutInterfaceController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/EndWorkOutInterfaceController.m
+-[NotificationController init]
+-[NotificationController willActivate]
+-[NotificationController didDeactivate]
+_OBJC_CLASS_$_NotificationController
+_OBJC_METACLASS_$_NotificationController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit Extension/NotificationController.m
+-[MusicInterfaceController awakeWithContext:]
+-[MusicInterfaceController willActivate]
+-[MusicInterfaceController didDeactivate]
+-[MusicInterfaceController buttonLikeClicked]
+-[MusicInterfaceController buttonDisLikeClicked]
+-[MusicInterfaceController session:activationDidCompleteWithState:error:]
+-[MusicInterfaceController session:didReceiveApplicationContext:]
+___65-[MusicInterfaceController session:didReceiveApplicationContext:]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
+-[MusicInterfaceController lableSong]
+-[MusicInterfaceController setLableSong:]
+_OBJC_CLASS_$_MusicInterfaceController
+___block_descriptor_tmp
+_OBJC_IVAR_$_MusicInterfaceController._lableSong
+l_OBJC_PROTOCOL_$_WCSessionDelegate
+l_OBJC_LABEL_PROTOCOL_$_WCSessionDelegate
+_OBJC_METACLASS_$_MusicInterfaceController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/MusicInterfaceController.m
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/MusicInterfaceController.h
+__destroy_helper_block_
+__copy_helper_block_
+__65-[MusicInterfaceController session:didReceiveApplicationContext:]_block_invoke
+-[HeartRateInterfaceController awakeWithContext:]
+-[HeartRateInterfaceController willActivate]
+-[HeartRateInterfaceController didDeactivate]
+-[HeartRateInterfaceController updateHeartRate:]
+___48-[HeartRateInterfaceController updateHeartRate:]_block_invoke
+-[HeartRateInterfaceController updateWalkingDistance:]
+___54-[HeartRateInterfaceController updateWalkingDistance:]_block_invoke
+___copy_helper_block_.49
+___destroy_helper_block_.50
+-[HeartRateInterfaceController updateSteps:]
+___44-[HeartRateInterfaceController updateSteps:]_block_invoke
+___copy_helper_block_.60
+___destroy_helper_block_.61
+-[HeartRateInterfaceController updateCalories:]
+___47-[HeartRateInterfaceController updateCalories:]_block_invoke
+___copy_helper_block_.71
+___destroy_helper_block_.72
+-[HeartRateInterfaceController labelCalories]
+-[HeartRateInterfaceController setLabelCalories:]
+-[HeartRateInterfaceController labelSteps]
+-[HeartRateInterfaceController setLabelSteps:]
+-[HeartRateInterfaceController labelHeartRate]
+-[HeartRateInterfaceController setLabelHeartRate:]
+-[HeartRateInterfaceController labelDistance]
+-[HeartRateInterfaceController setLabelDistance:]
+-[HeartRateInterfaceController calories]
+-[HeartRateInterfaceController setCalories:]
+-[HeartRateInterfaceController steps]
+-[HeartRateInterfaceController setSteps:]
+-[HeartRateInterfaceController heartRate]
+-[HeartRateInterfaceController setHeartRate:]
+-[HeartRateInterfaceController distance]
+-[HeartRateInterfaceController setDistance:]
+_OBJC_CLASS_$_HeartRateInterfaceController
+___block_descriptor_tmp.51
+___block_descriptor_tmp.62
+___block_descriptor_tmp.73
+_OBJC_IVAR_$_HeartRateInterfaceController._labelCalories
+_OBJC_IVAR_$_HeartRateInterfaceController._labelSteps
+_OBJC_IVAR_$_HeartRateInterfaceController._labelHeartRate
+_OBJC_IVAR_$_HeartRateInterfaceController._labelDistance
+_OBJC_IVAR_$_HeartRateInterfaceController._calories
+_OBJC_IVAR_$_HeartRateInterfaceController._steps
+_OBJC_IVAR_$_HeartRateInterfaceController._heartRate
+_OBJC_IVAR_$_HeartRateInterfaceController._distance
+_OBJC_METACLASS_$_HeartRateInterfaceController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/HeartRateInterfaceController.m
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/HeartRateInterfaceController.h
+__47-[HeartRateInterfaceController updateCalories:]_block_invoke
+__44-[HeartRateInterfaceController updateSteps:]_block_invoke
+__54-[HeartRateInterfaceController updateWalkingDistance:]_block_invoke
+__48-[HeartRateInterfaceController updateHeartRate:]_block_invoke
+-[Settings onNextTapped]
+_OBJC_METACLASS_$_Settings
+_OBJC_CLASS_$_Settings
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/Settings.m
+-[SplashInterfaceController awakeWithContext:]
+-[SplashInterfaceController willActivate]
+-[SplashInterfaceController didDeactivate]
+-[SplashInterfaceController buttonTapped]
+_OBJC_CLASS_$_SplashInterfaceController
+_OBJC_METACLASS_$_SplashInterfaceController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/SplashInterfaceController.m
+-[MXInterfaceController awakeWithContext:]
+-[MXInterfaceController willActivate]
+-[MXInterfaceController didDeactivate]
+-[MXInterfaceController quickStartClicked]
+-[MXInterfaceController startClicked]
+-[MXInterfaceController buttonHeartBeatClicked]
+-[MXInterfaceController takePermission]
+___39-[MXInterfaceController takePermission]_block_invoke
+-[MXInterfaceController workoutSession:didFailWithError:]
+-[MXInterfaceController workoutSession:didChangeToState:fromState:date:]
+___72-[MXInterfaceController workoutSession:didChangeToState:fromState:date:]_block_invoke
+___copy_helper_block_.81
+___destroy_helper_block_.82
+-[MXInterfaceController workoutSession:didGenerateEvent:]
+-[MXInterfaceController updateHeartbeat:]
+___41-[MXInterfaceController updateHeartbeat:]_block_invoke
+___41-[MXInterfaceController updateHeartbeat:]_block_invoke_2
+___41-[MXInterfaceController updateHeartbeat:]_block_invoke_3
+___41-[MXInterfaceController updateHeartbeat:]_block_invoke_4
+___41-[MXInterfaceController updateHeartbeat:]_block_invoke_5
+___41-[MXInterfaceController updateHeartbeat:]_block_invoke_6
+___41-[MXInterfaceController updateHeartbeat:]_block_invoke_7
+___41-[MXInterfaceController updateHeartbeat:]_block_invoke_8
+-[MXInterfaceController fakeWorkout]
+-[MXInterfaceController session:didReceiveApplicationContext:]
+-[MXInterfaceController session:activationDidCompleteWithState:error:]
+-[MXInterfaceController lableHeartRate]
+-[MXInterfaceController setLableHeartRate:]
+-[MXInterfaceController lblDummy]
+-[MXInterfaceController setLblDummy:]
+-[MXInterfaceController healthStore]
+-[MXInterfaceController setHealthStore:]
+-[MXInterfaceController .cxx_destruct]
+_OBJC_CLASS_$_MXInterfaceController
+___block_descriptor_tmp.84
+___block_descriptor_tmp.93
+___block_literal_global
+___block_descriptor_tmp.113
+___block_literal_global.114
+___block_descriptor_tmp.117
+___block_literal_global.118
+___block_descriptor_tmp.121
+___block_literal_global.122
+___block_descriptor_tmp.125
+___block_literal_global.126
+___block_descriptor_tmp.150
+___block_literal_global.151
+___block_descriptor_tmp.154
+___block_literal_global.155
+___block_descriptor_tmp.160
+___block_literal_global.161
+_OBJC_IVAR_$_MXInterfaceController._lableHeartRate
+_OBJC_IVAR_$_MXInterfaceController._lblDummy
+_OBJC_IVAR_$_MXInterfaceController._healthStore
+_OBJC_METACLASS_$_MXInterfaceController
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/MXInterfaceController.m
+/Users/danwong/Desktop/projects/Musixuffle/Musixuffle WatchKit App/MXInterfaceController.h
+__41-[MXInterfaceController updateHeartbeat:]_block_invoke_8
+__41-[MXInterfaceController updateHeartbeat:]_block_invoke_7
+__41-[MXInterfaceController updateHeartbeat:]_block_invoke_6
+__41-[MXInterfaceController updateHeartbeat:]_block_invoke_5
+__41-[MXInterfaceController updateHeartbeat:]_block_invoke_4
+__41-[MXInterfaceController updateHeartbeat:]_block_invoke_3
+__41-[MXInterfaceController updateHeartbeat:]_block_invoke_2
+__41-[MXInterfaceController updateHeartbeat:]_block_invoke
+__72-[MXInterfaceController workoutSession:didChangeToState:fromState:date:]_block_invoke
+__39-[MXInterfaceController takePermission]_block_invoke
