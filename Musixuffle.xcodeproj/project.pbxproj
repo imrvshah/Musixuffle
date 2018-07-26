@@ -20,6 +20,7 @@
 		476D3110210972C8004FB9FD /* Moods.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D310F210972C8004FB9FD /* Moods.png */; };
 		476D311221097341004FB9FD /* Additional options.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D311121097341004FB9FD /* Additional options.png */; };
 		476D3115210973B5004FB9FD /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 476D3114210973B5004FB9FD /* Settings.m */; };
+		476D3117210975E0004FB9FD /* playlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D3116210975E0004FB9FD /* playlist.png */; };
 		47A5DDC02107CE6100568A00 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A5DDBF2107CE6100568A00 /* Player.storyboard */; };
 		47A5DDC32107D72600568A00 /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC22107D72600568A00 /* Playlist.m */; };
 		47A5DDC62107E12100568A00 /* StartUpPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC52107E12100568A00 /* StartUpPage.m */; };
@@ -114,6 +115,7 @@
 		476D311121097341004FB9FD /* Additional options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Additional options.png"; sourceTree = "<group>"; };
 		476D3113210973B5004FB9FD /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		476D3114210973B5004FB9FD /* Settings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		476D3116210975E0004FB9FD /* playlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playlist.png; sourceTree = "<group>"; };
 		47A5DDBF2107CE6100568A00 /* Player.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		47A5DDC12107D72600568A00 /* Playlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Playlist.h; sourceTree = "<group>"; };
 		47A5DDC22107D72600568A00 /* Playlist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Playlist.m; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 		476D310C21097192004FB9FD /* img */ = {
 			isa = PBXGroup;
 			children = (
+				476D3116210975E0004FB9FD /* playlist.png */,
 				476D311121097341004FB9FD /* Additional options.png */,
 				476D310F210972C8004FB9FD /* Moods.png */,
 				476D310D210971A7004FB9FD /* Genre.png */,
@@ -488,6 +491,7 @@
 				476D310E210971A7004FB9FD /* Genre.png in Resources */,
 				476D311221097341004FB9FD /* Additional options.png in Resources */,
 				476D3110210972C8004FB9FD /* Moods.png in Resources */,
+				476D3117210975E0004FB9FD /* playlist.png in Resources */,
 				561DC54221068CF200F68C23 /* Assets.xcassets in Resources */,
 				561DC54021068CF100F68C23 /* Interface.storyboard in Resources */,
 				476D30F62109474F004FB9FD /* DSMarkerFelt.ttf in Resources */,
