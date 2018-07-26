@@ -97,9 +97,15 @@
              
              id trackObjArray = [self processRecommendations:responseObject];
              
-             NSString *first = [trackObjArray[0][@"uri"] componentsSeparatedByString:@":"][2];
-             NSString *second = [trackObjArray[1][@"uri"] componentsSeparatedByString:@":"][2];
+             NSString *first = @"";
+             NSString *second = @"";
              
+             if ([trackObjArray count])
+             {
+                 first = [trackObjArray[0][@"uri"] componentsSeparatedByString:@":"][2];
+                 second = [trackObjArray[1][@"uri"] componentsSeparatedByString:@":"][2];
+             }
+
              [manager GET:@"recommendations"
                parameters:@{
                             @"seed_tracks" : [NSString stringWithFormat:@"%@,%@", first, second],
@@ -212,6 +218,57 @@
     {
         self.playlist = [array copy];
     }
+}
+
+- (void) replaceSongByRemovingAtIndex:(NSInteger)index withCompletion:(void (^)(void))completion
+{
+    NSMutableArray *items = self.playlist.mutableCopy;
+    [items removeObjectAtIndex:index];
+
+    
+    // new recommendation
+    NSString *baseURL = @"https://api.spotify.com/v1/";
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:baseURL]];
+    
+    [manager.requestSerializer setValue:SpotifyAPIController.sharedInstance.getBearerToken forHTTPHeaderField:@"Authorization"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    NSString *first = [[[items firstObject] objectForKey:@"uri"] componentsSeparatedByString:@":"][2];
+    NSString *last = [[[items lastObject] objectForKey:@"uri"] componentsSeparatedByString:@":"][2];
+    
+    [manager GET:@"recommendations"
+      parameters:@{
+                   @"seed_tracks" : [NSString stringWithFormat:@"%@,%@", first, last],
+                   @"min_tempo" :  @(self.heartRate - 5),
+                   @"max_tempo" :  @(self.heartRate + 5),
+                   @"limit" : @"5"
+                   }
+        progress:nil
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             
+             id trackObjArray = [self processRecommendations:responseObject];
+             
+             for (id track in trackObjArray)
+             {
+                 if ([items containsObject:track])
+                 {
+                     
+                 }
+                 else
+                 {
+                     [items addObject:track];
+                     [self updatePlaylist:items];
+                     if (completion)
+                     {
+                         completion();
+                     }
+                     return;
+                 }
+             }
+         }
+         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             NSLog(@"%@", error);
+         }];
 }
 
 - (void) updateLastHeartRate:(NSUInteger)heartRate

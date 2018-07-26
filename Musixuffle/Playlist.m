@@ -100,7 +100,15 @@
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-//        [self updateMemberWithUpdateType:TSTeamSyncManagerUpdateTypeLeave fromIndexPath:indexPath];
+        // UI delete
+        NSMutableArray *items = _viewItems.mutableCopy;
+        [items removeObjectAtIndex:[indexPath row]];
+        _viewItems = items;
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:YES];
+
+        [[SpotifyAPIController sharedInstance] replaceSongByRemovingAtIndex:[indexPath row] withCompletion:^(){
+            [self update];
+        }];
     }
 }
 
