@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		027D03E6EC54E6B3D209C236 /* Pods_Musixuffle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */; };
 		471EA84C2106BB7C00FEB317 /* SpotifyAuthPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 471EA84B2106BB7C00FEB317 /* SpotifyAuthPage.m */; };
+		476D30F52109474F004FB9FD /* DSMarkerFelt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 476D30F42109474F004FB9FD /* DSMarkerFelt.ttf */; };
+		476D30F62109474F004FB9FD /* DSMarkerFelt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 476D30F42109474F004FB9FD /* DSMarkerFelt.ttf */; };
+		476D30F72109474F004FB9FD /* DSMarkerFelt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 476D30F42109474F004FB9FD /* DSMarkerFelt.ttf */; };
+		476D30F921094AEB004FB9FD /* Spotify_Icon_RGB_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D30F821094AEB004FB9FD /* Spotify_Icon_RGB_White.png */; };
+		476D30FC21094CB3004FB9FD /* justlines.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D30FB21094CB3004FB9FD /* justlines.png */; };
+		476D30FE21094D3A004FB9FD /* justlines2.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D30FD21094D39004FB9FD /* justlines2.png */; };
 		47A5DDC02107CE6100568A00 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A5DDBF2107CE6100568A00 /* Player.storyboard */; };
 		47A5DDC32107D72600568A00 /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC22107D72600568A00 /* Playlist.m */; };
 		47A5DDC62107E12100568A00 /* StartUpPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC52107E12100568A00 /* StartUpPage.m */; };
@@ -40,7 +46,6 @@
 		563C7B912106EB49009C00C8 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */; };
 		563C7B922106EB49009C00C8 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */; };
 		5654E5AB2106ECB500DF32B0 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5654E5A92106ECB500DF32B0 /* WebViewController.m */; };
-		8170864A21091EE300331CBB /* Spotify_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8170864921091EE300331CBB /* Spotify_Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,10 @@
 		473889B92106AF720004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BB2106B36A0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473889BD2106B43E0004E3C1 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		476D30F42109474F004FB9FD /* DSMarkerFelt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DSMarkerFelt.ttf; sourceTree = "<group>"; };
+		476D30F821094AEB004FB9FD /* Spotify_Icon_RGB_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spotify_Icon_RGB_White.png; sourceTree = "<group>"; };
+		476D30FB21094CB3004FB9FD /* justlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justlines.png; sourceTree = "<group>"; };
+		476D30FD21094D39004FB9FD /* justlines2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justlines2.png; sourceTree = "<group>"; };
 		47A5DDBF2107CE6100568A00 /* Player.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		47A5DDC12107D72600568A00 /* Playlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Playlist.h; sourceTree = "<group>"; };
 		47A5DDC22107D72600568A00 /* Playlist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Playlist.m; sourceTree = "<group>"; };
@@ -147,7 +156,6 @@
 		5654E5A92106ECB500DF32B0 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		5654E5AA2106ECB500DF32B0 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8170864921091EE300331CBB /* Spotify_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spotify_Icon.png; path = ../../Spotify_Icon.png; sourceTree = "<group>"; };
 		990DD4D993E0D278420E5251 /* Pods_Musixuffle_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D933CD5E24DF45E3149961 /* Pods-Musixuffle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musixuffle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Musixuffle/Pods-Musixuffle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +191,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		476D30FA21094C9F004FB9FD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				476D30FB21094CB3004FB9FD /* justlines.png */,
+				476D30F821094AEB004FB9FD /* Spotify_Icon_RGB_White.png */,
+				47A5DDC72107F48A00568A00 /* Spotify_Green.png */,
+				476D30FD21094D39004FB9FD /* justlines2.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		561DC51A21068CEB00F68C23 = {
 			isa = PBXGroup;
 			children = (
@@ -208,8 +227,7 @@
 		561DC52521068CEB00F68C23 /* Musixuffle */ = {
 			isa = PBXGroup;
 			children = (
-				47A5DDC72107F48A00568A00 /* Spotify_Green.png */,
-				8170864921091EE300331CBB /* Spotify_Icon.png */,
+				476D30FA21094C9F004FB9FD /* images */,
 				47BED4312107024E009FF862 /* Config.h */,
 				5654E5AA2106ECB500DF32B0 /* WebViewController.h */,
 				5654E5A92106ECB500DF32B0 /* WebViewController.m */,
@@ -237,6 +255,7 @@
 				47A5DDC92108402700568A00 /* PlaylistCell.xib */,
 				47A5DDCB2108415800568A00 /* PlaylistCell.h */,
 				47A5DDCC2108415800568A00 /* PlaylistCell.m */,
+				476D30F42109474F004FB9FD /* DSMarkerFelt.ttf */,
 			);
 			path = Musixuffle;
 			sourceTree = "<group>";
@@ -422,13 +441,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476D30F52109474F004FB9FD /* DSMarkerFelt.ttf in Resources */,
 				47A5DDC82107F48A00568A00 /* Spotify_Green.png in Resources */,
 				561DC53321068CF100F68C23 /* LaunchScreen.storyboard in Resources */,
 				561DC53021068CF100F68C23 /* Assets.xcassets in Resources */,
+				476D30FE21094D3A004FB9FD /* justlines2.png in Resources */,
 				47A5DDCA2108402700568A00 /* PlaylistCell.xib in Resources */,
+				476D30F921094AEB004FB9FD /* Spotify_Icon_RGB_White.png in Resources */,
 				47A5DDC02107CE6100568A00 /* Player.storyboard in Resources */,
-				8170864A21091EE300331CBB /* Spotify_Icon.png in Resources */,
 				561DC52E21068CEC00F68C23 /* Main.storyboard in Resources */,
+				476D30FC21094CB3004FB9FD /* justlines.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +460,7 @@
 			files = (
 				561DC54221068CF200F68C23 /* Assets.xcassets in Resources */,
 				561DC54021068CF100F68C23 /* Interface.storyboard in Resources */,
+				476D30F62109474F004FB9FD /* DSMarkerFelt.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +468,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476D30F72109474F004FB9FD /* DSMarkerFelt.ttf in Resources */,
 				561DC55721068CF300F68C23 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

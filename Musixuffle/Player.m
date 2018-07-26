@@ -60,8 +60,7 @@
     self.trackTitle.text = @" ";
     self.artistTitle.text = @" ";
     
-    [self.playPauseButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    
+    [self.playPauseButton.titleLabel setTextAlignment:NSTextAlignmentCenter];    
 }
 
 - (BOOL)prefersStatusBarHidden {

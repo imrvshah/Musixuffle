@@ -48,12 +48,50 @@
         NSLog(@"WCSession is supported");
     }
     
-    [self.view setBackgroundColor:[UIColor colorWithRed:229.0/255.0 green:117.0/255.0 blue:75.0/255.0 alpha:1.0]];
+    [self.view setBackgroundColor:[UIColor blackColor]];
     
-    UIImage *img = [UIImage imageNamed:@"Spotify_Icon"];
+    UIImage *img = [UIImage imageNamed:@"Spotify_Icon_RGB_White"];
     self.imageView.image = [UIImage imageWithCGImage:[img CGImage] scale:[img scale]/10 orientation:UIImageOrientationUp];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionUpdatedNotification:) name:@"sessionUpdated" object:nil];
+    [self animate];
+}
+
+- (void) animate
+{
+    static BOOL reverse = NO;
+    __weak typeof(self) weakSelf = self;
+    [UIView transitionWithView:self.titleLabel
+                      duration:1.
+                        options:UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         if (reverse)
+                         {
+                             [self.titleLabel setTextColor:[UIColor colorWithRed:255.0/255.0 green:69.0/255.0 blue:126.0/255.0 alpha:1]];
+                         }
+                         else
+                         {
+                              [self.titleLabel setTextColor:UIColor.whiteColor];
+                         }
+                     } completion:^(BOOL finished) {
+                         if (finished)
+                         {
+                             reverse = !reverse;
+                             [weakSelf performSelector:@selector(animate) withObject:nil afterDelay:1];
+                         }
+                     }];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+
 }
 
 - (IBAction)onSignInTapped:(id)sender
@@ -77,6 +115,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    self.navigationController.navigationBar.hidden = YES;
     [super viewWillAppear:animated];
     
     SPTAuth *auth = [SPTAuth defaultInstance];
@@ -110,13 +149,6 @@
     
     // Else, just show login dialog
 }
-
-
-- (BOOL)prefersStatusBarHidden
-{
-    return NO;
-}
-
 
 - (UIViewController *)authViewControllerWithURL:(NSURL *)url
 {
