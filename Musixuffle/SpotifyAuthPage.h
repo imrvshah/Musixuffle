@@ -12,7 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SpotifyAuthPage : UIViewController
-    
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

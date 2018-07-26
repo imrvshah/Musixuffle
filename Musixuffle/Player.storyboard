@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7FI-3t-gaJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7FI-3t-gaJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,9 +23,9 @@
                                 <accessibility key="accessibilityConfiguration" label="Blurry"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Track Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOd-8l-b1v">
-                                <rect key="frame" x="26" y="401" width="323" height="17"/>
+                                <rect key="frame" x="26" y="276" width="323" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="textColor" red="0.97814254369999998" green="0.98725848999999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.27058823529411763" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSd-e0-1dd">
@@ -36,7 +34,7 @@
                                     <constraint firstAttribute="width" constant="50" id="ejV-dB-b6u"/>
                                 </constraints>
                                 <state key="normal" title="&lt;&lt;">
-                                    <color key="titleColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.27058823529999998" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -49,18 +47,15 @@
                                     <constraint firstAttribute="width" constant="50" id="GDY-3o-nCD"/>
                                 </constraints>
                                 <state key="normal" title="&gt;&gt;">
-                                    <color key="titleColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.27058823529999998" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="fastForward:" destination="7FI-3t-gaJ" eventType="touchUpInside" id="9gx-d8-Joj"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LB1-xa-Jzs">
-                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                            </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="740" translatesAutoresizingMaskIntoConstraints="NO" id="4RF-G1-IKI">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                <rect key="frame" x="62.5" y="0.0" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4RF-G1-IKI" secondAttribute="height" id="a5p-0w-l0T"/>
                                 </constraints>
@@ -69,7 +64,7 @@
                                 <rect key="frame" x="101" y="599" width="173" height="34"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Pause">
-                                    <color key="titleColor" red="0.62807674229999999" green="1" blue="0.59483990919999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.27058823529999998" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -77,13 +72,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GaP-5y-EcF">
-                                <rect key="frame" x="26" y="426" width="323" height="17"/>
+                                <rect key="frame" x="26" y="301" width="323" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.27058823529411763" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DSB-lr-wNT">
-                                <rect key="frame" x="29" y="445" width="317" height="31"/>
+                                <rect key="frame" x="29" y="418" width="317" height="31"/>
                                 <connections>
                                     <action selector="proggressTouchDown:" destination="7FI-3t-gaJ" eventType="valueChanged" id="3Fd-ot-rE8"/>
                                     <action selector="seekValueChanged:" destination="7FI-3t-gaJ" eventType="valueChanged" id="Ov9-DW-JZZ"/>
@@ -92,21 +87,21 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Playback source" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVj-xe-rj0">
                                 <rect key="frame" x="26" y="35" width="323" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.27058823529411763" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEk-xt-lku">
-                                <rect key="frame" x="144" y="500.5" width="87" height="28"/>
+                                <rect key="frame" x="144" y="548" width="87" height="28"/>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
                                 <state key="normal" title="Show Playlist">
-                                    <color key="titleColor" red="0.1921460653308342" green="0.62812889233594327" blue="0.9500080958549223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.27058823529999998" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onOpenPlaylistTapped:" destination="7FI-3t-gaJ" eventType="touchUpInside" id="u8j-DX-siG"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.097284675010000002" green="0.091569580050000002" blue="0.097326144370000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i0y-av-kQ2" firstAttribute="top" secondItem="4RF-G1-IKI" secondAttribute="top" id="0jo-jd-9DP"/>
                             <constraint firstItem="7Fo-V2-yRa" firstAttribute="leading" secondItem="E8Z-wY-5hh" secondAttribute="trailing" constant="20" id="15M-sk-ZaQ"/>
@@ -117,23 +112,20 @@
                             <constraint firstAttribute="centerY" secondItem="i0y-av-kQ2" secondAttribute="centerY" id="Ad7-oT-RFD"/>
                             <constraint firstItem="bOd-8l-b1v" firstAttribute="leading" secondItem="U5F-cg-eiA" secondAttribute="leadingMargin" constant="10" id="CX3-ya-Z0L"/>
                             <constraint firstItem="GaP-5y-EcF" firstAttribute="centerX" secondItem="U5F-cg-eiA" secondAttribute="centerX" id="GTS-0d-2lO"/>
-                            <constraint firstItem="DSB-lr-wNT" firstAttribute="top" secondItem="GaP-5y-EcF" secondAttribute="bottom" constant="2" id="GaY-uK-Im2"/>
-                            <constraint firstItem="CEk-xt-lku" firstAttribute="top" secondItem="DSB-lr-wNT" secondAttribute="bottom" constant="25.5" id="L17-Rf-RYn"/>
+                            <constraint firstItem="DSB-lr-wNT" firstAttribute="top" secondItem="GaP-5y-EcF" secondAttribute="bottom" constant="100" id="GaY-uK-Im2"/>
+                            <constraint firstItem="CEk-xt-lku" firstAttribute="top" secondItem="DSB-lr-wNT" secondAttribute="bottom" constant="100" id="L17-Rf-RYn"/>
                             <constraint firstItem="aVj-xe-rj0" firstAttribute="centerX" secondItem="U5F-cg-eiA" secondAttribute="centerX" id="Lck-I3-kHo"/>
-                            <constraint firstItem="DSB-lr-wNT" firstAttribute="centerX" secondItem="U5F-cg-eiA" secondAttribute="centerX" id="M7e-zU-lwi"/>
                             <constraint firstItem="Bxc-3d-hP7" firstAttribute="bottom" secondItem="YSd-e0-1dd" secondAttribute="bottom" constant="36" id="OAX-a4-9LD"/>
-                            <constraint firstAttribute="width" secondItem="4RF-G1-IKI" secondAttribute="width" id="OZd-W8-WsH"/>
+                            <constraint firstAttribute="width" secondItem="4RF-G1-IKI" secondAttribute="width" multiplier="1.5" id="OZd-W8-WsH"/>
                             <constraint firstItem="CEk-xt-lku" firstAttribute="centerX" secondItem="Bxc-3d-hP7" secondAttribute="centerX" id="PQp-Iy-UmL"/>
                             <constraint firstItem="DSB-lr-wNT" firstAttribute="leading" secondItem="U5F-cg-eiA" secondAttribute="leadingMargin" constant="15" id="Pj8-4b-HQj"/>
                             <constraint firstAttribute="width" secondItem="i0y-av-kQ2" secondAttribute="width" id="Prd-MR-KsD"/>
-                            <constraint firstItem="4RF-G1-IKI" firstAttribute="top" secondItem="LB1-xa-Jzs" secondAttribute="top" id="Ua2-5B-7Sh"/>
                             <constraint firstItem="YSd-e0-1dd" firstAttribute="leading" secondItem="DSB-lr-wNT" secondAttribute="leading" id="WLm-KL-lfw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aVj-xe-rj0" secondAttribute="trailing" constant="10" id="Y5v-86-CdV"/>
                             <constraint firstItem="bOd-8l-b1v" firstAttribute="top" secondItem="4RF-G1-IKI" secondAttribute="bottom" priority="998" constant="26" id="Ydh-05-o1P"/>
                             <constraint firstItem="YSd-e0-1dd" firstAttribute="centerY" secondItem="E8Z-wY-5hh" secondAttribute="centerY" id="d4b-PQ-MPU"/>
                             <constraint firstItem="i0y-av-kQ2" firstAttribute="centerX" secondItem="bOd-8l-b1v" secondAttribute="centerX" priority="999" id="e5b-RE-LCh"/>
                             <constraint firstItem="GaP-5y-EcF" firstAttribute="leading" secondItem="U5F-cg-eiA" secondAttribute="leadingMargin" constant="10" id="fbR-Xd-wjY"/>
-                            <constraint firstItem="LB1-xa-Jzs" firstAttribute="leading" secondItem="i0y-av-kQ2" secondAttribute="leading" id="iK3-hK-RjS"/>
                             <constraint firstItem="GaP-5y-EcF" firstAttribute="top" secondItem="bOd-8l-b1v" secondAttribute="bottom" constant="8" id="idx-ec-0bt"/>
                             <constraint firstItem="4RF-G1-IKI" firstAttribute="centerX" secondItem="bOd-8l-b1v" secondAttribute="centerX" id="nYH-6S-ZYd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GaP-5y-EcF" secondAttribute="trailing" constant="10" id="sUX-Np-WZj"/>
@@ -155,7 +147,6 @@
                         <outlet property="playbackSourceTitle" destination="aVj-xe-rj0" id="OLn-vJ-gGl"/>
                         <outlet property="prevButton" destination="YSd-e0-1dd" id="1ja-I1-YyF"/>
                         <outlet property="progressSlider" destination="DSB-lr-wNT" id="TTK-Hx-9A2"/>
-                        <outlet property="spinner" destination="LB1-xa-Jzs" id="rM0-cP-qO3"/>
                         <outlet property="trackTitle" destination="bOd-8l-b1v" id="j04-TJ-JWD"/>
                     </connections>
                 </viewController>

@@ -62,6 +62,8 @@
     
     [self.playPauseButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
     
+    self.navigationController.navigationBar.hidden = YES;
+    
 //    UINavigationBar *bar = [self.navigationController navigationBar];
 //    [bar setTintColor:[UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0]];
 }

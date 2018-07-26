@@ -55,6 +55,32 @@
     self.imageView.image = [UIImage imageWithCGImage:[img CGImage] scale:[img scale]/10 orientation:UIImageOrientationUp];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sessionUpdatedNotification:) name:@"sessionUpdated" object:nil];
+    [self animate];
+}
+
+- (void) animate
+{
+    static BOOL reverse = NO;
+    __weak typeof(self) weakSelf = self;
+    [UIView transitionWithView:self.titleLabel
+                      duration:1.
+                        options:UIViewAnimationOptionTransitionCrossDissolve
+                     animations:^{
+                         if (reverse)
+                         {
+                             [self.titleLabel setTextColor:[UIColor colorWithRed:255.0/255.0 green:69.0/255.0 blue:126.0/255.0 alpha:1]];
+                         }
+                         else
+                         {
+                              [self.titleLabel setTextColor:UIColor.whiteColor];
+                         }
+                     } completion:^(BOOL finished) {
+                         if (finished)
+                         {
+                             reverse = !reverse;
+                             [weakSelf performSelector:@selector(animate) withObject:nil afterDelay:1];
+                         }
+                     }];
 }
 
 - (BOOL)prefersStatusBarHidden
