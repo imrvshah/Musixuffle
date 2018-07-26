@@ -52,6 +52,7 @@
 		563C7B912106EB49009C00C8 /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8E2106EB49009C00C8 /* SpotifyAudioPlayback.framework */; };
 		563C7B922106EB49009C00C8 /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */; };
 		5654E5AB2106ECB500DF32B0 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5654E5A92106ECB500DF32B0 /* WebViewController.m */; };
+		5675DE342109837700CE7377 /* SplashInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5675DE332109837700CE7377 /* SplashInterfaceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,8 @@
 		563C7B8F2106EB49009C00C8 /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = Libs/SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		5654E5A92106ECB500DF32B0 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		5654E5AA2106ECB500DF32B0 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5675DE322109837700CE7377 /* SplashInterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashInterfaceController.h; sourceTree = "<group>"; };
+		5675DE332109837700CE7377 /* SplashInterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashInterfaceController.m; sourceTree = "<group>"; };
 		7F3D7BCB5F18100BD89B5161 /* Pods_Musixuffle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990DD4D993E0D278420E5251 /* Pods_Musixuffle_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Musixuffle_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3D933CD5E24DF45E3149961 /* Pods-Musixuffle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Musixuffle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Musixuffle/Pods-Musixuffle.release.xcconfig"; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				561DC5712106996400F68C23 /* MXInterfaceController.m */,
 				476D3113210973B5004FB9FD /* Settings.h */,
 				476D3114210973B5004FB9FD /* Settings.m */,
+				5675DE322109837700CE7377 /* SplashInterfaceController.h */,
+				5675DE332109837700CE7377 /* SplashInterfaceController.m */,
 			);
 			path = "Musixuffle WatchKit App";
 			sourceTree = "<group>";
@@ -594,6 +599,7 @@
 				5612BE59210836A40019CAAF /* MusicInterfaceController.m in Sources */,
 				5612BE58210836A10019CAAF /* HeartRateInterfaceController.m in Sources */,
 				476D3115210973B5004FB9FD /* Settings.m in Sources */,
+				5675DE342109837700CE7377 /* SplashInterfaceController.m in Sources */,
 				561DC57521069B2F00F68C23 /* MXInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

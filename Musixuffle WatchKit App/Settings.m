@@ -10,6 +10,6 @@
 
 @implementation Settings
 - (IBAction)onNextTapped {
-    
+    [[self class] reloadRootControllersWithNames:@[@"HeartRateInterfaceController",@"MusicInterfaceController", @"EndWorkOutInterfaceController"] contexts:nil];
 }
 @end

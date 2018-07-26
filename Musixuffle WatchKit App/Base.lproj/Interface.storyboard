@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14306.4" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QN5-l1-VqB">
-    <device id="watch38" orientation="portrait">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14237"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14031"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="DSMarkerFelt.ttf">
@@ -14,12 +14,31 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Interface Controller-->
+        <!--SplashInterfaceController-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController"/>
+                <controller identifier="SplashInterfaceController" id="AgC-eL-Hgc" customClass="SplashInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" id="ono-RG-nHY">
+                            <items>
+                                <button width="1" alignment="left" title="Musixuffle" id="VAm-1F-Dk0">
+                                    <color key="titleColor" red="0.86992989489999994" green="0.27988806560000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <fontDescription key="font" type="italicSystem" pointSize="29"/>
+                                    <connections>
+                                        <action selector="buttonTapped" destination="AgC-eL-Hgc" id="3fr-zK-r3V"/>
+                                        <segue destination="QN5-l1-VqB" kind="push" id="DCF-r8-9TQ"/>
+                                    </connections>
+                                </button>
+                                <label width="136" alignment="left" text="Musixuffle" textAlignment="center" id="hp0-Eo-x75">
+                                    <fontDescription key="font" type="italicSystem" weight="heavy" pointSize="16"/>
+                                </label>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="59" bottom="0.0"/>
+                        </group>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="219.69230769230771" y="344.79487179487182"/>
         </scene>
         <!--heartBeat-->
         <scene sceneID="gZG-yl-4jb">
@@ -51,11 +70,7 @@
                             </items>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="18" bottom="0.0"/>
                         </group>
-                        <label alignment="left" text="Label" id="9ji-MN-Qhu"/>
                     </items>
-                    <connections>
-                        <outlet property="lblDummy" destination="9ji-MN-Qhu" id="eyH-WX-048"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="491" y="345"/>
@@ -281,7 +296,6 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="onNextTapped" destination="WEo-hL-rvX" id="zkq-MW-qIb"/>
-                                <segue destination="QN5-l1-VqB" kind="push" id="ucP-th-R4v"/>
                             </connections>
                         </button>
                     </items>
@@ -291,6 +305,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8kT-w4-CUZ"/>
+        <segue reference="ycU-X6-WOv"/>
     </inferredMetricsTieBreakers>
 </document>
