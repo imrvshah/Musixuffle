@@ -10,9 +10,8 @@
 
 @implementation BaseController
 
-+ (void) startWorkout:(id)delegate
++ (HKWorkoutSession *) startWorkout:(WKInterfaceController *)delegate
 {
-    self.lableHeartRate.text = @"startWorkout";
     HKWorkoutConfiguration *config = [[HKWorkoutConfiguration alloc]init];
     config.activityType = HKWorkoutActivityTypeRunning;
     config.locationType = HKWorkoutSessionLocationTypeOutdoor;
@@ -21,7 +20,7 @@
     HKWorkoutSession *workoutSession = [[HKWorkoutSession alloc] initWithConfiguration:config error:&error];
     workoutSession.delegate = delegate;
     
-    [self.healthStore startWorkoutSession:workoutSession];
+    return workoutSession;
 }
 
 @end

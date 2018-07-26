@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@import WatchKit;
+@import HealthKit;
 
-@interface BaseController : NSObject
-+ (void) startWorkout:(id)delegate;
-
+@interface BaseController : NSObject <HKWorkoutSessionDelegate>
++ (HKWorkoutSession *) startWorkout:(WKInterfaceController *)delegate;
 @end
 
-NS_ASSUME_NONNULL_END
