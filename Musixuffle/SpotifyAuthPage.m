@@ -223,7 +223,7 @@
         NSError *error = nil;
         if(![self.watchSession
              updateApplicationContext:
-             @{@"message" : @"test" }
+             @{@"message" : @"song" }
              error:&error]){
             NSLog(@"Updating the context failed: %@", error.localizedDescription);
         }

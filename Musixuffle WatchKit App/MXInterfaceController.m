@@ -283,7 +283,7 @@
 - (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *, id> *)applicationContext
 {
     NSLog(@"%@", applicationContext);
-    self.lblDummy.text = @"didReceiveApplicationContext";
+    self.lblDummy.text = [applicationContext objectForKey:@"message"];
 }
 
 /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
