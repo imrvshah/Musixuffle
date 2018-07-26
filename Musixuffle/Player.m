@@ -64,8 +64,8 @@
     
     self.navigationController.navigationBar.hidden = YES;
     
-//    UINavigationBar *bar = [self.navigationController navigationBar];
-//    [bar setTintColor:[UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0]];
+    //    UINavigationBar *bar = [self.navigationController navigationBar];
+    //    [bar setTintColor:[UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0]];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -199,7 +199,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self handleNewSession];
-//    self.playPauseButton.titleLabel.text = self.player.playbackState.isPlaying ? @"Pause" : @"Play";
+    //    self.playPauseButton.titleLabel.text = self.player.playbackState.isPlaying ? @"Pause" : @"Play";
 }
 
 -(void)handleNewSession {
@@ -323,10 +323,6 @@
             else
             {
                 [[SpotifyAPIController sharedInstance] getRelatedTracksForTracks:@[] withCompletion:^(NSArray *next) {
-                    for (NSDictionary *next in arr)
-                    {
-                        
-                    }
                 }];
             }
         }];
