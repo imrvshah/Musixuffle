@@ -15,6 +15,11 @@
 		476D30F921094AEB004FB9FD /* Spotify_Icon_RGB_White.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D30F821094AEB004FB9FD /* Spotify_Icon_RGB_White.png */; };
 		476D30FC21094CB3004FB9FD /* justlines.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D30FB21094CB3004FB9FD /* justlines.png */; };
 		476D30FE21094D3A004FB9FD /* justlines2.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D30FD21094D39004FB9FD /* justlines2.png */; };
+		476D310B21096E51004FB9FD /* BaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 476D310A21096D21004FB9FD /* BaseController.m */; };
+		476D310E210971A7004FB9FD /* Genre.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D310D210971A7004FB9FD /* Genre.png */; };
+		476D3110210972C8004FB9FD /* Moods.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D310F210972C8004FB9FD /* Moods.png */; };
+		476D311221097341004FB9FD /* Additional options.png in Resources */ = {isa = PBXBuildFile; fileRef = 476D311121097341004FB9FD /* Additional options.png */; };
+		476D3115210973B5004FB9FD /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 476D3114210973B5004FB9FD /* Settings.m */; };
 		47A5DDC02107CE6100568A00 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A5DDBF2107CE6100568A00 /* Player.storyboard */; };
 		47A5DDC32107D72600568A00 /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC22107D72600568A00 /* Playlist.m */; };
 		47A5DDC62107E12100568A00 /* StartUpPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 47A5DDC52107E12100568A00 /* StartUpPage.m */; };
@@ -102,6 +107,13 @@
 		476D30F821094AEB004FB9FD /* Spotify_Icon_RGB_White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spotify_Icon_RGB_White.png; sourceTree = "<group>"; };
 		476D30FB21094CB3004FB9FD /* justlines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justlines.png; sourceTree = "<group>"; };
 		476D30FD21094D39004FB9FD /* justlines2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justlines2.png; sourceTree = "<group>"; };
+		476D310921096D21004FB9FD /* BaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseController.h; sourceTree = "<group>"; };
+		476D310A21096D21004FB9FD /* BaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseController.m; sourceTree = "<group>"; };
+		476D310D210971A7004FB9FD /* Genre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Genre.png; sourceTree = "<group>"; };
+		476D310F210972C8004FB9FD /* Moods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Moods.png; sourceTree = "<group>"; };
+		476D311121097341004FB9FD /* Additional options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Additional options.png"; sourceTree = "<group>"; };
+		476D3113210973B5004FB9FD /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		476D3114210973B5004FB9FD /* Settings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		47A5DDBF2107CE6100568A00 /* Player.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		47A5DDC12107D72600568A00 /* Playlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Playlist.h; sourceTree = "<group>"; };
 		47A5DDC22107D72600568A00 /* Playlist.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Playlist.m; sourceTree = "<group>"; };
@@ -202,6 +214,16 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		476D310C21097192004FB9FD /* img */ = {
+			isa = PBXGroup;
+			children = (
+				476D311121097341004FB9FD /* Additional options.png */,
+				476D310F210972C8004FB9FD /* Moods.png */,
+				476D310D210971A7004FB9FD /* Genre.png */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
 		561DC51A21068CEB00F68C23 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +285,9 @@
 		561DC53D21068CF100F68C23 /* Musixuffle WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				476D310C21097192004FB9FD /* img */,
+				476D310921096D21004FB9FD /* BaseController.h */,
+				476D310A21096D21004FB9FD /* BaseController.m */,
 				5612BE5121080BC00019CAAF /* EndWorkOutInterfaceController.h */,
 				5612BE5221080BC00019CAAF /* EndWorkOutInterfaceController.m */,
 				5612BE4F21080BC00019CAAF /* HeartRateInterfaceController.h */,
@@ -274,6 +299,8 @@
 				561DC54321068CF200F68C23 /* Info.plist */,
 				561DC5702106996400F68C23 /* MXInterfaceController.h */,
 				561DC5712106996400F68C23 /* MXInterfaceController.m */,
+				476D3113210973B5004FB9FD /* Settings.h */,
+				476D3114210973B5004FB9FD /* Settings.m */,
 			);
 			path = "Musixuffle WatchKit App";
 			sourceTree = "<group>";
@@ -458,6 +485,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476D310E210971A7004FB9FD /* Genre.png in Resources */,
+				476D311221097341004FB9FD /* Additional options.png in Resources */,
+				476D3110210972C8004FB9FD /* Moods.png in Resources */,
 				561DC54221068CF200F68C23 /* Assets.xcassets in Resources */,
 				561DC54021068CF100F68C23 /* Interface.storyboard in Resources */,
 				476D30F62109474F004FB9FD /* DSMarkerFelt.ttf in Resources */,
@@ -554,10 +584,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				561DC57421069AD800F68C23 /* ExtensionDelegate.m in Sources */,
+				476D310B21096E51004FB9FD /* BaseController.m in Sources */,
 				5612BE572108369D0019CAAF /* EndWorkOutInterfaceController.m in Sources */,
 				561DC55521068CF200F68C23 /* NotificationController.m in Sources */,
 				5612BE59210836A40019CAAF /* MusicInterfaceController.m in Sources */,
 				5612BE58210836A10019CAAF /* HeartRateInterfaceController.m in Sources */,
+				476D3115210973B5004FB9FD /* Settings.m in Sources */,
 				561DC57521069B2F00F68C23 /* MXInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,6 +15,16 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
+    [self setBackgroundColor:UIColor.blackColor];
+    [self.contentView setBackgroundColor:UIColor.blackColor];
+}
+
+- (void) layoutSubviews
+{
+    for (UIView *view in self.contentView.subviews)
+    {
+        [view setBackgroundColor:UIColor.blackColor];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated

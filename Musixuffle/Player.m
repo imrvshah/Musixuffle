@@ -194,7 +194,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self handleNewSession];
-//    self.playPauseButton.titleLabel.text = self.player.playbackState.isPlaying ? @"Pause" : @"Play";
+    //    self.playPauseButton.titleLabel.text = self.player.playbackState.isPlaying ? @"Pause" : @"Play";
 }
 
 -(void)handleNewSession {
@@ -318,10 +318,6 @@
             else
             {
                 [[SpotifyAPIController sharedInstance] getRelatedTracksForTracks:@[] withCompletion:^(NSArray *next) {
-                    for (NSDictionary *next in arr)
-                    {
-                        
-                    }
                 }];
             }
         }];
