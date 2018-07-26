@@ -291,11 +291,23 @@
 - (void)audioStreaming:(SPTAudioStreamingController *)audioStreaming didStartPlayingTrack:(NSString *)trackUri {
     NSLog(@"Starting %@", trackUri);
     NSLog(@"Source %@", self.player.metadata.currentTrack.playbackSourceUri);
+    [self sendSongNameToWatch:self.player.metadata.currentTrack.name];
     // If context is a single track and the uri of the actual track being played is different
     // than we can assume that relink has happended.
     BOOL isRelinked = [self.player.metadata.currentTrack.playbackSourceUri containsString: @"spotify:track"]
     && ![self.player.metadata.currentTrack.playbackSourceUri isEqualToString:trackUri];
     NSLog(@"Relinked %d", isRelinked);
+}
+
+- (void)sendSongNameToWatch:(NSString *)songName
+{
+    if(self.watchSession){
+        NSError *error = nil;
+        if(![self.watchSession updateApplicationContext:@{@"songName" : songName }error:&error])
+        {
+            NSLog(@"Updating the context failed: %@", error.localizedDescription);
+        }
+    }
 }
 
 - (void)audioStreaming:(SPTAudioStreamingController *)audioStreaming didStopPlayingTrack:(NSString *)trackUri {
@@ -361,11 +373,26 @@
     }
     else if ([applicationContext objectForKey:@"disLike"])
     {
-        
+         __weak typeof(self) weakSelf = self;
+        dispatch_async(dispatch_get_main_queue(), ^{
+           NSArray *arrayPlayList =  [[SpotifyAPIController sharedInstance] getCurrentPlaylist];
+            [weakSelf.player playSpotifyURI:[arrayPlayList[0] valueForKey:@"uri"] startingWithIndex:0 startingWithPosition:10 callback:^(NSError *error) {
+                if (error != nil)
+                {
+                    NSLog(@"*** failed to play: %@", error);
+                    return;
+                }
+                else
+                {
+                    [[SpotifyAPIController sharedInstance] getRelatedTracksForTracks:@[] withCompletion:^(NSArray *next) {
+                    }];
+                }
+            }];
+        });
+       
     }
-    
-    
 }
+
 
 @end
 

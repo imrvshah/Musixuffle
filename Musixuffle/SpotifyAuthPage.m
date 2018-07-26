@@ -218,17 +218,6 @@
 
         [self presentViewController:self.authViewController animated:YES completion:nil];
     }
-    
-    if(self.watchSession){
-        NSError *error = nil;
-        if(![self.watchSession
-             updateApplicationContext:
-             @{@"message" : @"test" }
-             error:&error]){
-            NSLog(@"Updating the context failed: %@", error.localizedDescription);
-        }
-        
-    }
 }
 
 - (void)renewTokenAndShowPlayer

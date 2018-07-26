@@ -9,7 +9,7 @@
 #import "MusicInterfaceController.h"
 #import <WatchConnectivity/WatchConnectivity.h>
 
-@interface MusicInterfaceController ()
+@interface MusicInterfaceController () <WCSessionDelegate>
 
 @end
 
@@ -65,6 +65,14 @@
 - (void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(nullable NSError *)error
 {
     
+}
+
+- (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *, id> *)applicationContext
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+         [self.lableSong setText:[applicationContext valueForKey:@"songName"]];
+    });
+   
 }
 
 @end
