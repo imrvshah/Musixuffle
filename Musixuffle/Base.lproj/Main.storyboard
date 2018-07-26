@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flE-k1-Crc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="flE-k1-Crc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,32 +34,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-vc-KL6">
-                                <rect key="frame" x="262" y="610" width="103" height="32"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
-                                <state key="normal" title="Clear Cookies">
-                                    <color key="titleColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.44800326540000002" green="0.90823348449999997" blue="0.4585417893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onClearCookies:" destination="60D-Ee-gKn" eventType="touchUpInside" id="VeV-AP-g0G"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVw-gy-ncG">
-                                <rect key="frame" x="122.5" y="492" width="130" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D7C-Yy-ROX">
+                                <rect key="frame" x="16" y="154" width="343" height="392"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Musixuffle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJY-5h-wgE">
+                                        <rect key="frame" x="38.5" y="0.0" width="266" height="67.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="62"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OP-Ob-qAe">
+                                        <rect key="frame" x="40" y="77.5" width="263" height="13.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Descriptiong Comes here">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="12" name="MarkerFelt-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="justlines2.png" translatesAutoresizingMaskIntoConstraints="NO" id="UR0-ln-hiA">
+                                        <rect key="frame" x="40" y="101" width="263" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="999" constant="70" id="J6P-Ns-Rvi"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfL-8X-9P9">
+                                        <rect key="frame" x="51.5" y="181" width="240" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Vey-x8-A5x"/>
+                                        </constraints>
+                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="upA-Aa-uVW">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="146.5" y="291" width="50" height="50"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AcW-Db-a4o"/>
                                             <constraint firstAttribute="width" constant="50" id="WUb-IQ-GBt"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1F-U1-c8c">
-                                        <rect key="frame" x="50" y="0.0" width="80" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <rect key="frame" x="136" y="351" width="71" height="41"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Sign in">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" red="0.44800326540000002" green="0.90823348449999997" blue="0.4585417893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -68,18 +90,30 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="SgL-CH-2Uh"/>
-                                    <constraint firstAttribute="height" constant="50" id="k2R-2A-A3R"/>
+                                    <constraint firstItem="1OP-Ob-qAe" firstAttribute="leading" secondItem="D7C-Yy-ROX" secondAttribute="leading" constant="40" id="3hm-ZV-W5T"/>
+                                    <constraint firstItem="UR0-ln-hiA" firstAttribute="leading" secondItem="D7C-Yy-ROX" secondAttribute="leading" constant="40" id="9Ca-hM-C5O"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-vc-KL6">
+                                <rect key="frame" x="134.5" y="606" width="106" height="36"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                <state key="normal" title="Clear Cookies">
+                                    <color key="titleColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.44800326540000002" green="0.90823348449999997" blue="0.4585417893" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClearCookies:" destination="60D-Ee-gKn" eventType="touchUpInside" id="VeV-AP-g0G"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="CVw-gy-ncG" firstAttribute="bottom" secondItem="G5X-bt-dZG" secondAttribute="bottom" constant="-125" id="ESd-z8-kQR"/>
-                            <constraint firstItem="rkz-vc-KL6" firstAttribute="bottom" secondItem="G5X-bt-dZG" secondAttribute="bottom" constant="-25" id="QfY-wt-NI5"/>
-                            <constraint firstItem="CVw-gy-ncG" firstAttribute="centerX" secondItem="c9v-3V-yqe" secondAttribute="centerX" id="WhE-qw-tup"/>
+                            <constraint firstItem="rkz-vc-KL6" firstAttribute="top" secondItem="D7C-Yy-ROX" secondAttribute="bottom" constant="60" id="5QA-xy-TWd"/>
+                            <constraint firstItem="G5X-bt-dZG" firstAttribute="bottom" secondItem="rkz-vc-KL6" secondAttribute="bottom" constant="25" id="QfY-wt-NI5"/>
+                            <constraint firstItem="G5X-bt-dZG" firstAttribute="trailing" secondItem="D7C-Yy-ROX" secondAttribute="trailing" constant="16" id="VBW-g9-H9m"/>
                             <constraint firstItem="rkz-vc-KL6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c9v-3V-yqe" secondAttribute="leading" constant="20" symbolic="YES" id="djc-gZ-DIk"/>
-                            <constraint firstItem="rkz-vc-KL6" firstAttribute="trailing" secondItem="G5X-bt-dZG" secondAttribute="trailing" constant="-10" id="fSL-nj-1Xs"/>
+                            <constraint firstItem="rkz-vc-KL6" firstAttribute="centerX" secondItem="G5X-bt-dZG" secondAttribute="centerX" id="lQg-Qn-jbm"/>
+                            <constraint firstItem="D7C-Yy-ROX" firstAttribute="leading" secondItem="G5X-bt-dZG" secondAttribute="leading" constant="16" id="rmD-Jr-eQl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="G5X-bt-dZG"/>
                     </view>
@@ -135,7 +169,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="350" height="700"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS SDK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbx-jn-Wyf">
-                                <rect key="frame" x="90.5" y="84" width="170.5" height="53"/>
+                                <rect key="frame" x="90" y="84" width="170.5" height="53"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                 <color key="textColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -163,13 +197,13 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4F-09-WVo">
-                                <rect key="frame" x="138.5" y="540" width="74" height="18"/>
+                                <rect key="frame" x="138" y="540" width="74" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Track Playback Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7R-eX-cDU">
-                                <rect key="frame" x="67.5" y="139" width="216" height="18"/>
+                                <rect key="frame" x="67" y="139" width="216" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -219,5 +253,6 @@
     </scenes>
     <resources>
         <image name="Spotify_Logo_CMYK_Green.png" width="2362" height="709"/>
+        <image name="justlines2.png" width="1456" height="424"/>
     </resources>
 </document>
