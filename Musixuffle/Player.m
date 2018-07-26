@@ -130,8 +130,6 @@
 }
 
 -(void)updateUI {
-    SPTAuth *auth = [SPTAuth defaultInstance];
-    
     if (self.player.metadata == nil || self.player.metadata.currentTrack == nil) {
         self.coverView.image = nil;
         self.coverView2.image = nil;
@@ -148,47 +146,49 @@
     
     [self.playPauseButton setTitle:@"Pause" forState:UIControlStateNormal];
     
-    [SPTTrack trackWithURI: [NSURL URLWithString:self.player.metadata.currentTrack.uri]
-               accessToken:auth.session.accessToken
-                    market:nil
-                  callback:^(NSError *error, SPTTrack *track) {
-                      NSURL *imageURL = track.album.largestCover.imageURL;
-                      if (imageURL == nil) {
-                          NSLog(@"Album %@ doesn't have any images!", track.album);
-                          self.coverView.image = nil;
-                          self.coverView2.image = nil;
-                          return;
-                      }
-                      
-                      // Pop over to a background queue to load the image over the network.
-                      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                          NSError *error = nil;
-                          UIImage *image = nil;
-                          NSData *imageData = [NSData dataWithContentsOfURL:imageURL options:0 error:&error];
-                          
-                          if (imageData != nil) {
-                              image = [UIImage imageWithData:imageData];
-                          }
-                          
-                          
-                          // …and back to the main queue to display the image.
-                          dispatch_async(dispatch_get_main_queue(), ^{
-                              [self.spinner stopAnimating];
-                              self.coverView.image = image;
-                              if (image == nil) {
-                                  NSLog(@"Couldn't load cover image with error: %@", error);
-                                  return;
-                              }
-                          });
-                          
-                          // Also generate a blurry version for the background
-                          UIImage *blurred = [self applyBlurOnImage:image withRadius:10.0f];
-                          dispatch_async(dispatch_get_main_queue(), ^{
-                              self.coverView2.image = blurred;
-                          });
-                      });
-                      
-                  }];
+    NSString *imageStr = nil;
+    NSArray *playlist = [[SpotifyAPIController sharedInstance] getCurrentPlaylist];
+    for (id song in playlist)
+    {
+        NSString *currentSongURI = self.player.metadata.currentTrack.uri;
+        if ([[song objectForKey:@"uri"] isEqualToString:currentSongURI])
+        {
+            imageStr = [song objectForKey:@"imageURL"];
+            break;
+        }
+    }
+    
+    if (imageStr == nil || [imageStr isEqualToString:@""])
+    {
+        imageStr = @"https://i.scdn.co/image/b6e762dcce1502ce63eb2c68798843eb2ed53c51";
+    }
+
+    NSURL * imageURL = [NSURL URLWithString:imageStr];
+    // Pop over to a background queue to load the image over the network.
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSError *error = nil;
+        UIImage *image = nil;
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL options:0 error:&error];
+        
+        if (imageData != nil) {
+            image = [UIImage imageWithData:imageData];
+        }
+        // …and back to the main queue to display the image.
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.spinner stopAnimating];
+            self.coverView.image = image;
+            if (image == nil) {
+                NSLog(@"Couldn't load cover image with error: %@", error);
+                return;
+            }
+        });
+        
+        // Also generate a blurry version for the background
+        UIImage *blurred = [self applyBlurOnImage:image withRadius:10.0f];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.coverView2.image = blurred;
+        });
+    });
 }
 
 - (void)viewDidAppear:(BOOL)animated {

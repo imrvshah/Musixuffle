@@ -10,9 +10,8 @@
 #import <HealthKit/HealthKit.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 
-
+#import "BaseController.h"
 @interface MXInterfaceController () <HKWorkoutSessionDelegate, WCSessionDelegate>
-@property(nonatomic, strong)HKHealthStore *healthStore;
 @end
 
 @implementation MXInterfaceController
@@ -77,7 +76,8 @@
             
             if (success) {
                 NSLog(@"health data request success");
-               
+                id workoutSession = [BaseController startWorkout:self];
+                [self.healthStore startWorkoutSession:workoutSession];
                 [self fakeWorkout];
                 [[self class] reloadRootControllersWithNames:@[@"HeartRateInterfaceController",@"MusicInterfaceController", @"EndWorkOutInterfaceController"] contexts:nil];
             }else{
@@ -283,7 +283,7 @@
 - (void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *, id> *)applicationContext
 {
     NSLog(@"%@", applicationContext);
-    self.lblDummy.text = @"didReceiveApplicationContext";
+    self.lblDummy.text = [applicationContext objectForKey:@"message"];
 }
 
 /** Called when the session has completed activation. If session state is WCSessionActivationStateNotActivated there will be an error with more details. */
