@@ -18,4 +18,6 @@
 
 - (NSArray *) getCurrentPlaylist;
 - (void) updateLastHeartRate:(NSUInteger)heartRate;
+
+- (void) replaceSongByRemovingAtIndex:(NSInteger)index withCompletion:(void (^)(void))completion;
 @end
